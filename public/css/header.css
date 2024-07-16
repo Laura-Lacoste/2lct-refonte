@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --mainColor : #350026;
+    --secondColor : #64004A;
+    --titleColor : #1A0B16;
+    --paragrapheColor : #383036;
+    --whiteColor : #FFFFFF;
+    --backgroundColor : #f0ebef;
+    --oppositeColor : #026C7C;
+    --lightColor : #890065;
+}
+
+html{
+    font-family: Montserrat;
+    font-size: large;
+}
+
+body{
+    margin: 0 ;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    border-bottom: var(--backgroundColor) 1px solid;
+    padding: 2.5vh 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+.header__links a:hover {
+    background-color: var(--backgroundColor);
+    padding: 1vh;
+    border-radius: 50px;
+    color: var(--lightColor);    
+    font-weight: 500;
+}
+
+
+.header__links{
+    grid-column: 3/5;
+    display: flex;
+    justify-content: space-evenly;
+}    
+
+.header__link{
+    color: var(--titleColor);
+    padding: 1vh;
+    font-size: 1.7vh;
+}
+
+.header__contact{
+    background-color: var(--secondColor
+    );
+    padding: 1vh 3vh;
+    color: #fff;
+    border-radius: 50px;
+    justify-self: center;
+    grid-column: 5/7;
+    font-size: 1.9vh;
+    border: var(--secondColor) 1px solid;
+
+}
+
+.header__contact:hover{
+    background-color: var(--whiteColor);
+    padding: 1vh 3vh;
+    color: var(--secondColor);
+    border-radius: 50px;
+    justify-self: center;
+    grid-column: 5/7;
+    font-size: 1.9vh;  
+    border: var(--secondColor) 1px solid;
+
+}
+
+
+.header__image{
+    height: 4vh;
+    justify-self: center;
+    grid-column: 1/3;
+}
+

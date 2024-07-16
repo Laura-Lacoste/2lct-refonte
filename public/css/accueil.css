@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --mainColor : #350026;
+    --secondColor : #64004A;
+    --titleColor : #1A0B16;
+    --paragrapheColor : #383036;
+    --whiteColor : #FFFFFF;
+    --backgroundColor : #f0ebef;
+    --oppositeColor : #026C7C;
+    --lightColor : #890065;
+}
+
+html{
+    font-family: Montserrat;
+    font-size: large;
+}
+
+body{
+    margin: 0 ;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section__title--btn{
+ display: flex;
+ gap: 2vh;
+}
+
+
+.btn{
+    background-color: var(--secondColor
+    );
+    padding: 1vh 3vh;
+    color: #fff;
+    border-radius: 50px;
+    justify-self: center;
+    grid-column: 5/7;
+    font-size: 1.9vh;
+    border: var(--secondColor) 1px solid;
+
+}
+
+.btn:hover{
+    background-color: var(--whiteColor);
+    padding: 1vh 3vh;
+    color: var(--secondColor);
+    border-radius: 50px;
+    justify-self: center;
+    grid-column: 5/7;
+    font-size: 1.9vh;  
+    border: var(--secondColor) 1px solid;
+
+}
+
+.btn--light{
+    background-color: var(--whiteColor);
+    padding: 1vh 3vh;
+    color: var(--secondColor);
+    border-radius: 50px;
+    justify-self: center;
+    grid-column: 5/7;
+    font-size: 1.9vh;  
+    border: var(--secondColor) 1px solid;
+}
+
+.btn--light:hover{
+    background-color: var(--secondColor
+    );
+    padding: 1vh 3vh;
+    color: #fff;
+    border-radius: 50px;
+    justify-self: center;
+    grid-column: 5/7;
+    font-size: 1.9vh;
+}
+
+
+h1{
+color: var(--titleColor);
+font-size: 5.5vh;
+width: 75%;
+}
+
+h1 span{
+    color: var(--lightColor);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.section__title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 50vh;
+    padding: 5vh 20vh 5vh 20vh;
+    height: 60vh;
+    background-color: var(--backgroundColor);
+    align-content: center;
+}
+
+.section__title--left{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.section__title--left p{
+
+    color: var(--paragrapheColor);
+    font-size: 2.5vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+.section__title--right{
+justify-self: center;
+}
+
+.section__title--right img{
+    height: 50vh;
+    border-radius: 20px;
+
+}
+
+.section__presentation{
+    padding: 8vh 20vh;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.section__presentation--p{
+    text-align: center;
+    padding: 0 10vh;
+    line-height: 3vh;
+}
+
+.section__prestation--list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5vh;
+    padding: 5vh 20vh 5vh 20vh;
+
+}
+
+.section__prestation--item{
+    background-color: var(--backgroundColor);
+    padding: 2vh;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}    
+
+
+.section__prestation--crea{
+    grid-column: 1/3;
+    background-color: var(--secondColor);
+    color: var(--whiteColor);
+}
+
+.section__prestation--all{
+    background-color: var(--secondColor);
+    align-self: center;
+}
