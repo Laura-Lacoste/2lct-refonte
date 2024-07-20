@@ -1,30 +1,30 @@
+require('dotenv').config();
+const path = require('path');
+
 
 const express = require('express')
 const app = express()
-const port = 3000
-const accueilRouter = require(`${__dirname}/routers/accueilRouter`);
-const aProposRouter = require(`${__dirname}/routers/aProposRouter`);
-const prestationsRouter = require(`${__dirname}/routers/prestationsRouter`);
-const gestionProjetRouter = require(`${__dirname}/routers/gestionProjetRouter`);
-const portfolioRouter = require(`${__dirname}/routers/portfolioRouter`);
-const contactRouter = require(`${__dirname}/routers/contactRouter`);
+const port = process.env.PORT || 3000;
+const Router = require('./src/routers/router');
+
 
 app.set('view engine', 'ejs');
-app.set('views', ('./views'));
+app.set('views', ('./src/views'));
 
 app.use(express.static('public'));
 
+const securedPathToViews = path.join(__dirname, 'src/views');
+app.set('views', securedPathToViews);
+
+const securedPathToAssets = path.join(__dirname, 'public');
+app.use(express.static(securedPathToAssets));
+
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port ${process.env.BASE_URL}:${port}`)
 })
 
-app.use(accueilRouter);
-app.use(aProposRouter);
-app.use(prestationsRouter);
-app.use(gestionProjetRouter);
-app.use(portfolioRouter);
-app.use(contactRouter);
-
+app.use(Router);
 
 app.use ((req, res) => {
   res.status(404).render("pages/404");

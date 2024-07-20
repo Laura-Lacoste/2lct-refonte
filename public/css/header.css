@@ -84,3 +84,8 @@ header{
     grid-column: 1/3;
 }
 
+.section__techno--img{
+    background-color: var(--lightColor);
+    height: 3rem;
+    width: 3rem;
+}
