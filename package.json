@@ -2,19 +2,31 @@
   "name": "2lct-refonte",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:create": "psql -U laura -d 2LCT -f ./data/create_db.sql",
+    "db:populate": "psql -U laura -d 2LCT -f ./data/populate_db.sql",
+    "db:reset": "npm run db:create && npm run db:populate"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "dotenv": "^16.4.7",
+    "next": "15.2.4",
+    "nodemailer": "^6.10.0",
+    "particles.js": "^2.0.0",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "sequelize": "^6.37.6"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.1"
   }
 }
