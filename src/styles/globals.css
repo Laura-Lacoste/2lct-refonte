@@ -8,3 +8,6 @@ body {
     font-size: large;
   }
 
+.no-scroll {
+  overflow:hidden
+}

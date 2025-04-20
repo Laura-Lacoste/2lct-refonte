@@ -1,7 +1,8 @@
 import { Poppins } from 'next/font/google'
 import "../styles/reset.css"
 import "../styles/globals.css";
-
+import Burger from '../components/burger';
+import Header from '../components/header'
 
 export const metadata = {
   title: '2LCT',
@@ -16,15 +17,15 @@ const poppins = Poppins({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
-      <head>
+    <html lang="fr" className={poppins.variable}>
+      <body className="font-sans">
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           precedence="default"
         />
-      </head>
-      <body className={`${poppins.variable} font-sans`} suppressHydrationWarning>
+        <Burger />
+        <Header />
         {children}
       </body>
     </html>

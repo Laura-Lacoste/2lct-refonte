@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from "next/link"
 import Image from 'next/image'
 
-import Header from '../components/header'
+
 import HeaderHome from '../components/headerHome'
 
 import ParticlesBackground from '../components/ParticlesBackground'
@@ -14,9 +14,7 @@ import image3Home from '@/public/2lct-page-accueil-collaboration-site-web.svg'
 
 export default function Home() {
   const [home, setHome] = useState({})
-  const [scrolled, setScrolled] = useState(false)
 
-  
     useEffect(() => {
       const fetchServices = async () => {
       try {        
@@ -28,17 +26,10 @@ export default function Home() {
       }
     }
     fetchServices()
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 1)
-  }
-    window.addEventListener('scroll', handleScroll)
-  return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-    
+  }, [])
   return (
     <div>
-<Header className={`${scrolled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} transition-opacity duration-700`} />
-<HeaderHome className={`${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} transition-opacity duration-700`} />
+<HeaderHome/>
 
 <main>
   <div className='flex justify-between p-40'>
@@ -69,11 +60,11 @@ export default function Home() {
       <div className='flex flex-wrap gap-14 justify-center'>
       {home.services && home.services.length > 0 ? (
         home.services.map(service => (
-          <div key={service.id} className="bg-[url('/background-items-services.png')] relative flex flex-col gap-4 w-1/5 p-10 justify-between bg-cover bg-center">
+          <div key={service.id} className="bg-[url('/background-items-services.png')] relative flex flex-col gap-4 w-1/5 p-10 justify-between bg-cover bg-center  transition-transform duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white hover:bg-opacity-90">
             <div className="absolute inset-0 bg-white/80 z-1"></div>
             <h3 className='font-semibold relative'>{service.name}</h3>
             <p className='relative'>{service.card_description}</p>
-            <a href="#" className='relative bg-[#E58BD3] p-4 w-fit hover:text-white'>En savoir plus</a>
+            <a href="#" className='relative bg-[#E58BD3] p-4 w-fit hover:text-white hover:scale-105 transition-transform duration-200'>En savoir plus</a>
           </div>
         ))
       ) : (
@@ -81,7 +72,7 @@ export default function Home() {
       )}
       </div>
   </div>
-  <div className='bg-black p-40 flex gap-14 overflow-scroll'>
+  {/* <div className='bg-black p-40 flex gap-14 overflow-scroll'>
   {home.technologies && home.technologies.length > 0 ? (
         home.technologies.map(technology => (
           <div className='flex flex-col gap-10 items-center' key={technology.id}>
@@ -92,7 +83,7 @@ export default function Home() {
       ) : (
         <p>Chargement des technologies...</p>
       )}
-  </div>
+  </div> */}
 
       <div className='p-40 flex flex-col gap-14 items-center'>
       <p className='text-[#E58BD3] flex items-center gap-6 font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Portfolio<span className="bg-[#E58BD3] w-24 h-1"></span></p>
