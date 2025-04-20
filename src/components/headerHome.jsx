@@ -12,7 +12,7 @@ export default function HeaderHome() {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
         text-white text-center px-6 md:px-0 z-20 max-w-4xl w-full flex flex-col gap-6 md:gap-10 py-20">
         
-        <p className="text-2xl md:text-4xl flex justify-center items-center gap-4 font-bold tracking-wide uppercase">
+        <p className="hidden text-2xl md:text-4xl md:flex justify-center items-center gap-4 font-bold tracking-wide uppercase">
           <span className="bg-[#E58BD3] w-16 md:w-24 h-0.5"></span>
           2LCT
           <span className="bg-[#E58BD3] w-16 md:w-24 h-0.5"></span>

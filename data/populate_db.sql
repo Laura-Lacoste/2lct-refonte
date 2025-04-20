@@ -105,13 +105,11 @@ INSERT INTO "service_advantage" ("service_id", "advantage_id") VALUES
 (2, 4), (2, 5), (2, 6),
 (3, 7), (3, 8), (3, 9),
 (4, 10), (4, 11), (4, 12);
+
 INSERT INTO "project" ("id", "image", "name", "slug", "card_description", "short_description", "long_description") VALUES
-(1, '2lct-image.png', '2lct', 'refonte-2lct', 'Refonte complète du site 2lct', '2lct est un projet de refonte visant à moderniser le site d’une entreprise spécialisée dans la gestion de la logistique et du transport.', 'Le projet 2lct avait pour objectif de repenser complètement le site existant. J''ai travaillé sur l''optimisation de l''expérience utilisateur, en améliorant l''interface de navigation, l''ergonomie, ainsi que la performance du site. J''ai également intégré des fonctionnalités spécifiques pour simplifier la gestion des transports et logistiques, tout en améliorant la visibilité de l''entreprise sur le web. Cette refonte a permis une meilleure interaction avec les clients et a optimisé les processus internes.'),
-(2, 'ecom_shop_image.jpg', 'Ecom Shop', 'creation-ecomshop', 'Création d''une boutique en ligne moderne', 'Ecom Shop est un site de e-commerce développé pour une marque de vêtements. Le projet incluait un design responsive et une optimisation SEO.', 'Ecom Shop est un projet de développement complet d’une boutique en ligne. J''ai travaillé sur la création d''un site intuitif et visuellement attractif pour permettre aux utilisateurs de parcourir et d’acheter facilement des produits. J''ai aussi intégré un système de paiement sécurisé, un module de gestion des stocks et un tableau de bord personnalisé pour suivre les ventes. L''optimisation SEO a amélioré la visibilité du site, attirant plus de clients.'),
-(3, 'art_portfolio_image.jpg', 'Art Portfolio', 'creation-artportfolio', 'Site portfolio pour un artiste contemporain', 'Art Portfolio est un projet destiné à un artiste souhaitant présenter ses œuvres en ligne via une interface moderne et élégante.', 'Le projet Art Portfolio consistait à créer un site web mettant en valeur les œuvres d''un artiste. J''ai conçu une galerie visuelle dynamique, permettant aux utilisateurs de visualiser des œuvres avec des descriptions détaillées et des images haute résolution. J''ai également intégré une section blog et un formulaire de contact personnalisé pour faciliter la communication entre l''artiste et ses admirateurs. Le design épuré et minimaliste reflète parfaitement l''identité visuelle de l''artiste.'),
-(4, 'startup_hub_image.jpg', 'Startup Hub', 'refonte-startuphub', 'Refonte du site pour une startup tech', 'Startup Hub est un projet de refonte d''un site pour une entreprise tech, améliorant l''UX et la présentation des services.', 'Startup Hub était un projet de refonte complète d''un site internet pour une startup dans le domaine de la technologie. Le site a été repensé pour offrir une navigation fluide et intuitive, avec une mise en avant des services technologiques proposés par l’entreprise. J''ai optimisé le parcours utilisateur et implémenté une stratégie de contenu pour mieux convertir les visiteurs en clients. De plus, j''ai intégré des fonctionnalités de blog et de newsletter pour permettre à l’entreprise de garder ses utilisateurs informés des dernières innovations.'),
-(5, 'fitness_blog_image.jpg', 'Fitness Blog', 'creation-fitnessblog', 'Création d''un blog pour une coach fitness', 'Fitness Blog est un projet de création de blog pour une coach fitness, avec des articles optimisés SEO et des vidéos d''entraînement.', 'Le projet Fitness Blog visait à créer une plateforme en ligne pour une coach fitness, où elle pourrait partager ses conseils et programmes d''entraînement. Le site inclut une section blog, des vidéos d’entraînement intégrées, ainsi qu’un calendrier des sessions de coaching. J''ai optimisé le site pour les moteurs de recherche afin de capter un trafic qualifié et encourager la conversion des visiteurs en clients. Le design dynamique et énergique reflète l''esprit de la coach et incite les utilisateurs à s''inscrire à ses services de coaching.'),
-(6, 'consultancy_site_image.jpg', 'Consultancy Pro', 'creation-consultancypro', 'Site vitrine pour un consultant en business', 'Consultancy Pro est un site vitrine créé pour un consultant en stratégie d''entreprise, avec une présentation claire des services et une section contact.', 'Consultancy Pro est un site vitrine conçu pour un consultant en business qui souhaitait mettre en avant ses services de manière professionnelle. Le site propose une navigation simple avec des sections dédiées à ses différentes expertises, des témoignages clients et un formulaire de prise de contact. J''ai conçu un design élégant et moderne, en accord avec l''image professionnelle que le consultant souhaitait véhiculer. Des fonctionnalités telles que l''intégration de calendriers pour les rendez-vous en ligne et une section blog ont été ajoutées pour augmenter l''interaction avec ses clients potentiels.');
+(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat', 'Refonte du site institutionnel du Cabilat d''Oust sous WordPress', 'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu.', 'Refonte complète du site officiel du Cabilat du Canton d’Oust. Objectif : proposer une interface claire, accessible et responsive pour les habitants et visiteurs. Intégration WordPress avec back-office personnalisé pour simplifier la gestion du contenu. Le design a été modernisé tout en respectant l''identité visuelle locale.'),
+(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas', 'Création du site e-commerce Les Biscuits d''Azas avec React et Node.js', 'Boutique artisanale en ligne développée sur-mesure avec React et un back-end Node.js.', 'Site de vente en ligne pour une biscuiterie artisanale. Développé en React (frontend) avec une API Node.js (Express). Intégration de la gestion des produits, commandes, panier et paiement. L’interface est optimisée pour les mobiles avec une navigation fluide et chaleureuse pour refléter l’univers de la marque.'),
+(3, '2lct_homepage.png', '2LCT', 'refonte-2lct', 'Refonte du site 2LCT avec Next.js', 'Refonte technique et visuelle du site de l''entreprise 2LCT spécialisée en logistique.', 'Mise à jour complète du site existant de 2LCT avec Next.js pour plus de performance et de modernité. Nouvelle charte graphique, sections clarifiées, SEO amélioré. Intégration responsive avec animations légères et code optimisé. L’objectif était de renforcer la crédibilité de la marque en ligne tout en améliorant l’expérience utilisateur.');
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
 (1, '2lct_homepage.jpg', 1),
@@ -123,17 +121,7 @@ INSERT INTO "project_image" ("id", "image", "project_id") VALUES
 (7, 'ecom_shop_checkout_page.jpg', 2),
 (8, 'art_portfolio_gallery.jpg', 3),
 (9, 'art_portfolio_about_page.jpg', 3),
-(10, 'art_portfolio_contact_page.jpg', 3),
-(11, 'startup_hub_services.jpg', 4),
-(12, 'startup_hub_team_page.jpg', 4),
-(13, 'startup_hub_contact.jpg', 4),
-(14, 'fitness_blog_workout.jpg', 5),
-(15, 'fitness_blog_nutrition_tips.jpg', 5),
-(16, 'fitness_blog_testimonials.jpg', 5),
-(17, 'consultancy_pro_homepage.jpg', 6),
-(18, 'consultancy_pro_services_page.jpg', 6),
-(19, 'consultancy_pro_testimonials.jpg', 6),
-(20, 'consultancy_pro_contact_page.jpg', 6);
+(10, 'art_portfolio_contact_page.jpg', 3);
 
 
 INSERT INTO "technology" ("id", "icon", "name") VALUES
@@ -167,52 +155,19 @@ INSERT INTO "technology" ("id", "icon", "name") VALUES
 (28, 'fa-solid fa-paint-brush', 'Canva'),
 (29, 'fa-brands fa-npm', 'npm'),
 (30, 'fa-brands fa-windows', 'Windows OS'),
-(31, 'fa-brands fa-ubuntu', 'Ubuntu');
+(31, 'fa-brands fa-ubuntu', 'Ubuntu'),
+(32, 'fa-brands fa-react', 'Next.js'),
+(33, 'fa-solid fa-wind', 'Tailwind CSS');
 
 
 INSERT INTO "technology_project" ("project_id", "technology_id") VALUES
-(1, 1),
-(1, 2),
-(1, 3),
-(1, 4),
-(1, 5),
-(1, 6),
-(1, 10),
-(1, 11),
-(1, 12),
-(1, 14),
-(1, 16),
-(2, 1),
-(2, 2),
-(2, 3),
-(2, 4),
-(2, 5),
-(2, 6),
-(2, 10),
-(2, 11),
-(2, 12),
-(2, 14),
-(2, 16),
-(2, 17),
-(2, 21),
-(2, 22),
-(2, 23),
-(2, 24),
-(2, 28),
-(2, 29),
-(3, 1),
-(3, 2),
-(3, 3),
-(3, 4),
-(3, 5),
-(4, 1),
-(4, 2),
-(4, 3),
-(4, 4),
-(5, 1),
-(5, 2),
-(5, 3),
-(5, 4);
+(1, 7),       -- WordPress
+(2, 9),       -- React
+(2, 4),       -- Node.js
+(2, 23),      -- PostgreSQL
+(3, 32),      -- Next.js
+(3, 9),       -- React
+(3, 33);      -- Tailwind CSS
 
 COMMIT;
 
