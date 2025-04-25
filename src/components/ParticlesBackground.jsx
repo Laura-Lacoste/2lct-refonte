@@ -14,5 +14,5 @@ export default function ParticlesBackground() {
     })
   }, [])
 
-  return <div id="particles-js" className="relative top-0 left-0 w-full h-full z-10" />
+  return <div id="particles-js" className="absolute inset-0 w-full h-full z-0 pointer-events-non" />
 }

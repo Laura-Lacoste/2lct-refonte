@@ -3,6 +3,7 @@ import "../styles/reset.css"
 import "../styles/globals.css";
 import Burger from '../components/burger';
 import Header from '../components/header'
+import Footer from '../components/footer';
 
 export const metadata = {
   title: '2LCT',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         <Burger />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

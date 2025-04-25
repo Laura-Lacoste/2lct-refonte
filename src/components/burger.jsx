@@ -46,7 +46,7 @@ export default function Burger() {
       {/* 🟣 Menu déroulant */}
       <div
         className={`fixed top-0 right-0 h-full w-[70%] max-w-xs bg-white shadow-lg flex flex-col items-start gap-6 py-10 px-6 transform transition-transform duration-300 ease-in-out ${
-          burgerOpen ? 'translate-x-0' : 'translate-x-full'
+          burgerOpen ? 'translate-x-0' : 'translate-x-full will-change-transform'
         } z-[998]`}
       >
         <Link href="/" onClick={toggleBurger} className="hover:text-[#E58BD3] text-lg">Accueil</Link>
