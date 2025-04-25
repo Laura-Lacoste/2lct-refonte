@@ -10,7 +10,7 @@ export async function GET() {
             order: [["id", "ASC"]]
         });
         const projects = await Project.findAll({
-            order: [["id", "ASC"]]
+            order: [["id", "DESC"]]
         })
 
         return NextResponse.json({technologies, services, projects});

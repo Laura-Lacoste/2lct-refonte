@@ -132,7 +132,11 @@ export default function Home() {
     ) : (
       <p>Chargement des projets...</p>
     )}
+
     </div>
+<Link href="/portfolio" className='z-10 mt-10 bg-[#E58BD3] text-white px-6 py-3 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 w-fit'>
+    Voir tous les projets
+    </Link>
     
     </section>
     
