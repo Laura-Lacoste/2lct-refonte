@@ -14,51 +14,52 @@ TRUNCATE TABLE "service",
 
 INSERT INTO "service" ("id", "icon", "name", "slug", "card_description", "image", "short_description", "long_description") VALUES
 (1, 'fa-solid fa-laptop-code', 'Création de Site Web', 'creation-site',
-'Je conçois des sites vitrines, e-commerce ou portfolios sur-mesure, pensés pour valoriser votre activité et faciliter la navigation.',
+'Conception de sites vitrine WordPress ou sur-mesure (React/Next.js), avec des packs clairs et des options personnalisées.',
 '2lct-description-creation-site.svg',
 'Lancez votre présence en ligne avec un site professionnel, responsive et optimisé pour vos clients. Chaque site est pensé pour refléter votre identité et répondre à vos besoins réels.',
 'Inclus : design personnalisé, optimisation mobile & SEO de base, accompagnement humain et formation à la prise en main.'
 ),
 
 (2, 'fa-solid fa-hammer', 'Refonte & Optimisation', 'refonte-optimisation',
-'Modernisez votre site existant avec une refonte graphique, technique ou complète.',
+'Refonte graphique et/ou technique de votre site existant pour moderniser votre présence en ligne.',
 '2lct-description-refonte-site.svg',
 'Votre site n’est plus à jour ? Je vous propose une refonte ciblée ou globale, avec un audit UX et une optimisation des performances.',
 'Inclus : audit technique/UX, refonte graphique ou structurelle, optimisation SEO, accompagnement sur mesure.'
 ),
 
-(3, 'fa-solid fa-keyboard', 'Visibilité & Référencement', 'visibilite-seo',
-'Améliorez votre positionnement sur Google grâce à une optimisation SEO complète.',
+(3, 'fa-solid fa-keyboard', ' Référencement naturel (SEO)', 'seo',
+'Optimisation technique et éditoriale pour améliorer votre visibilité sur les moteurs de recherche.',
 '2lct-description-seo.svg',
 'Attirez les bons visiteurs au bon moment avec un site optimisé pour le référencement naturel.',
 'Inclus : audit SEO, optimisation on-page et technique, stratégie de contenu, conseils mots-clés et netlinking (en option).'
 ),
 
 (4, 'fa-solid fa-headset', 'Maintenance & Support', 'maintenance-support',
-'Gardez votre site rapide, sécurisé et toujours opérationnel avec une maintenance fiable.',
+'Suivi technique, mises à jour, sécurité et évolutions pour garder votre site performant dans le temps.',
 '2lct-description-maintenance.svg',
 'Je vous accompagne dans la gestion technique de votre site avec des forfaits de maintenance adaptés à vos besoins.',
 'Inclus : mises à jour régulières, corrections techniques, assistance réactive et suivi personnalisé.'
 );
 
-INSERT INTO "variation_service" ("id", "name", "service_id") VALUES
-(1, 'Site Vitrine', 1),
-(2, 'Site E-commerce', 1),
-(3, 'Portfolio Créatif', 1),
+INSERT INTO "variation_service" ("id", "name", "wordpress_price","development_price", "service_id") VALUES
+(1, 'Pack page unique', '950 €', '1 100 €', 1),
+(2, 'Pack site simple', '1 500 €', '1 700 €', 1),
+(3, 'Pack site avancé', '2 600 €', '3 200 €', 1),
+(4, 'Options disponibles',NULL, NULL, 1),
 
-(4, 'Audit Technique', 2),
-(5, 'Audit UX/UI', 2),
-(6, 'Refonte Graphique', 2),
-(7, 'Refonte Technique', 2),
+(5, 'Pack mini optimisation', '300 €', '350 €', 2),
+(6, 'Pack refonte graphique', '1 200 €', '1 400 €', 2),
+(7, 'Pack refonte graphique et technique', '1 800 €', '2 200€', 2),
+(8, 'Options disponibles',NULL, NULL, 2),
 
-(8, 'SEO On-page', 3),
-(9, 'SEO Technique', 3),
-(10, 'Stratégie de Contenu', 3),
-(11, 'Netlinking', 3),
+(9, 'Pack SEO de base', '400 €', '400 €', 3),
+(10, 'Pack SEO complet', '750 €', '750 €', 3),
+(11, 'Pack SEO et Rédaction 3 pages', '1 100 €', '1 100€', 3),
+(12, 'Options disponibles',NULL, NULL, 3),
 
-(12, 'Maintenance Préventive', 4),
-(13, 'Maintenance Corrective', 4),
-(14, 'Support Technique', 4);
+(13, 'Maintenance de base', '30 € / mois', '35 € /mois', 4),
+(14, 'Maintenance avancée', '60 € / mois', '65 € /mois', 4),
+(15, 'Maintenance premium', '90 € / mois', '95 € /mois', 4);
 
 INSERT INTO "question" ("id", "question", "answer") VALUES
 (1, 'Quel type de site web réalisez-vous ?', 'Je propose des sites vitrines, e-commerce et portfolios, tous personnalisés selon vos besoins.'),

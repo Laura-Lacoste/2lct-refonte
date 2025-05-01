@@ -13,7 +13,8 @@ import image2Home from '@/public/2lct-page-accueil-bureau-double-ecran.svg'
 import image3Home from '@/public/2lct-page-accueil-collaboration-site-web.svg'
 
 export default function Home() {
-  const [home, setHome] = useState({})
+  const [home, setHome] = useState({});
+  const [openService, setOpenService] = useState(1);
   
   useEffect(() => {
     const fetchServices = async () => {
@@ -27,6 +28,12 @@ export default function Home() {
     }
     fetchServices()
   }, [])
+  
+  function selectedService(id) {
+    setOpenService(id)
+  }
+  
+
   return (
     <div className='max-w-full'>
     <HeaderHome/>
@@ -48,23 +55,23 @@ export default function Home() {
     
     <div className='flex flex-col gap-6 text-sm md:text-base lg:text-lg leading-relaxed'>
     <p>
-    Bonjour, je suis Laura, freelance spécialisée dans la création de sites web et les solutions digitales. Je vous accompagne à chaque étape pour concevoir un site <b>adapté à vos besoins</b>.
+    Je suis Laura, freelance spécialisée dans la création, la refonte et l’optimisation de sites web.
+    J’aide les professionnels à développer leur présence en ligne grâce à des solutions digitales <b>utiles</b>, <b>élégantes</b> et <b>sur-mesure</b>.
     </p>
     
     <p>
-    Que vous cherchiez à renforcer votre présence en ligne ou à mettre en place une stratégie digitale efficace, je suis là pour vous aider à <b>atteindre vos objectifs</b> grâce à un <b>accompagnement personnalisé</b>.
+    Chaque projet est pensé selon vos objectifs, vos contraintes et votre public cible.
     </p>
     
     <p>
-    En tant que freelance, je suis votre <b>unique interlocutrice</b>, ce qui garantit un suivi de projet fluide, une écoute attentive, et des solutions <b>sur mesure</b>.
+    Que vous ayez besoin d’un site <b>vitrine simple</b>, d’un <b>projet technique personnalisé</b>, ou d’un <b>accompagnement complet</b> (SEO, maintenance, refonte), je vous propose un cadre clair, humain et professionnel.
     </p>
     </div>
     
     <div className='flex flex-col md:flex-row gap-8 pt-4'>
     <div className='w-4 h-auto bg-[#E58BD3]'></div>
     <p className='font-semibold leading-relaxed'>
-    Vous êtes au cœur de mon approche. Que vous soyez une start-up, une PME ou un indépendant, je prends le temps de comprendre vos besoins pour créer un site qui reflète <b>votre identité</b> et vous aide à <b>atteindre vos objectifs</b>.
-    </p>
+    Mon approche : écoute, rigueur, transparence.    </p>
     </div>
     <Link href="/prestations" className='z-10 mt-10 bg-[#E58BD3] text-white px-6 py-3 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 w-fit'>
     En savoir plus
@@ -100,7 +107,36 @@ export default function Home() {
       <p>Chargement des prestations...</p>
     )}
     </div>
-    </section>
+    <h2 className='text-3xl font-bold'>Des packs clairs pour chaque projet</h2>
+    <div className='flex flex-wrap gap-4 justify-center'>
+      {home.services && home.services.length > 0 ? (
+    home.services.map(service => (
+      <div key={service.id}
+      onClick={() => selectedService(service.id)}
+      className={`text-lg text-left w-fit cursor-pointer hover:underline transition-colors duration-200 ${
+        openService === service.id
+          ? 'font-bold text-[#E58BD3]'
+          : 'text-gray-800'
+      }`}>
+        {service.name}
+      </div> 
+    ))
+    ) : (
+      <p>Chargement des packs</p>
+    )}
+    </div>
+        <div className='flex gap-6 flex-wrap justify-center'>
+          {home.services && openService && (
+            home.services.find(service => service.id === openService)?.variation_services?.map(variation =>(
+              <div key={variation.id} className="flex justify-between align-center flex-col gap-4 bg-[#050305] text-white py-6 px-10 w-full sm:w-fit">
+                <h3 className='text-base font-bold'>{variation.name}</h3>
+                {variation.wordpress_price && (<p className='bg-[#E58BD3] text-[#050305] px-2 w-fit text-center self-center'>A partir de {variation.wordpress_price}</p>)}
+              </div>
+            ))
+          )}
+        </div>
+
+     </section>
     
     <section className='px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center'>
     <p className='text-[#E58BD3] flex items-center uppercase gap-6 font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Portfolio<span className="bg-[#E58BD3] w-24 h-1"></span></p>

@@ -9,6 +9,14 @@ VariationService.init(
 			type: DataTypes.TEXT,
 			allowNull: false,
 		},
+		wordpress_price:{
+			type: DataTypes.TEXT,
+			allowNull: true,
+		},
+		development_price:{
+			type: DataTypes.TEXT,
+			allowNull: true,
+		},
 	},
 	{
 		sequelize,
