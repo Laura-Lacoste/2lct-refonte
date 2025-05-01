@@ -1,6 +1,9 @@
 BEGIN;
 
-TRUNCATE TABLE "service",
+TRUNCATE TABLE 
+"variation_detail",
+"detail_variation_service",
+"service" ,
 "variation_service",
 "service_question",
 "question",
@@ -9,7 +12,7 @@ TRUNCATE TABLE "service",
 "project",
 "project_image",
 "technology_project",
-"technology";
+"technology" ;
 
 
 INSERT INTO "service" ("id", "icon", "name", "slug", "card_description", "image", "short_description", "long_description") VALUES
@@ -60,6 +63,40 @@ INSERT INTO "variation_service" ("id", "name", "wordpress_price","development_pr
 (13, 'Maintenance de base', '30 € / mois', '35 € /mois', 4),
 (14, 'Maintenance avancée', '60 € / mois', '65 € /mois', 4),
 (15, 'Maintenance premium', '90 € / mois', '95 € /mois', 4);
+
+INSERT INTO "detail_variation_service" ("id", "name") VALUES
+(1,'Arborescence & zoning'),
+(2, 'Wireframe par page'),
+(3, 'Design page accueil'),
+(4, 'Intégration accueil'),
+(5, 'Responsive par page'),
+(6, 'Formulaire de contact basique'),
+(7, 'SEO de base'),
+(8, 'Configuration + Mise en ligne'),
+(9, 'Wireframes pour 3 pages principales'),
+(10, 'Design des pages intérieures (2 pages)'),
+(11,'Intégration pages intérieures'),
+(12, 'Reponsive');
+
+INSERT INTO "variation_detail" ("variation_id" , "detail_id" ) VALUES
+(1,1),
+(1,2),
+(1,3),
+(1,4),
+(1,5),
+(1,6),
+(1,7),
+(1,8),
+(2,1),
+(2,9),
+(2,3),
+(2,10),
+(2,4),
+(2,11),
+(2,12),
+(2,6),
+(2,7),
+(2,8);
 
 INSERT INTO "question" ("id", "question", "answer") VALUES
 (1, 'Quel type de site web réalisez-vous ?', 'Je propose des sites vitrines, e-commerce et portfolios, tous personnalisés selon vos besoins.'),

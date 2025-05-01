@@ -5,7 +5,7 @@ import { VariationService } from "./variationService.model.js";
 import { Question } from "./question.model.js";
 import { ProjectImage } from "./projectImage.model.js";
 import { Technology } from "./technology.model.js";
-
+import { DetailVariationService } from "./detailVariationService.model.js";
 
 Service.hasMany(VariationService,{
     foreignKey: "service_id",
@@ -63,4 +63,16 @@ Technology.belongsToMany(Project, {
     as: "projects"
 })
 
-export {Service, VariationService, Question, Advantage, Project, ProjectImage, Technology};
+DetailVariationService.belongsToMany(VariationService, {
+    through: "variation_detail",
+    foreignKey: "detail_id",
+    as: "varations"
+})
+
+VariationService.belongsToMany(DetailVariationService, {
+    through: "variation_detail",
+    foreignKey: "variation_id",
+    as: "details"
+})
+
+export {Service, VariationService, Question, Advantage, Project, ProjectImage, Technology, DetailVariationService};

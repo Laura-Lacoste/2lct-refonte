@@ -8,7 +8,11 @@ export async function GET() {
         });
         const services = await Service.findAll({
             order: [["id", "ASC"]],
-            include: [{ association: "variation_services", separate:true, order: [['id', 'ASC']]  }]
+            include: [{ association: "variation_services", separate:true, order: [['id', 'ASC']],
+                include: [{association : "details", order: [['detail_id', 'ASC']]}]
+              },
+            
+        ]
         });
         const projects = await Project.findAll({
             order: [["id", "DESC"]]

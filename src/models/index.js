@@ -1,3 +1,3 @@
-import { Service, VariationService, Question, Advantage, Project, ProjectImage, Technology} from "./association.js";
+import { Service, VariationService, Question, Advantage, Project, ProjectImage, Technology, DetailVariationService} from "./association.js";
 
-export {Service, VariationService, Question, Advantage, Project, ProjectImage, Technology};
+export {Service, VariationService, Question, Advantage, Project, ProjectImage, Technology, DetailVariationService};

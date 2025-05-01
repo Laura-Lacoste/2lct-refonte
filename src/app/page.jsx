@@ -33,6 +33,7 @@ export default function Home() {
     setOpenService(id)
   }
   
+  console.log(home)
 
   return (
     <div className='max-w-full'>
@@ -128,12 +129,20 @@ export default function Home() {
         <div className='flex gap-6 flex-wrap justify-center'>
           {home.services && openService && (
             home.services.find(service => service.id === openService)?.variation_services?.map(variation =>(
-              <div key={variation.id} className="flex justify-between align-center flex-col gap-4 bg-[#050305] text-white py-6 px-10 w-full sm:w-fit">
+              <div key={variation.id} className='w-fit'>
+              <div className="flex justify-between align-center flex-col gap-4 bg-[#050305] text-white py-6 px-10 w-full rounded-t-lg shadow-sm hover:shadow-lg transition-all">
                 <h3 className='text-base font-bold'>{variation.name}</h3>
-                {variation.wordpress_price && (<p className='bg-[#E58BD3] text-[#050305] px-2 w-fit text-center self-center'>A partir de {variation.wordpress_price}</p>)}
+                {variation.wordpress_price && (<p className='bg-[#E58BD3] text-[#050305] px-2 w-fit text-center self-center rounded '>A partir de {variation.wordpress_price}</p>)}
               </div>
+              <div className='bg-[#050305] text-white rounded-b-lg py-6 px-10 border-t border-[#FCFAFC]'> 
+                {variation.details?.sort((a,b) => a.id - b.id).map(detail => (
+                  <p>{detail.name}</p>
+                ))}
+              </div>
+                </div>
             ))
           )}
+          
         </div>
 
      </section>
