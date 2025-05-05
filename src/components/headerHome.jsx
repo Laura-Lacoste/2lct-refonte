@@ -18,22 +18,22 @@ export default function HeaderHome() {
           <span className="bg-[#E58BD3] w-16 md:w-24 h-0.5"></span>
         </p>
 
-        <h1 className="text-2xl md:text-4xl font-bold leading-snug">
+        <h1 className="text-xl md:text-2xl font-bold leading-snug">
           Création de <span className="text-[#E58BD3]">sites web</span> à Toulouse pour 
           <span className="text-[#E58BD3]"> indépendants et petites entreprises</span>
         </h1>
 
-        <h2 className="text-lg md:text-xl font-medium text-white/80">
+        <h2 className="text-base md:text-lg font-medium text-white/80">
           Des sites clairs, efficaces et personnalisés pour booster votre visibilité
         </h2>
 
-        <p className="text-sm md:text-base font-extralight text-white/70 leading-relaxed">
+        <p className="text-xs md:text-sm font-extralight text-white/70 leading-relaxed">
           Freelance web basée en Haute-Garonne, je vous accompagne de A à Z pour créer un site professionnel à votre image.
         </p>
 
         <a
           href="/contact"
-          className="bg-[#E58BD3] text-white px-6 py-3 mt-4 rounded shadow hover:bg-white hover:text-[#E58BD3] font-semibold transition-all duration-300 w-fit self-center"
+          className="bg-[#E58BD3] text-white px-6 py-3 mt-4 rounded shadow hover:bg-white hover:text-[#E58BD3] font-semibold transition-all duration-300 w-fit self-center text-base"
         >
           Demander votre devis gratuit
         </a>

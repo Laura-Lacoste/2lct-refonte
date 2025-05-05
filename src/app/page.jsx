@@ -39,7 +39,7 @@ export default function Home() {
     <div className='max-w-full'>
     <HeaderHome/>
     <main>
-    <section className='flex flex-col-reverse justify-center lg:justify-between items-center px-5 py-10 lg:flex-row lg:px-32 lg:py-36 lg:gap-10' >
+    <section className='flex flex-col-reverse justify-center lg:justify-between items-center px-5 py-10 lg:flex-row lg:px-36 lg:py-14 lg:gap-20' >
     <div className='flex flex-col lg:flex-row gap-8 items-center justify-center lg:justify-between lg:w-[36%]'>
     <div className='hidden lg:flex flex-col gap-8 w-full lg:w-[45%]'>
     <Image src={image1Home} alt='' />
@@ -52,9 +52,9 @@ export default function Home() {
     <div className='flex flex-col gap-8 py-10 lg:w-[60%]'>
     <p className='hidden text-[#E58BD3] md:flex items-center justify-start gap-5 font-bold'>Une Collaboration Personnalisée <span className="bg-[#E58BD3] w-28 h-1"></span></p>
     
-    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold'>Votre Partenaire pour Développer Votre Présence en Ligne</h2>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Votre Partenaire pour Développer Votre Présence en Ligne</h2>
     
-    <div className='flex flex-col gap-6 text-sm md:text-base lg:text-lg leading-relaxed'>
+    <div className='flex flex-col gap-6 text-xs md:text-sm lg:text-base leading-relaxed'>
     <p>
     Je suis Laura, freelance spécialisée dans la création, la refonte et l’optimisation de sites web.
     J’aide les professionnels à développer leur présence en ligne grâce à des solutions digitales <b>utiles</b>, <b>élégantes</b> et <b>sur-mesure</b>.
@@ -74,7 +74,7 @@ export default function Home() {
     <p className='font-semibold leading-relaxed'>
     Mon approche : écoute, rigueur, transparence.    </p>
     </div>
-    <Link href="/prestations" className='z-10 mt-10 bg-[#E58BD3] text-white px-6 py-3 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 w-fit'>
+    <Link href="/prestations" className='z-10 mt-10 bg-[#E58BD3] text-base text-white px-6 py-3 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 w-fit'>
     En savoir plus
     </Link>
     </div>
@@ -83,9 +83,9 @@ export default function Home() {
     
     <section className='bg-[#FCFAFC] px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center' >
     <p className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Services<span className="bg-[#E58BD3] w-24 h-1"></span></p>
-    <h2 className='text-3xl font-bold'>Des Solutions Digitales à Votre Image</h2>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Des Solutions Digitales à Votre Image</h2>
     
-    <div className='flex flex-wrap gap-8 justify-center w-full'>
+    <div className='flex flex-wrap gap-8 justify-center w-full mb-16'>
     {home.services && home.services.length > 0 ? (
       home.services.map(service => (
         <div key={service.id} className="  w-full sm:w-[48%] lg:w-[22%] bg-[url('/background-items-services.png')] relative flex flex-col gap-6 p-6 justify-between bg-cover  items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl shadow-md  rounded-xl  hover:bg-white hover:bg-opacity-90">
@@ -108,13 +108,19 @@ export default function Home() {
       <p>Chargement des prestations...</p>
     )}
     </div>
-    <h2 className='text-3xl font-bold'>Des packs clairs pour chaque projet</h2>
+    <div className='flex flex-col gap-4'>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Des packs clairs pour chaque projet</h2>
+    <p className="text-base leading-relaxed text-center text-[#050305]">
+  Choisissez le pack qui vous convient et ajoutez les options nécessaires selon votre besoin.
+</p>    
+    </div>
+
     <div className='flex flex-wrap gap-4 justify-center'>
       {home.services && home.services.length > 0 ? (
     home.services.map(service => (
       <div key={service.id}
       onClick={() => selectedService(service.id)}
-      className={`text-lg text-left w-fit cursor-pointer hover:underline transition-colors duration-200 ${
+      className={`text-base text-left w-fit cursor-pointer hover:underline transition-colors duration-200 ${
         openService === service.id
           ? 'font-bold text-[#E58BD3]'
           : 'text-gray-800'
@@ -129,12 +135,12 @@ export default function Home() {
         <div className='flex gap-6 flex-wrap justify-center'>
           {home.services && openService && (
             home.services.find(service => service.id === openService)?.variation_services?.map(variation =>(
-              <div key={variation.id} className='w-fit'>
-              <div className="flex justify-between align-center flex-col gap-4 bg-[#050305] text-white py-6 px-10 w-full rounded-t-lg shadow-sm hover:shadow-lg transition-all">
+              <div key={variation.id} className='w-full sm:w-[80%] md:w-[48%] lg:w-[22%]'>
+              <div className="flex justify-between align-center flex-col gap-4 border-l-4 border-[#E58BD3] bg-white py-6 px-10 w-full shadow-lg transition-all">
                 <h3 className='text-base font-bold'>{variation.name}</h3>
                 {variation.wordpress_price && (<p className='bg-[#E58BD3] text-[#050305] px-2 w-fit text-center self-center rounded '>A partir de {variation.wordpress_price}</p>)}
               </div>
-              <div className='bg-[#050305] text-white rounded-b-lg py-6 px-10 border-t border-[#FCFAFC]'> 
+              <div className='border-l-4 border-[#E58BD3] bg-white leading-loose text-base py-6 px-10 shadow-lg'> 
                 {variation.details?.sort((a,b) => a.id - b.id).map(detail => (
                   <p>{detail.name}</p>
                 ))}
@@ -149,7 +155,7 @@ export default function Home() {
     
     <section className='px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center'>
     <p className='text-[#E58BD3] flex items-center uppercase gap-6 font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Portfolio<span className="bg-[#E58BD3] w-24 h-1"></span></p>
-    <h2 className='text-3xl font-bold'>Découvrez Quelques Réalisations</h2>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Découvrez Quelques Réalisations</h2>
     
     <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items-center w-full'>
     {home.projects && home.projects.length > 0 ? (
@@ -194,7 +200,7 @@ export default function Home() {
     <span className="bg-[#E58BD3] w-12 h-0.5"></span>
   </p>
 
-  <h2 className=" text-2xl md:text-3xl lg:text-4xl font-bold z-10">Pourquoi me choisir ?</h2>
+  <h2 className='text-xl md:text-2xl lg:text-3xl font-bold z-10'>Pourquoi me choisir ?</h2>
 
   <div className="max-w-5xl flex flex-col gap-8 z-10">
     <p className="leading-relaxed">

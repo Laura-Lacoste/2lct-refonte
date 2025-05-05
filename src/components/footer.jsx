@@ -4,7 +4,7 @@ import logo from '@/public/logo-2lct-blanc-fond-noir.png'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050305] text-white px-6 md:px-12 py-12">
+    <footer className="bg-[#050305] text-white px-6 md:px-12 py-12 text-sm">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Bloc logo + baseline */}
         <div className="flex flex-col gap-4 items-start">
