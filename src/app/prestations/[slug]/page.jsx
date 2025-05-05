@@ -64,9 +64,9 @@ export default function PrestationsDetailPage({params}) {
                 <p>{prestation.long_description}</p>
                 </div>
 
-                <div className="flex justify-between">
-                <div className="flex flex-col gap-10 w-2/3">
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Les variantes de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <div className="flex flex-col lg:flex-row justify-between">
+                <div className="flex flex-col gap-10 w-full lg:w-2/3">
+                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#E58BD3] w-24 h-1"></span>Les variantes de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
                 <p>{prestation.short_description}</p>
                 {prestation.variation_services?.length > 0 ? (
                 prestation.variation_services.map((element) => (
@@ -103,7 +103,7 @@ export default function PrestationsDetailPage({params}) {
 
                 </div>
 
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Les bénéfices de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#E58BD3] w-24 h-1"></span>Les bénéfices de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
                 
                 {prestation.servicesToAdvantage?.length > 0 ? (
   <div className="flex flex-wrap gap-6 justify-center">
@@ -122,14 +122,14 @@ export default function PrestationsDetailPage({params}) {
 )}
 
                 
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Les questions récurrentes<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#E58BD3] w-24 h-1"></span>Les questions récurrentes<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
 
                 {prestation.servicesToQuestion?.length > 0 ? (
                 prestation.servicesToQuestion.map((element) => (
                     <div key={element.id} className="flex flex-col border-l-4 border-[#E58BD3] p-4 justify-center bg-[#FCFAFC] shadow-sm">
-                        <button onClick={() => setActiveQuestionId(activeQuestionId === element.id ? null : element.id)} className="flex justify-between items-center w-full font-bold">
+                        <button onClick={() => setActiveQuestionId(activeQuestionId === element.id ? null : element.id)} className="flex justify-between items-center md:w-full font-bold">
                         {element.question}
-                        <span className="text-2xl text-[#E58BD3]">  {activeQuestionId === element.id ? "−" : "+"}</span>
+                        <span className="text-2xl text-[#E58BD3] ml-4">  {activeQuestionId === element.id ? "−" : "+"}</span>
                         </button>
                             {activeQuestionId === element.id && (
         <p className="mt-2 text-sm">{element.answer}</p>
