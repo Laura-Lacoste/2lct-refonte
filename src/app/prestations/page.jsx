@@ -18,7 +18,6 @@ export default function PrestationsPage() {
 
   const title = "Création de Sites Web et Solutions Digitales"
 
-  console.log(services)
   return (
     <main className='text-base overflow-hidden'>
 
