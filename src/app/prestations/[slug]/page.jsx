@@ -27,7 +27,6 @@ export default function PrestationsDetailPage({params}) {
         fetchServices()
      }, [])
 
-     console.log(prestation)
     return(
         <main className="text-base overflow-hidden">
             <HeadPageComponent title={prestation.name} />

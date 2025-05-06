@@ -10,11 +10,8 @@ export async function GET(req, {params}) {
 				{ association: "technologies" }
 			],
 		});
-		const projects = await Project.findAll({
-			order: [["id", "ASC"]],
-		});
 	
-		return NextResponse.json({projects, project});
+		return NextResponse.json(project);
 	} catch(error){
 		console.error('[API ERROR]', error)
         return NextResponse.json({ error: 'Erreur serveur' }, { status: 500 })
