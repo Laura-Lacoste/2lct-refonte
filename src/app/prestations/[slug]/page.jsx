@@ -29,30 +29,31 @@ export default function PrestationsDetailPage({params}) {
 
      console.log(prestation)
     return(
-        <main className="text-base">
+        <main className="text-base overflow-hidden">
             <HeadPageComponent title={prestation.name} />
             <section className=' px-5 py-10 lg:px-36 lg:py-36 flex flex-col gap-14' >
-                <div className="flex flex-col lg:flex-row flex-wrap justify-between h-72">
+                <div className="flex flex-col gap-10 lg:flex-row flex-wrap justify-between h-auto">
                 {prestation.image && (
                             <Image
                             src={`/${prestation.image}`}
                                 alt={prestation.name}
                                 width={600}
                                 height={400}
-                                className="w-full md:w-2/3 h-72 object-cover rounded-md shadow-sm"
+                                className="w-full lg:w-2/3 h-72 object-cover rounded-md shadow-sm"
                             />
                         )}
-                    <div className="w-1/5 flex flex-col justify-evenly gap-6 border-l-4 border-[#E58BD3] bg-[#FCFAFC] px-4 py-6 shadow-sm h-72 text-sm">
+                    <div className="w-full lg:w-1/5 flex flex-col justify-evenly gap-6 border-l-4 border-[#E58BD3] bg-[#FCFAFC] px-4 py-6 shadow-sm h-72 text-sm">
                     <h2 className=" text-center font-bold text-base">Toutes les prestations</h2>
                     <div className="flex flex-col gap-2">
                 {allPrestations && allPrestations.length > 0 ? (
                 allPrestations.map((element) => (
                     <Link
-  href={`/prestations/${element.slug}`}
-  className="bg-white px-2 py-2 rounded-md shadow-sm hover:text-[#E58BD3] hover:cursor-pointer hover:shadow-md transition-all"
->
-  {element.name} ⭢
-</Link>
+                      key={element.slug}
+                      href={`/prestations/${element.slug}`}
+                      className="bg-white px-2 py-2 rounded-md shadow-sm hover:text-[#E58BD3] hover:cursor-pointer hover:shadow-md transition-all"
+                    >
+                      {element.name} ⭢
+                    </Link>
                 )) ) : (
                     <p>Chargement des prestations</p>
                 )}
@@ -60,7 +61,7 @@ export default function PrestationsDetailPage({params}) {
                     </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Description de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center'><span className="bg-[#E58BD3] w-24 h-1"></span>Description de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
                 <p>{prestation.long_description}</p>
                 </div>
 
@@ -70,8 +71,8 @@ export default function PrestationsDetailPage({params}) {
                 <p>{prestation.short_description}</p>
                 {prestation.variation_services?.length > 0 ? (
                 prestation.variation_services.map((element) => (
-                    <div className="flex border-l-4 border-[#E58BD3] bg-[#FCFAFC] p-4 shadow-sm w-full gap-14 ">
-                        <div className="flex flex-col w-96 gap-4">
+                    <div className="flex flex-col lg:flex-row border-l-4 border-[#E58BD3] bg-[#FCFAFC] p-4 shadow-sm w-full gap-14 ">
+                        <div className="flex flex-col w-full lg:w-96 gap-4">
       <h4 className="text-[#E58BD3] font-semibold text-xl ">{element.name}</h4>
       {element.wordpress_price && (
         <div className="flex flex-col gap-2">
@@ -82,7 +83,7 @@ export default function PrestationsDetailPage({params}) {
          </div>
          <div className="text-sm">
       {element.details?.sort((a,b) => a.id -b.id).map(detail =>(
-        <p>{detail.name}</p>
+        <p>➔ {detail.name}</p>
       ))}   
       </div>
 </div>
@@ -93,7 +94,7 @@ export default function PrestationsDetailPage({params}) {
                 
                 </div>
 
-                <div className="relative flex flex-col gap-10 p-10 bg-[url('/2lct-besoin-daide-contact.svg')] bg-cover bg-center w-1/5 justify-center items-center rounded-xl shadow-sm">
+                <div className="relative flex flex-col mt-10 lg:mt-0 gap-10 p-10 bg-[url('/2lct-besoin-daide-contact.svg')] bg-cover bg-center w-full lg:w-1/5 justify-center items-center rounded-xl shadow-sm">
                 <div className="absolute inset-0 bg-[#FCFAFC]/70 z-0 rounded-xl"></div>
                 <div className="absolute inset-0 bg-[#E58BD3]/30 z-0 rounded-xl"></div>
                 <h2 className="relative z-10 uppercase  text-shadow-sm font-bold">Contacter</h2>

@@ -115,7 +115,7 @@ export default function Home() {
 </p>    
     </div>
 
-    <div className='flex flex-wrap gap-4 justify-center'>
+    <div className='flex flex-col lg:flex-row flex-wrap gap-4 justify-center items-center'>
       {home.services && home.services.length > 0 ? (
     home.services.map(service => (
       <div key={service.id}

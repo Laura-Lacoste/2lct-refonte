@@ -20,7 +20,7 @@ export default function PrestationsPage() {
 
   console.log(services)
   return (
-    <main className='text-base'>
+    <main className='text-base overflow-hidden'>
 
     <HeadPageComponent title={title}/>
 
@@ -80,7 +80,7 @@ export default function PrestationsPage() {
     </section>
 
 <section className=' flex flex-col px-5 py-10 lg:px-32 lg:py-36 gap-20'>
-    <h2 className='text-3xl font-bold self-center'>Comment Travailler Ensemble ?</h2>
+    <h2 className='text-3xl font-bold self-center text-center lg:text-left'>Comment Travailler Ensemble ?</h2>
     <div className="flex justify-center flex-wrap gap-20">
         <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
             <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">01</div>
