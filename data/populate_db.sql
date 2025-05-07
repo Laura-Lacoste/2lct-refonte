@@ -402,7 +402,7 @@ Le site s’adresse aux <b>entrepreneurs, artisans, indépendants</b> et <b>peti
 – se projeter dans leur propre projet digital,<br>
 – et me contacter facilement.<br><br>
 
-Le site comprend <b>6 pages principales</b> (accueil, prestations, portfolio, gestion de projet, à propos, contact), avec un <b>formulaire de contact optimisé</b> et des pages de services structurées pour le <b>référencement naturel (SEO)</b>.<br>
+Le site comprend <b>5 pages principales</b> (accueil, prestations, portfolio, à propos, contact), avec un <b>formulaire de contact optimisé</b> et des pages de services structurées pour le <b>référencement naturel (SEO)</b>.<br>
 Le <b>contenu</b> a été entièrement <b>rédigé et structuré</b> par moi.<br><br>
 
 Côté design, j’ai réalisé une <b>refonte graphique complète</b> : <b>nouveau logo</b>, <b>palette de couleurs</b>, <b>typographie</b> et <b>iconographie</b>. J’ai utilisé <b>Figma</b> pour les maquettes et <b>Canva</b> pour la communication visuelle.<br><br>

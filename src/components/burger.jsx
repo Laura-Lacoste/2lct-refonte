@@ -52,7 +52,6 @@ export default function Burger() {
         <Link href="/" onClick={toggleBurger} className="hover:text-[#E58BD3] text-lg">Accueil</Link>
         <Link href="/prestations" onClick={toggleBurger} className="hover:text-[#E58BD3] text-lg">Prestations</Link>
         <Link href="/portfolio" onClick={toggleBurger} className="hover:text-[#E58BD3] text-lg">Portfolio</Link>
-        <Link href="/gestion-de-projet" onClick={toggleBurger} className="hover:text-[#E58BD3] text-lg">Gestion de projet</Link>
         <Link href="/a-propos" onClick={toggleBurger} className="hover:text-[#E58BD3] text-lg">À propos</Link>
         <Link
           href="/contact"

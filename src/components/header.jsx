@@ -18,7 +18,6 @@ export default function Header() {
           <Link href="/" className="hover:text-[#E58BD3] transition-colors duration-200">Accueil</Link>
           <Link href="/prestations" className="hover:text-[#E58BD3] transition-colors duration-200">Prestations</Link>
           <Link href="/portfolio" className="hover:text-[#E58BD3] transition-colors duration-200">Portfolio</Link>
-          <Link href="/gestion-de-projet" className="hover:text-[#E58BD3] transition-colors duration-200">Gestion de projet</Link>
           <Link href="/a-propos" className="hover:text-[#E58BD3] transition-colors duration-200">À propos</Link>
           <Link
             href="/contact"
