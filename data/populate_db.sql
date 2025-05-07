@@ -361,39 +361,58 @@ INSERT INTO "service_advantage" ("service_id", "advantage_id") VALUES
 (4, 19), 
 (4, 20);
 INSERT INTO "project" ("id", "image", "name", "slug", "card_description", "short_description", "long_description") VALUES
-(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat', 'Refonte du site institutionnel du Cabilat d''Oust sous WordPress', 'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu. L’objectif : offrir une vitrine moderne et accessible, tout en permettant à l’association de rester autonome dans les mises à jour.', 'Refonte complète du site officiel du Cabilat du Canton d’Oust, une association de pêche en Ariège. Le site précédent, réalisé sur Joomla en version gratuite, était quasiment invisible sur Google et n’offrait aucune autonomie.
-Le nouveau site, développé sous WordPress, améliore radicalement la visibilité, la navigation et la présentation de l’association. Il comprend 6 pages clés : accueil, présentation, actualités, où pêcher, où acheter sa carte, galerie photo.
-J’ai assuré la structuration et la rédaction de tous les contenus, conçu l’univers graphique complet à partir du logo existant (palette, typographie, icônes) et travaillé le SEO ainsi que le responsive design.
-Le back-office WordPress permet aux membres de l''association de mettre à jour de façon autonome les actualités et les images. Une petite formation a été dispensée pour assurer leur autonomie.
-Enfin, j’ai pris en charge la mise en ligne ainsi que l’hébergement du site. Depuis la refonte, le Cabilat dispose enfin d’une présence digitale efficace, moderne et visible sur les moteurs de recherche.'),
-(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas', 'Création du site Les Biscuits d''Azas avec React et Node.js', 'Boutique artisanale en ligne développée sur-mesure avec React et un back-office Node.js. Un site qui permet de visualiser les produits, suivre l’actualité, et surtout, passer commande simplement depuis les villages alentour.', 'Les Biscuits d’Azas est une biscuiterie artisanale basée à Azas (31380), qui ne disposait jusque-là que d’une présence sur les réseaux sociaux. L’objectif du projet était de créer un véritable site vitrine évolutif, permettant de :
+(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat',
+'Refonte du site institutionnel du Cabilat d''Oust sous WordPress',
+'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu.',
+'
+Refonte complète du site du <b>Cabilat du Canton d''Oust</b>, une association de pêche ariégeoise. L’ancien site était un <b>Joomla gratuit</b> peu visible sur les moteurs de recherche. Le besoin : <b>améliorer la visibilité</b> en ligne, moderniser le design et <b>faciliter la gestion du contenu</b>.<br><br>
 
-présenter les produits de la gamme,
+Le site s’adresse aux <b>pêcheurs</b> en recherche de <b>coins de pêche</b> ou d’une <b>carte d’adhésion</b>. Il contient <b>6 pages</b> : accueil, présentation, actualités, points de vente, zones de pêche et galerie photos. J’ai structuré l’arborescence, <b>rédigé tous les contenus</b> et assuré leur cohérence SEO.<br><br>
 
-afficher les actualités de la boutique,
+Le site a été conçu sous <b>WordPress</b>, avec un <b>back-office adapté</b> permettant à l’association de mettre à jour facilement les actualités et photos.<br><br>
 
-faciliter les prises de commandes via un outil de réservation personnalisé.
+J’ai imaginé une <b>identité graphique complète</b> (palette, typographie, icônes) à partir du logo existant, en utilisant <b>Canva</b> et <b>Coolors</b>. Le site est <b>responsive</b>, <b>optimisé SEO</b>, et <b>hébergé</b> par mes soins.<br><br>
 
-J’ai conçu un site dynamique en React, avec un back-end Node.js/Express et une base de données PostgreSQL, totalement sur-mesure. Le site comprend environ 7 pages, dont une page de réservation ultra complète, pensée comme une boutique simplifiée.
-Le visiteur peut choisir ses produits, indiquer ses coordonnées, choisir une date de retrait ou de livraison, et obtenir un récapitulatif automatique. L’ensemble du système est conditionné selon le code postal et la ville, ce qui permet une gestion locale des zones de commande (certaines zones ne peuvent pas commander, d’autres ont des options spécifiques).
-
-J’ai également développé un back-office sur-mesure pour la cliente, lui permettant de gérer :
-
-ses produits et catégories,
-
-ses actualités,
-
-sa galerie,
-
-et ses commandes en temps réel.
-Des emails automatiques sont générés à chaque commande.
-
-J’ai aussi réalisé la rédaction des contenus, ainsi que la conception graphique à partir du logo existant. J’ai utilisé Figma pour les maquettes. L’interface est fluide, responsive, rapide et accessible.
-
-Depuis la mise en ligne, le site permet à la biscuiterie d’être visible sur Google, tout en simplifiant la gestion des commandes locales, qui ne passent plus uniquement par Instagram.
-
+Une <b>formation rapide</b> a été donnée aux membres de l’association pour garantir leur autonomie. Résultat : une <b>meilleure visibilité en ligne</b>, un site accessible depuis Google, et une image plus professionnelle.
 '),
-(3, '2lct_homepage.png', '2LCT', 'refonte-2lct', 'Refonte du site 2LCT avec Next.js', 'Refonte technique et visuelle du site de l''entreprise 2LCT spécialisée en logistique.', 'Mise à jour complète du site existant de 2LCT avec Next.js pour plus de performance et de modernité. Nouvelle charte graphique, sections clarifiées, SEO amélioré. Intégration responsive avec animations légères et code optimisé. L’objectif était de renforcer la crédibilité de la marque en ligne tout en améliorant l’expérience utilisateur.');
+(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas',
+'Création du site e-commerce Les Biscuits d''Azas avec React et Node.js',
+'Boutique artisanale en ligne développée sur-mesure avec React et un back-office Node.js.',
+'
+Le site <b>Les Biscuits d''Azas</b> a été créé pour une <b>biscuiterie artisanale</b> qui ne disposait pas encore de site vitrine. L’objectif : offrir une <b>meilleure visibilité</b> que celle des réseaux sociaux, et surtout <b>simplifier la prise de commande</b> (qui se faisait jusque-là uniquement par message privé).<br><br>
+
+Le site s’adresse aux <b>habitants des villages autour d’Azas (31380)</b>. Il devait être <b>simple, rapide et fluide</b> pour que les visiteurs découvrent facilement les produits et puissent passer commande. La <b>page de réservation</b> est une vraie <b>interface de commande dynamique</b> : formulaire d’identité, sélection des produits, calcul automatique, retrait ou livraison selon la zone, filtrage par code postal…<br><br>
+
+J’ai conçu un <b>back-office sur-mesure</b> permettant à la cliente de gérer : les <b>produits</b>, la <b>galerie</b>, les <b>actualités</b>, et les <b>commandes</b>. Le système déclenche des <b>emails automatiques</b>.<br><br>
+
+J’ai également rédigé tout le contenu, conçu les maquettes dans <b>Figma</b>, et développé le site en <b>React</b>, <b>Node.js</b>, <b>Express</b>, <b>Sequelize</b> et <b>PostgreSQL</b>.<br><br>
+
+Le site est <b>rapide</b>, <b>responsive</b>, <b>accessible</b> et <b>référencé</b> (SEO). Il est en ligne et hébergé par mes soins. Une <b>formation post-livraison</b> a été faite pour garantir l’autonomie de la cliente.<br><br>
+
+Aujourd’hui, <b>le site est visible</b> sur Google et les commandes se font directement en ligne.
+'),
+(3, '2lct_homepage.png', '2LCT', 'refonte-2lct',
+'Refonte du site 2LCT avec Next.js',
+'Refonte technique et visuelle du site de mon auto-entreprise 2LCT, spécialisée en création et refonte de sites web.',
+'
+<b>Refonte complète</b> du site vitrine <b>2LCT</b>, mon auto-entreprise spécialisée dans la <b>création</b> et la <b>refonte</b> de sites web. Cette refonte visait à mettre en cohérence l’image du site avec ma <b>stratégie globale</b>, mes <b>valeurs</b> et mon <b>positionnement professionnel</b>. Elle m’a également permis de montrer concrètement mes <b>compétences techniques</b> en <b>Next.js</b> et <b>Tailwind CSS</b>.<br><br>
+
+Le site s’adresse aux <b>entrepreneurs, artisans, indépendants</b> et <b>petites entreprises</b>, et a été pensé pour leur permettre de :<br>
+– comprendre rapidement mon offre,<br>
+– se projeter dans leur propre projet digital,<br>
+– et me contacter facilement.<br><br>
+
+Le site comprend <b>6 pages principales</b> (accueil, prestations, portfolio, gestion de projet, à propos, contact), avec un <b>formulaire de contact optimisé</b> et des pages de services structurées pour le <b>référencement naturel (SEO)</b>.<br>
+Le <b>contenu</b> a été entièrement <b>rédigé et structuré</b> par moi.<br><br>
+
+Côté design, j’ai réalisé une <b>refonte graphique complète</b> : <b>nouveau logo</b>, <b>palette de couleurs</b>, <b>typographie</b> et <b>iconographie</b>. J’ai utilisé <b>Figma</b> pour les maquettes et <b>Canva</b> pour la communication visuelle.<br><br>
+
+Le site a été développé avec <b>Next.js</b>, <b>Tailwind CSS</b> et est entièrement <b>responsive</b>, <b>rapide</b>, <b>accessible</b> et <b>léger</b>. Il n’intègre pas de back-office, car je gère moi-même les contenus et l’infrastructure.<br><br>
+
+J’ai pris en charge <b>l’hébergement</b> et la <b>mise en ligne</b>, avec pour objectif une <b>expérience utilisateur fluide</b> et une <b>image professionnelle forte</b>.<br><br>
+
+Aujourd’hui, ce site représente ma <b>vitrine</b>, mon <b>terrain d’expérimentation</b> et un <b>support de démonstration client</b>. Il reflète ma <b>vision du web</b> : <b>clair, moderne, humain et performant</b>.
+');
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
 (1, 'cabilat_homepage.png', 1),
@@ -466,8 +485,16 @@ INSERT INTO "technology_project" ("project_id", "technology_id") VALUES
 (2,27),
 (2,12),     
 (3, 32),      
-(3, 9),       
-(3, 33);      
+(3, 33),       
+(3, 1),
+(3,2),
+(3,3),
+(3,16),
+(3,24),
+(3,28),
+(3,27),
+(3,10),
+(3,12);      
 
 COMMIT;
 

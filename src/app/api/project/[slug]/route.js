@@ -6,7 +6,7 @@ export async function GET(req, {params}) {
 		const projectSlug = params.slug;
 		const project = await Project.findOne({
 			where: { slug: projectSlug },
-			include: [{ association: "project_images" },
+			include: [{ association: "project_images", separate: true, order: [['id', 'ASC']] },
 				{ association: "technologies" }
 			],
 		});
