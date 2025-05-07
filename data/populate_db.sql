@@ -361,21 +361,55 @@ INSERT INTO "service_advantage" ("service_id", "advantage_id") VALUES
 (4, 19), 
 (4, 20);
 INSERT INTO "project" ("id", "image", "name", "slug", "card_description", "short_description", "long_description") VALUES
-(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat', 'Refonte du site institutionnel du Cabilat d''Oust sous WordPress', 'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu.', 'Refonte complète du site officiel du Cabilat du Canton d’Oust. Objectif : proposer une interface claire, accessible et responsive pour les habitants et visiteurs. Intégration WordPress avec back-office personnalisé pour simplifier la gestion du contenu. Le design a été modernisé tout en respectant l''identité visuelle locale.'),
-(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas', 'Création du site e-commerce Les Biscuits d''Azas avec React et Node.js', 'Boutique artisanale en ligne développée sur-mesure avec React et un back-end Node.js.', 'Site de vente en ligne pour une biscuiterie artisanale. Développé en React (frontend) avec une API Node.js (Express). Intégration de la gestion des produits, commandes, panier et paiement. L’interface est optimisée pour les mobiles avec une navigation fluide et chaleureuse pour refléter l’univers de la marque.'),
+(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat', 'Refonte du site institutionnel du Cabilat d''Oust sous WordPress', 'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu. L’objectif : offrir une vitrine moderne et accessible, tout en permettant à l’association de rester autonome dans les mises à jour.', 'Refonte complète du site officiel du Cabilat du Canton d’Oust, une association de pêche en Ariège. Le site précédent, réalisé sur Joomla en version gratuite, était quasiment invisible sur Google et n’offrait aucune autonomie.
+Le nouveau site, développé sous WordPress, améliore radicalement la visibilité, la navigation et la présentation de l’association. Il comprend 6 pages clés : accueil, présentation, actualités, où pêcher, où acheter sa carte, galerie photo.
+J’ai assuré la structuration et la rédaction de tous les contenus, conçu l’univers graphique complet à partir du logo existant (palette, typographie, icônes) et travaillé le SEO ainsi que le responsive design.
+Le back-office WordPress permet aux membres de l''association de mettre à jour de façon autonome les actualités et les images. Une petite formation a été dispensée pour assurer leur autonomie.
+Enfin, j’ai pris en charge la mise en ligne ainsi que l’hébergement du site. Depuis la refonte, le Cabilat dispose enfin d’une présence digitale efficace, moderne et visible sur les moteurs de recherche.'),
+(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas', 'Création du site Les Biscuits d''Azas avec React et Node.js', 'Boutique artisanale en ligne développée sur-mesure avec React et un back-office Node.js. Un site qui permet de visualiser les produits, suivre l’actualité, et surtout, passer commande simplement depuis les villages alentour.', 'Les Biscuits d’Azas est une biscuiterie artisanale basée à Azas (31380), qui ne disposait jusque-là que d’une présence sur les réseaux sociaux. L’objectif du projet était de créer un véritable site vitrine évolutif, permettant de :
+
+présenter les produits de la gamme,
+
+afficher les actualités de la boutique,
+
+faciliter les prises de commandes via un outil de réservation personnalisé.
+
+J’ai conçu un site dynamique en React, avec un back-end Node.js/Express et une base de données PostgreSQL, totalement sur-mesure. Le site comprend environ 7 pages, dont une page de réservation ultra complète, pensée comme une boutique simplifiée.
+Le visiteur peut choisir ses produits, indiquer ses coordonnées, choisir une date de retrait ou de livraison, et obtenir un récapitulatif automatique. L’ensemble du système est conditionné selon le code postal et la ville, ce qui permet une gestion locale des zones de commande (certaines zones ne peuvent pas commander, d’autres ont des options spécifiques).
+
+J’ai également développé un back-office sur-mesure pour la cliente, lui permettant de gérer :
+
+ses produits et catégories,
+
+ses actualités,
+
+sa galerie,
+
+et ses commandes en temps réel.
+Des emails automatiques sont générés à chaque commande.
+
+J’ai aussi réalisé la rédaction des contenus, ainsi que la conception graphique à partir du logo existant. J’ai utilisé Figma pour les maquettes. L’interface est fluide, responsive, rapide et accessible.
+
+Depuis la mise en ligne, le site permet à la biscuiterie d’être visible sur Google, tout en simplifiant la gestion des commandes locales, qui ne passent plus uniquement par Instagram.
+
+'),
 (3, '2lct_homepage.png', '2LCT', 'refonte-2lct', 'Refonte du site 2LCT avec Next.js', 'Refonte technique et visuelle du site de l''entreprise 2LCT spécialisée en logistique.', 'Mise à jour complète du site existant de 2LCT avec Next.js pour plus de performance et de modernité. Nouvelle charte graphique, sections clarifiées, SEO amélioré. Intégration responsive avec animations légères et code optimisé. L’objectif était de renforcer la crédibilité de la marque en ligne tout en améliorant l’expérience utilisateur.');
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
-(1, '2lct_homepage.jpg', 1),
-(2, '2lct_services_page.jpg', 1),
-(3, '2lct_contact_page.jpg', 1),
-(4, '2lct_portfolio_page.jpg', 1),
-(5, 'ecom_shop_homepage.jpg', 2),
-(6, 'ecom_shop_product_page.jpg', 2),
-(7, 'ecom_shop_checkout_page.jpg', 2),
-(8, 'art_portfolio_gallery.jpg', 3),
-(9, 'art_portfolio_about_page.jpg', 3),
-(10, 'art_portfolio_contact_page.jpg', 3);
+(1, 'cabilat_homepage.png', 1),
+(2, 'cabilat_a_propos.png', 1),
+(3, 'cabilat_actualites.png', 1),
+(4, 'cabilat_ou_pecher.png', 1),
+
+(5, 'lesbiscuitsdazas_homepage.png', 2),
+(6, 'lesbiscuitsdazas_liste_produits.png', 2),
+(7, 'lesbiscuitsdazas_detail_biscuits.png', 2),
+(8, 'lesbiscuitsdazas_reservation.png', 2),
+
+(9, '2lct_homepage.png', 3),
+(10, '2lct_page_detail_presta.png', 3),
+(11, '2lct_portfolio.png',3),
+(12, '2lct_homepage.png',3);
 
 
 INSERT INTO "technology" ("id", "icon", "name") VALUES
@@ -415,13 +449,25 @@ INSERT INTO "technology" ("id", "icon", "name") VALUES
 
 
 INSERT INTO "technology_project" ("project_id", "technology_id") VALUES
-(1, 7),       -- WordPress
-(2, 9),       -- React
-(2, 4),       -- Node.js
-(2, 23),      -- PostgreSQL
-(3, 32),      -- Next.js
-(3, 9),       -- React
-(3, 33);      -- Tailwind CSS
+(1, 7), 
+(1,27),
+(1,10),
+(1,28),
+(1,12),      
+(2, 9),       
+(2, 4),       
+(2, 5), 
+(2,23),
+(2,1),
+(2,2),
+(2,3),
+(2,24),
+(2,16),
+(2,27),
+(2,12),     
+(3, 32),      
+(3, 9),       
+(3, 33);      
 
 COMMIT;
 

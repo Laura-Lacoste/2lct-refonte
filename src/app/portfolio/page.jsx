@@ -25,7 +25,7 @@ export default function PortfolioPage() {
     <HeadPageComponent title={title}/>
 
 <section className="px-5 py-10 lg:px-36 lg:py-36">
-    <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items-center w-full'>
+    <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items- w-full'>
     {projects && projects.length > 0 ? (
       projects.map(project => (
         <div key={project.id} className='flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm transition-transform hover:scale-105 hover:shadow-xl'>

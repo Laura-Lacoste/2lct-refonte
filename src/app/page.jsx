@@ -157,7 +157,7 @@ export default function Home() {
     <p className='text-[#E58BD3] flex items-center uppercase gap-6 font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Portfolio<span className="bg-[#E58BD3] w-24 h-1"></span></p>
     <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Découvrez Quelques Réalisations</h2>
     
-    <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items-center w-full'>
+    <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items-stretch w-full'>
     {home.projects && home.projects.length > 0 ? (
       home.projects.map(project => (
         <div key={project.id} className='flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm transition-transform hover:scale-105 hover:shadow-xl'>
