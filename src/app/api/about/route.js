@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { Technology } from "../../../../models/index.js";
+import { Technology } from "../../../models/index.js";
 
 export const aboutController = {
     async  aboutPage(req, res) { 

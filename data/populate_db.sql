@@ -97,11 +97,11 @@ INSERT INTO "detail_variation_service" ("id", "name") VALUES
 (30,'Fonctionnalité spécifique'),
 (31,'Audit SEO + performances'),
 (32,'Optimisation SEO de base'),
-(33,'Optimisation performance rapide');
+(33,'Optimisation performance rapide'),
 (34,'Audit site existant'),
 (35,'Intégration front (3 pages)'),
 (36, 'Wireframes 5 pages principales'),
-(37,'Intégration front (5 pages)');
+(37,'Intégration front (5 pages)'),
 (38,'Accessibilité RGAA'),
 (39,'Mise en conformité RGPD'),
 (40,'Audit SEO technique simplifié'),
@@ -130,7 +130,7 @@ INSERT INTO "detail_variation_service" ("id", "name") VALUES
 (63,'2 interventions correctives/an'),
 (64,'Toutes les actions du Pack Évolutif'),
 (65,'5 interventions correctives/an'),
-(66,'Prise en charge des incidents en priorité')
+(66,'Prise en charge des incidents en priorité');
 
 INSERT INTO "variation_detail" ("variation_id" , "detail_id" ) VALUES
 (1,1),
