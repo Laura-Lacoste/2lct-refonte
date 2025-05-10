@@ -17,31 +17,77 @@ TRUNCATE TABLE
 
 INSERT INTO "service" ("id", "icon", "name", "slug", "card_description", "image", "short_description", "long_description") VALUES
 (1, 'fa-solid fa-laptop-code', 'Création de Site Web', 'creation-site',
-'Conception de sites vitrine WordPress ou sur-mesure (React/Next.js), avec des packs clairs et des options personnalisées.',
+'Des sites modernes, sur-mesure, bien pensés. WordPress ou dev spécifique, selon vos besoins.',
 '2lct-description-creation-site.svg',
-'Lancez votre présence en ligne avec un site professionnel, responsive et optimisé pour vos clients. Chaque site est pensé pour refléter votre identité et répondre à vos besoins réels.',
-'Inclus : design personnalisé, optimisation mobile & SEO de base, accompagnement humain et formation à la prise en main.'
+'Je conçois des sites vitrines professionnels, efficaces et modernes.
+Chaque site est adapté à votre activité, vos objectifs et votre image.
+Je propose des packs clairs, avec un accompagnement sur-mesure.
+Votre site est responsive, rapide et prêt à évoluer.
+WordPress ou développement sur-mesure selon vos besoins.',
+'Je réalise des sites internet professionnels, clairs, élégants et performants.
+Chaque projet commence par un échange pour cerner vos attentes.
+Je propose WordPress pour la simplicité ou développement sur-mesure pour la performance.
+Je conçois le design, j’intègre le contenu, je structure pour le SEO.
+Chaque site est responsive, rapide à charger, facile à faire évoluer.
+Formulaires, blog, galerie, CMS : tout est personnalisable.
+Votre site devient un vrai outil de communication, pensé pour durer.
+Un accompagnement complet, du début à la mise en ligne.'
 ),
 
 (2, 'fa-solid fa-hammer', 'Refonte & Optimisation', 'refonte-optimisation',
-'Refonte graphique et/ou technique de votre site existant pour moderniser votre présence en ligne.',
+'Modernisez votre site actuel. Nouveau design, meilleures performances, plus de visibilité.',
 '2lct-description-refonte-site.svg',
-'Votre site n’est plus à jour ? Je vous propose une refonte ciblée ou globale, avec un audit UX et une optimisation des performances.',
-'Inclus : audit technique/UX, refonte graphique ou structurelle, optimisation SEO, accompagnement sur mesure.'
+'Votre site est en ligne, mais il ne vous ressemble plus ou ne performe pas ?
+Je vous propose une refonte visuelle et/ou technique.
+Objectif : un site plus rapide, plus lisible, plus efficace.
+Je retravaille le design, le contenu et l’expérience utilisateur.
+Votre site devient un vrai levier digital.',
+'Je modernise les sites existants pour les rendre plus attractifs et plus performants.
+Refonte graphique pour un design actuel, responsive et élégant.
+Optimisation technique pour améliorer la vitesse et la structure.
+Meilleure hiérarchisation des contenus, meilleure lisibilité.
+Adaptation aux normes SEO pour remonter dans les résultats Google.
+Je vous accompagne de l’audit à la mise en ligne.
+Votre site devient plus clair, plus efficace, plus crédible.
+Pas besoin de repartir de zéro pour repartir du bon pied.'
 ),
 
 (3, 'fa-solid fa-keyboard', ' Référencement naturel (SEO)', 'seo',
-'Optimisation technique et éditoriale pour améliorer votre visibilité sur les moteurs de recherche.',
+'Améliorez votre position sur Google.
+Contenu, technique, performance : un SEO solide.',
 '2lct-description-seo.svg',
-'Attirez les bons visiteurs au bon moment avec un site optimisé pour le référencement naturel.',
-'Inclus : audit SEO, optimisation on-page et technique, stratégie de contenu, conseils mots-clés et netlinking (en option).'
+'Un bon site doit être visible.
+Je vous accompagne pour améliorer votre référencement naturel.
+Je travaille les mots-clés, les contenus, les balises et la structure.
+L’objectif : plus de visiteurs, mieux ciblés, sans pub payante.
+Un SEO clair, propre, durable.',
+'e vous aide à améliorer votre positionnement sur Google grâce au référencement naturel.
+J’analyse votre site, vos contenus, vos mots-clés et votre structure technique.
+Je retravaille les titres, balises, textes, images et vitesse de chargement.
+Je mets en place un maillage interne efficace et une hiérarchie claire.
+Le SEO permet d’attirer des visiteurs qualifiés sans budget publicitaire.
+Je vous propose une stratégie adaptée à votre activité et vos objectifs.
+Votre site devient plus visible, plus crédible, plus performant.
+Un vrai levier de trafic, durable et rentable.'
 ),
 
 (4, 'fa-solid fa-headset', 'Maintenance & Support', 'maintenance-support',
-'Suivi technique, mises à jour, sécurité et évolutions pour garder votre site performant dans le temps.',
+'Un site qui tourne sans souci.
+Mises à jour, sécurité, évolutions.',
 '2lct-description-maintenance.svg',
-'Je vous accompagne dans la gestion technique de votre site avec des forfaits de maintenance adaptés à vos besoins.',
-'Inclus : mises à jour régulières, corrections techniques, assistance réactive et suivi personnalisé.'
+'Je m’occupe de la santé de votre site au quotidien.
+Mises à jour, sauvegardes, surveillance sécurité, support technique.
+Vous avez l’esprit tranquille, je gère les aspects techniques.
+Je reste disponible pour faire évoluer votre site.
+Un accompagnement fiable, à long terme.',
+'Un site professionnel doit rester sécurisé, stable et performant.
+Je propose un service de maintenance pour vous libérer des tâches techniques.
+Je réalise les mises à jour WordPress, plugins, ou dépendances.
+Je mets en place des sauvegardes automatiques et des outils de surveillance.
+Je corrige les bugs rapidement, je reste disponible pour toute question.
+Je propose aussi des évolutions techniques ou fonctionnelles selon vos besoins.
+Votre site est entre de bonnes mains, avec un vrai suivi humain.
+Moins de stress, plus de fiabilité.'
 );
 
 INSERT INTO "variation_service" ("id", "name", "wordpress_price","development_price", "service_id") VALUES
@@ -235,67 +281,154 @@ INSERT INTO "variation_detail" ("variation_id" , "detail_id" ) VALUES
 (15,66);
 
 INSERT INTO "question" ("id", "question", "answer") VALUES
-(1, 'Quel type de site web réalisez-vous ?', 'Je propose des sites vitrines, e-commerce et portfolios, tous personnalisés selon vos besoins.'),
-(2, 'Combien de temps prend la création d’un site ?', 'En moyenne 3 à 4 semaines pour un site vitrine, un peu plus pour un e-commerce ou un projet sur mesure.'),
-(3, 'Puis-je modifier mon site moi-même ?', 'Oui, je vous forme à l’utilisation de votre site via un CMS simple.'),
+(1, 'Quels types de sites proposez-vous ?', 'Je propose des sites vitrines, one page ou multi-pages, sur WordPress ou en développement sur-mesure, selon vos objectifs et votre budget.'),
+(2, 'Quelle est la différence entre WordPress et le développement sur-mesure ?', 'WordPress est plus rapide à mettre en place et facile à modifier. Le développement sur-mesure offre plus de flexibilité, de performance et de personnalisation.'),
+(3, 'Combien coûte un site ?', 'Les tarifs dépendent du type de site, du nombre de pages, des fonctionnalités et des options choisies. Je propose des packs clairs et des devis sur mesure.'),
+(4, 'Combien de temps faut-il pour créer un site ?', 'En moyenne, entre 2 et 6 semaines selon la complexité du projet. Je vous donne un planning précis avant le démarrage.'),
+(5, 'Le site sera-t-il optimisé pour le SEO et le mobile ?', 'Oui, tous mes sites sont responsive et incluent une optimisation SEO de base (balises, vitesse, structure).'),
 
-(4, 'Pourquoi refaire mon site ?', 'Parce qu’un site obsolète peut freiner votre crédibilité, votre référencement et vos conversions.'),
-(5, 'Combien de temps dure une refonte ?', 'Entre 4 et 8 semaines selon l’ampleur des modifications.'),
-(6, 'Une refonte est-elle forcément coûteuse ?', 'Pas forcément : je propose des audits pour cibler ce qu’il faut vraiment améliorer.'),
+(6, 'Quand faut-il envisager une refonte de site ?', 'Quand le design est dépassé, que le site est lent, non responsive, mal référencé ou ne reflète plus votre activité actuelle.'),
+(7, 'Dois-je repartir de zéro pour une refonte ?', 'Pas forcément. Je peux conserver ce qui fonctionne et améliorer le reste : design, structure, performance, SEO.'),
+(8, 'Comment se déroule une refonte ?', 'Je commence par un audit complet, puis on valide une nouvelle arborescence, un design et un plan d’action. Ensuite je m’occupe de tout.'),
+(9, 'Le contenu du site sera-t-il retravaillé ?', 'Oui, si besoin. Je vous aide à reformuler les textes pour plus d’impact, de clarté et de pertinence SEO.'),
+(10, 'Une refonte améliore-t-elle vraiment le référencement ?', 'Oui, car on repart sur une base saine, rapide et structurée, avec un contenu optimisé et une hiérarchie claire.'),
 
-(7, 'Quand commencer le SEO ?', 'Le plus tôt possible ! Idéalement dès la création du site.'),
-(8, 'Les résultats SEO sont-ils rapides ?', 'Non, ils apparaissent en général entre 3 et 6 mois.'),
-(9, 'Le SEO fonctionne-t-il sur tous les sites ?', 'Oui, avec une stratégie adaptée à votre activité et votre cible.'),
+(11, 'Le SEO est-il inclus dans la création du site ?', 'Oui, une optimisation de base est prévue : structure, balises, performance. Je propose aussi des options SEO avancées.'),
+(12, 'Est-ce que le SEO fonctionne sur un site WordPress ?', 'Oui, très bien, surtout avec un thème bien conçu et des contenus optimisés. Je configure les bons outils dès le départ.'),
+(13,'Peut-on améliorer le SEO d’un site existant ?','Bien sûr. J’analyse le site, les mots-clés, la structure et je vous propose des optimisations concrètes.'),
+(14,'Combien de temps faut-il pour voir des résultats ?','Le SEO prend du temps. On commence à voir des effets au bout de 2 à 6 mois selon la concurrence et l’effort fourni.'),
+(15,'Proposez-vous un accompagnement SEO ?','Oui, sous forme de missions ponctuelles ou de suivi mensuel, avec rapports, conseils et ajustements réguliers.'),
 
-(10, 'Pourquoi faire de la maintenance ?', 'Pour garantir la sécurité, les performances et la compatibilité de votre site.'),
-(11, 'Quelle est la différence entre maintenance et support ?', 'La maintenance est préventive (mise à jour, sécurité), le support est curatif (bug, problème technique).'),
-(12, 'Proposez-vous des forfaits ?', 'Oui, mensuels ou ponctuels selon vos besoins. Contactez-moi pour en discuter.');
+(16,'Pourquoi la maintenance est-elle importante ?','Pour garder votre site sécurisé, à jour, rapide et compatible avec les navigateurs et outils actuels.'),
+(17,'Qu’inclut votre maintenance ?','Mises à jour, sauvegardes, veille sécurité, correctifs techniques et support en cas de souci.'),
+(18,'Intervenez-vous si je rencontre un bug ?','Oui, je suis réactive en cas de problème technique, que vous soyez sous maintenance ou ponctuellement en demande.'),
+(19,'Puis-je ajouter la maintenance après la création du site ?','Oui, à tout moment. Je propose plusieurs formules selon vos besoins.'),
+(20,'Y a-t-il un engagement sur la durée ?','Non. Vous pouvez choisir une intervention ponctuelle, un mois d’essai, ou un abonnement mensuel sans engagement.');
 
 INSERT INTO "service_question" ("service_id", "question_id") VALUES
-(1, 1), (1, 2), (1, 3),
-(2, 4), (2, 5), (2, 6),
-(3, 7), (3, 8), (3, 9),
-(4, 10), (4, 11), (4, 12);
+(1, 1), (1, 2), (1, 3), (1, 4), (1, 5),
+(2, 6), (2, 7), (2, 8), (2, 9), (2, 10),
+(3, 11), (3, 12), (3, 13), (3, 14), (3, 15),
+(4, 16), (4, 17), (4, 18), (4, 19), (4, 20);
 
 INSERT INTO "advantage" ("id", "name", "description") VALUES
 (1, 'Site 100% Personnalisé', 'Chaque site est conçu sur mesure pour refléter votre identité et vos objectifs.'),
 (2, 'Design Responsive', 'Votre site est optimisé pour tous les écrans, du mobile au desktop.'),
 (3, 'Optimisé pour le SEO', 'Les meilleures pratiques SEO sont intégrées dès la création.'),
+(4, 'Expérience Utilisateur Fluide', 'Navigation intuitive pour convertir les visiteurs en clients.'),
+(5, 'Identité Visuelle Cohérente', 'Le design est en harmonie avec votre branding et vos valeurs.'),
 
-(4, 'Audit Complet', 'Je détecte les points faibles de votre site avant d’agir.'),
-(5, 'Design Modernisé', 'Un look à jour qui inspire confiance et attire les visiteurs.'),
-(6, 'Performances Améliorées', 'Votre site est plus rapide, plus clair et plus fluide.'),
+(6, 'Audit Complet', 'Je détecte les points faibles de votre site avant d’agir.'),
+(7, 'Design Modernisé', 'Un look à jour qui inspire confiance et attire les visiteurs.'),
+(8, 'Performances Améliorées', 'Votre site est plus rapide, plus clair et plus fluide.'),
+(9, 'Optimisation Technique', 'Je nettoie le code, j’optimise la structure, pour de meilleures bases.'),
+(10, 'Contenu Réajusté', 'Vos textes sont retravaillés pour être plus efficaces et engageants.'),
 
-(7, 'Plus de Visibilité', 'Votre site apparaît mieux dans les résultats de recherche.'),
-(8, 'Contenu Stratégique', 'Des textes pensés pour séduire les moteurs et vos visiteurs.'),
-(9, 'Trafic Ciblé', 'J’attire les bons visiteurs, ceux qui sont réellement intéressés.'),
+(11, 'Plus de Visibilité', 'Je suis dispo en cas de bug ou de problème technique.'),
+(12, 'Contenu Stratégique', 'Je m’occupe du site pendant que vous gérez votre activité.'),
+(13,'Trafic Ciblé','J’attire les bons visiteurs, ceux qui sont réellement intéressés.'),
+(14,'Hiérarchie Optimisée','Une structure claire qui aide les moteurs à comprendre votre site.'),
+(15,'Suivi & Ajustement','Des recommandations évolutives selon vos résultats SEO.'),
 
-(10, 'Sécurité Renforcée', 'Des mises à jour régulières pour éviter les failles.'),
-(11, 'Support Réactif', 'Je suis dispo en cas de bug ou de problème technique.'),
-(12, 'Sérénité Totale', 'Je m’occupe du site pendant que vous gérez votre activité.');
+(16,'Sécurité Renforcée','Des mises à jour régulières pour éviter les failles.'),
+(17,'Support Réactif','Je suis dispo en cas de bug ou de problème technique.'),
+(18,'Sérénité Totale','Je m’occupe du site pendant que vous gérez votre activité.'),
+(19,'Mises à Jour Sans Douleur','Tout est testé et validé avant d’être mis en ligne.'),
+(20,'Monitoring Proactif','Je surveille les indicateurs techniques clés pour anticiper les problèmes.');
 
 INSERT INTO "service_advantage" ("service_id", "advantage_id") VALUES
-(1, 1), (1, 2), (1, 3),
-(2, 4), (2, 5), (2, 6),
-(3, 7), (3, 8), (3, 9),
-(4, 10), (4, 11), (4, 12);
+(1, 1),  
+(1, 2),  
+(1, 3),  
+(1, 4),  
+(1, 5),  
 
+(2, 6),  
+(2, 7),  
+(2, 8),  
+(2, 9),  
+(2, 10), 
+
+(3, 11), 
+(3, 12), 
+(3, 13), 
+(3, 14), 
+(3, 15), 
+
+(4, 16), 
+(4, 17), 
+(4, 18), 
+(4, 19), 
+(4, 20);
 INSERT INTO "project" ("id", "image", "name", "slug", "card_description", "short_description", "long_description") VALUES
-(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat', 'Refonte du site institutionnel du Cabilat d''Oust sous WordPress', 'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu.', 'Refonte complète du site officiel du Cabilat du Canton d’Oust. Objectif : proposer une interface claire, accessible et responsive pour les habitants et visiteurs. Intégration WordPress avec back-office personnalisé pour simplifier la gestion du contenu. Le design a été modernisé tout en respectant l''identité visuelle locale.'),
-(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas', 'Création du site e-commerce Les Biscuits d''Azas avec React et Node.js', 'Boutique artisanale en ligne développée sur-mesure avec React et un back-end Node.js.', 'Site de vente en ligne pour une biscuiterie artisanale. Développé en React (frontend) avec une API Node.js (Express). Intégration de la gestion des produits, commandes, panier et paiement. L’interface est optimisée pour les mobiles avec une navigation fluide et chaleureuse pour refléter l’univers de la marque.'),
-(3, '2lct_homepage.png', '2LCT', 'refonte-2lct', 'Refonte du site 2LCT avec Next.js', 'Refonte technique et visuelle du site de l''entreprise 2LCT spécialisée en logistique.', 'Mise à jour complète du site existant de 2LCT avec Next.js pour plus de performance et de modernité. Nouvelle charte graphique, sections clarifiées, SEO amélioré. Intégration responsive avec animations légères et code optimisé. L’objectif était de renforcer la crédibilité de la marque en ligne tout en améliorant l’expérience utilisateur.');
+(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat',
+'Refonte du site institutionnel du Cabilat d''Oust sous WordPress',
+'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu.',
+'
+Refonte complète du site du <b>Cabilat du Canton d''Oust</b>, une association de pêche ariégeoise. L’ancien site était un <b>Joomla gratuit</b> peu visible sur les moteurs de recherche. Le besoin : <b>améliorer la visibilité</b> en ligne, moderniser le design et <b>faciliter la gestion du contenu</b>.<br><br>
+
+Le site s’adresse aux <b>pêcheurs</b> en recherche de <b>coins de pêche</b> ou d’une <b>carte d’adhésion</b>. Il contient <b>6 pages</b> : accueil, présentation, actualités, points de vente, zones de pêche et galerie photos. J’ai structuré l’arborescence, <b>rédigé tous les contenus</b> et assuré leur cohérence SEO.<br><br>
+
+Le site a été conçu sous <b>WordPress</b>, avec un <b>back-office adapté</b> permettant à l’association de mettre à jour facilement les actualités et photos.<br><br>
+
+J’ai imaginé une <b>identité graphique complète</b> (palette, typographie, icônes) à partir du logo existant, en utilisant <b>Canva</b> et <b>Coolors</b>. Le site est <b>responsive</b>, <b>optimisé SEO</b>, et <b>hébergé</b> par mes soins.<br><br>
+
+Une <b>formation rapide</b> a été donnée aux membres de l’association pour garantir leur autonomie. Résultat : une <b>meilleure visibilité en ligne</b>, un site accessible depuis Google, et une image plus professionnelle.
+'),
+(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas',
+'Création du site e-commerce Les Biscuits d''Azas avec React et Node.js',
+'Boutique artisanale en ligne développée sur-mesure avec React et un back-office Node.js.',
+'
+Le site <b>Les Biscuits d''Azas</b> a été créé pour une <b>biscuiterie artisanale</b> qui ne disposait pas encore de site vitrine. L’objectif : offrir une <b>meilleure visibilité</b> que celle des réseaux sociaux, et surtout <b>simplifier la prise de commande</b> (qui se faisait jusque-là uniquement par message privé).<br><br>
+
+Le site s’adresse aux <b>habitants des villages autour d’Azas (31380)</b>. Il devait être <b>simple, rapide et fluide</b> pour que les visiteurs découvrent facilement les produits et puissent passer commande. La <b>page de réservation</b> est une vraie <b>interface de commande dynamique</b> : formulaire d’identité, sélection des produits, calcul automatique, retrait ou livraison selon la zone, filtrage par code postal…<br><br>
+
+J’ai conçu un <b>back-office sur-mesure</b> permettant à la cliente de gérer : les <b>produits</b>, la <b>galerie</b>, les <b>actualités</b>, et les <b>commandes</b>. Le système déclenche des <b>emails automatiques</b>.<br><br>
+
+J’ai également rédigé tout le contenu, conçu les maquettes dans <b>Figma</b>, et développé le site en <b>React</b>, <b>Node.js</b>, <b>Express</b>, <b>Sequelize</b> et <b>PostgreSQL</b>.<br><br>
+
+Le site est <b>rapide</b>, <b>responsive</b>, <b>accessible</b> et <b>référencé</b> (SEO). Il est en ligne et hébergé par mes soins. Une <b>formation post-livraison</b> a été faite pour garantir l’autonomie de la cliente.<br><br>
+
+Aujourd’hui, <b>le site est visible</b> sur Google et les commandes se font directement en ligne.
+'),
+(3, '2lct_homepage.png', '2LCT', 'refonte-2lct',
+'Refonte du site 2LCT avec Next.js',
+'Refonte technique et visuelle du site de mon auto-entreprise 2LCT, spécialisée en création et refonte de sites web.',
+'
+<b>Refonte complète</b> du site vitrine <b>2LCT</b>, mon auto-entreprise spécialisée dans la <b>création</b> et la <b>refonte</b> de sites web. Cette refonte visait à mettre en cohérence l’image du site avec ma <b>stratégie globale</b>, mes <b>valeurs</b> et mon <b>positionnement professionnel</b>. Elle m’a également permis de montrer concrètement mes <b>compétences techniques</b> en <b>Next.js</b> et <b>Tailwind CSS</b>.<br><br>
+
+Le site s’adresse aux <b>entrepreneurs, artisans, indépendants</b> et <b>petites entreprises</b>, et a été pensé pour leur permettre de :<br>
+– comprendre rapidement mon offre,<br>
+– se projeter dans leur propre projet digital,<br>
+– et me contacter facilement.<br><br>
+
+Le site comprend <b>5 pages principales</b> (accueil, prestations, portfolio, à propos, contact), avec un <b>formulaire de contact optimisé</b> et des pages de services structurées pour le <b>référencement naturel (SEO)</b>.<br>
+Le <b>contenu</b> a été entièrement <b>rédigé et structuré</b> par moi.<br><br>
+
+Côté design, j’ai réalisé une <b>refonte graphique complète</b> : <b>nouveau logo</b>, <b>palette de couleurs</b>, <b>typographie</b> et <b>iconographie</b>. J’ai utilisé <b>Figma</b> pour les maquettes et <b>Canva</b> pour la communication visuelle.<br><br>
+
+Le site a été développé avec <b>Next.js</b>, <b>Tailwind CSS</b> et est entièrement <b>responsive</b>, <b>rapide</b>, <b>accessible</b> et <b>léger</b>. Il n’intègre pas de back-office, car je gère moi-même les contenus et l’infrastructure.<br><br>
+
+J’ai pris en charge <b>l’hébergement</b> et la <b>mise en ligne</b>, avec pour objectif une <b>expérience utilisateur fluide</b> et une <b>image professionnelle forte</b>.<br><br>
+
+Aujourd’hui, ce site représente ma <b>vitrine</b>, mon <b>terrain d’expérimentation</b> et un <b>support de démonstration client</b>. Il reflète ma <b>vision du web</b> : <b>clair, moderne, humain et performant</b>.
+');
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
-(1, '2lct_homepage.jpg', 1),
-(2, '2lct_services_page.jpg', 1),
-(3, '2lct_contact_page.jpg', 1),
-(4, '2lct_portfolio_page.jpg', 1),
-(5, 'ecom_shop_homepage.jpg', 2),
-(6, 'ecom_shop_product_page.jpg', 2),
-(7, 'ecom_shop_checkout_page.jpg', 2),
-(8, 'art_portfolio_gallery.jpg', 3),
-(9, 'art_portfolio_about_page.jpg', 3),
-(10, 'art_portfolio_contact_page.jpg', 3);
+(1, 'cabilat_homepage.png', 1),
+(2, 'cabilat_a_propos.png', 1),
+(3, 'cabilat_actualites.png', 1),
+(4, 'cabilat_ou_pecher.png', 1),
+
+(5, 'lesbiscuitsdazas_homepage.png', 2),
+(6, 'lesbiscuitsdazas_liste_produits.png', 2),
+(7, 'lesbiscuitsdazas_detail_biscuits.png', 2),
+(8, 'lesbiscuitsdazas_reservation.png', 2),
+
+(9, '2lct_homepage.png', 3),
+(10, '2lct_page_detail_presta.png', 3),
+(11, '2lct_portfolio.png',3),
+(12, '2lct_homepage.png',3);
 
 
 INSERT INTO "technology" ("id", "icon", "name") VALUES
@@ -335,13 +468,33 @@ INSERT INTO "technology" ("id", "icon", "name") VALUES
 
 
 INSERT INTO "technology_project" ("project_id", "technology_id") VALUES
-(1, 7),       -- WordPress
-(2, 9),       -- React
-(2, 4),       -- Node.js
-(2, 23),      -- PostgreSQL
-(3, 32),      -- Next.js
-(3, 9),       -- React
-(3, 33);      -- Tailwind CSS
+(1, 7), 
+(1,27),
+(1,10),
+(1,28),
+(1,12),      
+(2, 9),       
+(2, 4),       
+(2, 5), 
+(2,23),
+(2,1),
+(2,2),
+(2,3),
+(2,24),
+(2,16),
+(2,27),
+(2,12),     
+(3, 32),      
+(3, 33),       
+(3, 1),
+(3,2),
+(3,3),
+(3,16),
+(3,24),
+(3,28),
+(3,27),
+(3,10),
+(3,12);      
 
 COMMIT;
 

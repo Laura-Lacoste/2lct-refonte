@@ -6,15 +6,12 @@ export async function GET(req, {params}) {
 		const projectSlug = params.slug;
 		const project = await Project.findOne({
 			where: { slug: projectSlug },
-			include: [{ association: "project_images" },
+			include: [{ association: "project_images", separate: true, order: [['id', 'ASC']] },
 				{ association: "technologies" }
 			],
 		});
-		const projects = await Project.findAll({
-			order: [["id", "ASC"]],
-		});
 	
-		return NextResponse.json({projects, project});
+		return NextResponse.json(project);
 	} catch(error){
 		console.error('[API ERROR]', error)
         return NextResponse.json({ error: 'Erreur serveur' }, { status: 500 })

@@ -6,7 +6,9 @@ export async function GET(req, {params}) {
 		const serviceSlug = params.slug;
 		const service = await Service.findOne({
 			where: { slug: serviceSlug },
-			include: [{ association: "variation_services", order: [['id', 'ASC']]  },
+			include: [{ association: "variation_services", separate: true, order: [['id', 'ASC']],
+				include: [{association : "details", order: [['detail_id', 'ASC']]}]
+			  },
 				{ association: "servicesToAdvantage",
 					order: [['id', 'ASC']] },
 				{ association: "servicesToQuestion" }
