@@ -1,7 +1,8 @@
 'use client'
 import { use, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import Joi from "joi";
+import useRecaptcha from '@/src/components/Recaptcha';
+
 
 
 import HeadPageComponent from "@/src/components/headPageComponent/headPageComponent";
@@ -28,7 +29,7 @@ export default function Contact () {
     const [service, setService] = useState("");
     const [rgpd, setRgpd] = useState(false);
 
-    
+    const { recaptchaToken, handleReCaptcha } = useRecaptcha();
 
     const handleContactSubmit = async (event) => {
         event.preventDefault();
@@ -83,7 +84,17 @@ export default function Contact () {
        return;
      }
 
+     const newToken = await handleReCaptcha();
 
+        if (!newToken) {
+            console.error("Erreur ReCAPTCHA : Le token est vide ou invalide !");
+            toast.error("Validation reCAPTCHA échouée. Merci de réessayer.", {
+                position: "bottom-right",
+                autoClose: 5000,
+                theme: "colored",
+            });
+            return;
+        }
 
     try {
     const res = await fetch("/api/contact", {
@@ -97,7 +108,8 @@ export default function Contact () {
         phone,
         service,
         message,
-        rgpd
+        rgpd,
+        recaptchaToken : newToken,
       }),
     });
 
