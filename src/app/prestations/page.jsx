@@ -13,6 +13,6 @@ export const metadata = {
 
 import PrestationsPage from "./prestationPage";
 
-export default function pprestationPage() {
+export default function prestationPage() {
   return <PrestationsPage />;
 }
