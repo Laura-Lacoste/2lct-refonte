@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-12 text-center text-sm text-white/50">
-        © {new Date().getFullYear()} 2LCT. Tous droits réservés.
+        © 2025 2LCT. Tous droits réservés. | <a href="/mentions-legales">Mentions Légales</a> 
       </div>
     </footer>
   )
