@@ -1,6 +1,8 @@
 'use client'
 import { use, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import Joi from "joi";
+
 
 import HeadPageComponent from "@/src/components/headPageComponent/headPageComponent";
 
@@ -13,6 +15,8 @@ export default function Contact () {
     const [message, setMessage] = useState("");
     const [service, setService] = useState("");
     const [rgpd, setRgpd] = useState(false);
+
+    
 
     const handleContactSubmit = async (event) => {
         event.preventDefault();
@@ -54,28 +58,20 @@ export default function Contact () {
       return;
     }
 
-    if (!rgpd) {
-      toast.error("Veuillez accepter la Politique de Confidentialité avant d'envoyer la demande.", {
-        position: "bottom-right",
-        autoClose: 5000,
+     if (!rgpd) {
+       toast.error("Veuillez accepter la Politique de Confidentialité avant d'envoyer la demande.", {
+         position: "bottom-right",
+         autoClose: 5000,
         hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "colored",
-      });
-      return;
-    }
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         theme: "colored",
+       });
+       return;
+     }
 
 
-    const contactData = {
-        name,
-        email,
-        phone,
-        message,
-        service, 
-        rgpd,
-    }
 
     try {
     const res = await fetch("/api/contact", {
@@ -89,19 +85,32 @@ export default function Contact () {
         phone,
         service,
         message,
+        rgpd
       }),
     });
 
-    const data = await res.json();
+    let data;
 
-    if (res.ok && data.success) {
+    try {
+    data = await res.json(); // protège l'appel
+  } catch {
+    toast.error("Réponse invalide du serveur.");
+    return;
+  }
+
+    if (res.status === 429) {
+  toast.error(data.error || "Trop de tentatives, réessaie plus tard.");
+  return;
+}
+
+    if (data.success) {
       toast.success("Message envoyé avec succès !");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setService("");
-      setMessage("");
-      setRgpd(false);
+      // setName("");
+      // setEmail("");
+      // setPhone("");
+      // setService("");
+      // setMessage("");
+      // setRgpd(false);
     } else {
       toast.error("Une erreur est survenue, veuillez réessayer.");
     }

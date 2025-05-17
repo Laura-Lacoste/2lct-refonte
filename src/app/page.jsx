@@ -33,7 +33,6 @@ export default function Home() {
     setOpenService(id)
   }
   
-  console.log(home)
 
   return (
     <div className='max-w-full'>
@@ -142,7 +141,7 @@ export default function Home() {
               </div>
               <div className='border-l-4 border-[#E58BD3] bg-white leading-loose text-base py-6 px-10 shadow-lg'> 
                 {variation.details?.sort((a,b) => a.id - b.id).map(detail => (
-                  <p>{detail.name}</p>
+                  <p key={detail.id}>{detail.name}</p>
                 ))}
               </div>
                 </div>
@@ -154,7 +153,7 @@ export default function Home() {
      </section>
     
     <section className='px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center'>
-    <p className='text-[#E58BD3] flex items-center uppercase gap-6 font-bold'><span className="bg-[#E58BD3] w-24 h-1"></span>Portfolio<span className="bg-[#E58BD3] w-24 h-1"></span></p>
+    <p className='text-[#E58BD3] flex items-center uppercase gap-6 font-bold'><span className="bg-[#] w-24 h-1"></span>Portfolio<span className="bg-[#E58BD3] w-24 h-1"></span></p>
     <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Découvrez Quelques Réalisations</h2>
     
     <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items-stretch w-full'>
@@ -170,7 +169,7 @@ export default function Home() {
         />
         <div className='p-6 flex flex-col gap-3 items-center'>
         <h3 className='text-xl font-semibold text-[#E58BD3]'>{project.name}</h3>
-        <p className='text-sm'>{project.card_description}</p>
+        <p className='text-sm'>{project.card_description}</p>E58BD3
         <a 
               href={`/portfolio/${project.slug}`}
               className="text-sm text-[#E58BD3] hover:underline w-fit"
