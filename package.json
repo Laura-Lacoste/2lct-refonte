@@ -10,7 +10,8 @@
     "lint": "next lint",
     "db:create": "psql -U laura -d 2LCT -f ./data/create_db.sql",
     "db:populate": "psql -U laura -d 2LCT -f ./data/populate_db.sql",
-    "db:reset": "npm run db:create && npm run db:populate"
+    "db:reset": "npm run db:create && npm run db:populate",
+      "sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
@@ -25,7 +26,8 @@
     "react-dom": "^19.0.0",
     "react-toastify": "^11.0.5",
     "sanitize-html": "^2.17.0",
-    "sequelize": "^6.37.6"
+    "sequelize": "^6.37.6",
+    "sitemap": "^8.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

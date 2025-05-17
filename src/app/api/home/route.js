@@ -1,18 +1,30 @@
 import { NextResponse } from 'next/server'
-import { Technology, Service, Project } from "../../../models/index.js";
+import { Technology, Service, Project, VariationService, DetailVariationService  } from "../../../models/index.js";
 
 export async function GET() {
+    console.log('VariationService.associations :', VariationService.associations);
+console.log('details' in VariationService.associations); 
+
     try {
         const technologies = await Technology.findAll({
             order: [["id", "ASC"]]
         });
         const services = await Service.findAll({
             order: [["id", "ASC"]],
-            include: [{ association: "variation_services", separate:true, order: [['id', 'ASC']],
-                include: [{association : "details", order: [['detail_id', 'ASC']]}]
-              },
-            
-        ]
+            include: [
+        {
+          model: VariationService,
+          as: 'variation_services',
+          order: [['id', 'ASC']],
+          include: [
+            {
+              model: DetailVariationService,
+              as: 'details',
+              order: [['detail_id', 'ASC']]
+            }
+          ]
+        }
+      ]
         });
         const projects = await Project.findAll({
             order: [["id", "DESC"]]

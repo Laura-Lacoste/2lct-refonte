@@ -6,6 +6,9 @@ import { Question } from "./question.model.js";
 import { ProjectImage } from "./projectImage.model.js";
 import { Technology } from "./technology.model.js";
 import { DetailVariationService } from "./detailVariationService.model.js";
+import { sequelize } from "../libs/db.js";
+
+
 
 Service.hasMany(VariationService,{
     foreignKey: "service_id",
@@ -75,4 +78,5 @@ VariationService.belongsToMany(DetailVariationService, {
     as: "details"
 })
 
-export {Service, VariationService, Question, Advantage, Project, ProjectImage, Technology, DetailVariationService};
+
+export {Service, VariationService, Question, Advantage, Project, ProjectImage, Technology, DetailVariationService, sequelize};
