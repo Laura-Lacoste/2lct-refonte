@@ -209,19 +209,19 @@ export default function Home() {
 
     <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-10 text-center">
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#E58BD3] font-semibold text-l">🎯 Un site à votre image</h3>
+        <h3 className="text-[#E58BD3] font-semibold text-l">Un site à votre image</h3>
         <p className="text-sm">Design, ton, contenu : tout est pensé pour refléter votre personnalité ou celle de votre marque.</p>
       </div>
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#E58BD3] font-semibold text-l">💡 Des conseils personnalisés</h3>
+        <h3 className="text-[#E58BD3] font-semibold text-l">Des conseils personnalisés</h3>
         <p className="text-sm">Pas de jargon inutile. On parle simple, on avance ensemble, et je vous guide à chaque étape.</p>
       </div>
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#E58BD3] font-semibold text-l">⚙️ Une solution clé en main</h3>
+        <h3 className="text-[#E58BD3] font-semibold text-l">Une solution clé en main</h3>
         <p className="text-sm">Je m’occupe de tout : création, optimisation, sécurité, SEO, maintenance. Zéro prise de tête pour vous.</p>
       </div>
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#E58BD3] font-semibold text-l">🤝 Un vrai suivi humain</h3>
+        <h3 className="text-[#E58BD3] font-semibold text-l">Un vrai suivi humain</h3>
         <p className="text-sm">On ne coupe pas les ponts à la livraison. Je reste dispo pour vous accompagner et faire évoluer votre site.</p>
       </div>
     </div>
