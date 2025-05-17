@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import logo from '@/public/logo-2lct-blanc-fond-noir.png'
+import logo from '@/public/logo-2lct-blanc-fond-noir.webp'
 
 export default function Header() {
   return (
@@ -21,7 +21,7 @@ export default function Header() {
           <Link href="/a-propos" className="hover:text-[#E58BD3] transition-colors duration-200">À propos</Link>
           <Link
             href="/contact"
-            className="bg-[#E58BD3] text-white px-4 py-2 rounded hover:bg-white hover:text-[#E58BD3] border border-transparent hover:border-[#E58BD3] transition-all duration-300"
+            className="bg-[#E58BD3] px-4 py-2 rounded text-[#050305] hover:bg-white hover:text-[#843E76] border border-transparent hover:border-[#843E76] transition-all duration-300"
           >
             Contact
           </Link>

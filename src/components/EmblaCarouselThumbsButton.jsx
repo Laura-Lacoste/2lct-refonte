@@ -20,7 +20,7 @@ export const Thumb = (props) => {
           alt={`Miniature ${index + 1}`}
           width={80}
           height={56}
-          className="w-full h-auto object-contain rounded-lg border-2 shadow-lg"
+          className="w-full h-auto object-cover rounded-lg border-2 shadow-lg"
         />
       </button>
     </div>

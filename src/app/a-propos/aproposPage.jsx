@@ -4,7 +4,7 @@ import HeadPageComponent from "@/src/components/headPageComponent/headPageCompon
 import { useState } from "react"
 import Image from "next/image"
 
-import imagePortrait from '@/public/portrait-laura-lacoste.jpg'
+import imagePortrait from '@/public/portrait-laura-lacoste.webp'
 
 export default function Apropos() {
     const title = "Qui suis-je & Comment je travaille ?"
@@ -61,7 +61,7 @@ export default function Apropos() {
   <p className="mb-4">
     Chaque détail compte : navigation fluide, hiérarchie de l’information, messages clairs, temps de chargement optimisé.
   </p>
-  <p className="italic text-[#E58BD3] font-semibold">
+  <p className="italic text-[#843E76] font-semibold">
     Mon objectif : créer des sites élégants, efficaces et durables — qui reflètent votre identité et parlent à vos clients.
   </p>
 </div>
@@ -69,10 +69,10 @@ export default function Apropos() {
 
 
 
-<h2 className="text-[#E58BD3] flex items-center gap-6 uppercase font-bold justify-center text-center text-lg md:text-xl">
-  <span className="bg-[#E58BD3] w-24 h-1"></span>
+<h2 className="text-[#843E76] flex items-center gap-6 uppercase font-bold justify-center text-center text-lg md:text-xl">
+  <span className="bg-[#843E76] w-24 h-1"></span>
   Ma méthode de travail
-  <span className="bg-[#E58BD3] w-24 h-1"></span>
+  <span className="bg-[#843E76] w-24 h-1"></span>
 </h2>
 
 <div className="max-w-6xl mx-auto text-center flex flex-col gap-4">
@@ -200,23 +200,23 @@ export default function Apropos() {
       <h2 className='text-3xl font-bold self-center text-center lg:text-left'>Pourquoi travailler avec moi ?</h2>
         <div className="flex justify-center flex-wrap gap-20">
           <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
-            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">01</div>
+            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">01</div>
             <p className="text-sm mt-2">Un interlocuteur unique : pas d’intermédiaire.</p>
           </div>
                     <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
-            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">02</div>
+            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">02</div>
             <p className="text-sm mt-2">Une approche humaine, simple, et engagée.</p>
           </div>
                     <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
-            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">03</div>
+            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">03</div>
             <p className="text-sm mt-2">Une vraie polyvalence : design, technique, stratégie.</p>
           </div>
                     <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
-            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">04</div>
+            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">04</div>
             <p className="text-sm mt-2">Un cadre clair dès le départ, sans surprise.</p>
           </div>
                     <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
-            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">05</div>
+            <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">05</div>
             <p className="text-sm mt-2">Une grande adaptabilité à vos besoins et votre rythme.</p>
           </div>
         </div>

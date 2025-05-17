@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server'
 import { Technology, Service, Project, VariationService, DetailVariationService  } from "../../../models/index.js";
 
 export async function GET() {
-    console.log('VariationService.associations :', VariationService.associations);
-console.log('details' in VariationService.associations); 
 
     try {
         const technologies = await Technology.findAll({

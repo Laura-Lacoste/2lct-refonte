@@ -26,7 +26,6 @@ export default function PorfolioDetailPage({params}) {
     }
     fetchServices()
     }, [])
-    console.log(project)
 
 
     const OPTIONS = {};
@@ -39,7 +38,7 @@ const SLIDES = SLIDE_ARRAY.map(item => item.image)
             <HeadPageComponent title={project.name}/>
             <section className="px-5 py-10 lg:px-36 lg:py-36 flex flex-col gap-14">
             <div className="flex flex-col gap-6">
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center'><span className="bg-[#E58BD3] w-24 h-1"></span>Description de la prestation<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <h2 className='text-[#843E76] flex items-center gap-6 uppercase font-bold text-center'><span className="bg-[#843E76] w-24 h-1"></span>Description de la prestation<span className="bg-[#843E76] w-24 h-1"></span></h2>
                 <p>{project.short_description}</p>
                 </div>
                 <div className="flex flex-col gap-2 lg:flex-row flex-wrap justify-between h-auto">
@@ -69,7 +68,7 @@ const SLIDES = SLIDE_ARRAY.map(item => item.image)
                 <div className="flex flex-col lg:flex-row justify-between">
 
                 <div className="flex flex-col gap-10 w-full lg:w-2/3">
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#E58BD3] w-24 h-1"></span>Détail<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <h2 className='text-[#843E76] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#843E76] w-24 h-1"></span>Détail<span className="bg-[#843E76] w-24 h-1"></span></h2>
                 <div className="text-base leading-relaxed" dangerouslySetInnerHTML={{ __html: project.long_description }} />
                 </div>
                 <div className="relative flex flex-col mt-10 lg:mt-0 gap-10 p-10 bg-[url('/2lct-besoin-daide-contact.svg')] bg-cover bg-center w-full lg:w-1/5 justify-center items-center rounded-xl shadow-sm">
@@ -77,11 +76,11 @@ const SLIDES = SLIDE_ARRAY.map(item => item.image)
                 <div className="absolute inset-0 bg-[#E58BD3]/30 z-0 rounded-xl"></div>
                 <h2 className="relative z-10 uppercase  text-shadow-sm font-bold">Contacter</h2>
                 <p className="relative z-10 uppercase text-2xl bold font-bold">Besoin d'aide ?</p>
-                <a href="/contact" className='relative z-10 bg-[#E58BD3] text-white py-2 px-4 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 w-fit'>Poser une question</a>
+                <a href="/contact" className='relative z-10 bg-[#E58BD3] text-base py-2 px-4 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>Poser une question</a>
                 </div>
                 </div>
 
-                <h2 className='text-[#E58BD3] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#E58BD3] w-24 h-1"></span>Les technologies utilisées<span className="bg-[#E58BD3] w-24 h-1"></span></h2>
+                <h2 className='text-[#843E76] flex items-center gap-6 uppercase font-bold text-center md:text-left'><span className="bg-[#843E76] w-24 h-1"></span>Les technologies utilisées<span className="bg-[#843E76] w-24 h-1"></span></h2>
                 
   {project.technologies?.length > 0 ? (
     <div className="flex flex-wrap gap-6 justify-center">
@@ -90,7 +89,7 @@ const SLIDES = SLIDE_ARRAY.map(item => item.image)
           key={tech.id}
           className="bg-white w-48 p-4 rounded-xl flex flex-col justify-center items-center shadow-md"
         >
-          <i className={`${tech.icon} text-3xl text-[#E58BD3]`}></i>
+          <i className={`${tech.icon} text-3xl text-[#843E76]`}></i>
           <p className="text-sm font-medium mt-2 text-center">{tech.name}</p>
         </div>
       ))}

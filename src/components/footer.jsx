@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import logo from '@/public/logo-2lct-blanc-fond-noir.png'
+import logo from '@/public/logo-2lct-blanc-fond-noir.webp'
 
 export default function Footer() {
   return (

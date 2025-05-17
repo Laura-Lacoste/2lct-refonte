@@ -139,21 +139,21 @@ export default function Contact () {
             <section className="px-5 py-10 lg:px-36 lg:py-36 flex flex-col md:flex-row gap-10 lg:gap-28 justify-center">
                 <div className="w-full border-l-8 border-[#E58BD3] justify-center items-center lg:w-[20%] flex flex-col gap-6 bg-[#FCFAFC] p-6 shadow-sm text-sm">
   <div className="flex flex-col gap-1 items-center ">
-    <h2 className="text-[#E58BD3] font-semibold text-base uppercase tracking-wide">Adresse</h2>
+    <h2 className="text-[#843E76] font-semibold text-base uppercase tracking-wide">Adresse</h2>
     <p className="text-[#050305]">Montastruc-la-Conseillère (31)</p>
   </div>
   <div className="flex flex-col gap-1 items-center">
-    <h2 className="text-[#E58BD3] font-semibold text-base uppercase tracking-wide">Email</h2>
+    <h2 className="text-[#843E76] font-semibold text-base uppercase tracking-wide">Email</h2>
     <p className="text-[#050305]">laura@2lct.fr</p>
   </div>
   <div className="flex flex-col gap-1 items-center">
-    <h2 className="text-[#E58BD3] font-semibold text-base uppercase tracking-wide">Téléphone</h2>
+    <h2 className="text-[#843E76] font-semibold text-base uppercase tracking-wide">Téléphone</h2>
     <p className="text-[#050305]">07 86 20 15 20</p>
   </div>  
         </div>
 
          <div className="w-full lg:w-[60%] flex flex-col  gap-6">
-            <h2 className="text-2xl font-bold text-[#E58BD3]">Vous avez des questions ?</h2>
+            <h2 className="text-2xl font-bold text-[#843E76]">Vous avez des questions ?</h2>
              <p className="text-base text-[#050305]">N'hésitez pas à me contacter, je vous réponds rapidement.</p>
             <form onSubmit={handleContactSubmit} className="flex flex-col gap-6 bg-[#FCFAFC] p-10 border-l-4 border-[#E58BD3] shadow-sm">
       <input
@@ -209,7 +209,7 @@ export default function Contact () {
             </label>
       <button
         type="submit"
-        className="bg-[#E58BD3] text-white px-4 py-2 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition"
+        className="bg-[#E58BD3] text-base px-4 py-2 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition"
       >
         Envoyer
       </button>

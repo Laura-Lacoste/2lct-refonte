@@ -8,7 +8,6 @@ export default function ParticlesBackground() {
     import('particles.js').then(() => {
       if (window.particlesJS) {
         window.particlesJS.load('particles-js', '/particlesjs-config.json', function () {
-          console.log('✨ Particles.js config loaded')
         })
       }
     })

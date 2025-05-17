@@ -24,7 +24,6 @@ const generateSitemap = async () => {
 
     fs.writeFileSync('./public/sitemap.xml', sitemap.toString());
 
-    console.log('✅ Sitemap généré avec succès dans ./public/sitemap.xml');
   } catch (error) {
     console.error('❌ Erreur lors de la génération du sitemap :', error);
   }

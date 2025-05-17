@@ -361,7 +361,7 @@ INSERT INTO "service_advantage" ("service_id", "advantage_id") VALUES
 (4, 19), 
 (4, 20);
 INSERT INTO "project" ("id", "image", "name", "slug", "card_description", "short_description", "long_description") VALUES
-(1, 'cabilat_homepage.png', 'Cabilat du Canton d''Oust', 'refonte-cabilat',
+(1, 'cabilat_homepage.webp', 'Cabilat du Canton d''Oust', 'refonte-cabilat',
 'Refonte du site institutionnel du Cabilat d''Oust sous WordPress',
 'Modernisation du site vitrine du Cabilat, facilitant la navigation et la gestion de contenu.',
 '
@@ -375,7 +375,7 @@ J’ai imaginé une <b>identité graphique complète</b> (palette, typographie, 
 
 Une <b>formation rapide</b> a été donnée aux membres de l’association pour garantir leur autonomie. Résultat : une <b>meilleure visibilité en ligne</b>, un site accessible depuis Google, et une image plus professionnelle.
 '),
-(2, 'lesbiscuitsdazas_homepage.png', 'Les Biscuits d''Azas', 'creation-biscuitsdazas',
+(2, 'lesbiscuitsdazas_homepage.webp', 'Les Biscuits d''Azas', 'creation-biscuitsdazas',
 'Création du site e-commerce Les Biscuits d''Azas avec React et Node.js',
 'Boutique artisanale en ligne développée sur-mesure avec React et un back-office Node.js.',
 '
@@ -391,7 +391,7 @@ Le site est <b>rapide</b>, <b>responsive</b>, <b>accessible</b> et <b>référenc
 
 Aujourd’hui, <b>le site est visible</b> sur Google et les commandes se font directement en ligne.
 '),
-(3, '2lct_homepage.png', '2LCT', 'refonte-2lct',
+(3, '2lct_homepage.webp', '2LCT', 'refonte-2lct',
 'Refonte du site 2LCT avec Next.js',
 'Refonte technique et visuelle du site de mon auto-entreprise 2LCT, spécialisée en création et refonte de sites web.',
 '
@@ -415,20 +415,20 @@ Aujourd’hui, ce site représente ma <b>vitrine</b>, mon <b>terrain d’expéri
 ');
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
-(1, 'cabilat_homepage.png', 1),
-(2, 'cabilat_a_propos.png', 1),
-(3, 'cabilat_actualites.png', 1),
-(4, 'cabilat_ou_pecher.png', 1),
+(1, 'cabilat_homepage.webp', 1),
+(2, 'cabilat_a_propos.webp', 1),
+(3, 'cabilat_actualites.webp', 1),
+(4, 'cabilat_ou_pecher.webp', 1),
 
-(5, 'lesbiscuitsdazas_homepage.png', 2),
-(6, 'lesbiscuitsdazas_liste_produits.png', 2),
-(7, 'lesbiscuitsdazas_detail_biscuits.png', 2),
-(8, 'lesbiscuitsdazas_reservation.png', 2),
+(5, 'lesbiscuitsdazas_homepage.webp', 2),
+(6, 'lesbiscuitsdazas_liste_produits.webp', 2),
+(7, 'lesbiscuitsdazas_detail_biscuits.webp', 2),
+(8, 'lesbiscuitsdazas_reservation.webp', 2),
 
-(9, '2lct_homepage.png', 3),
-(10, '2lct_page_detail_presta.png', 3),
-(11, '2lct_portfolio.png',3),
-(12, '2lct_homepage.png',3);
+(9, '2lct_homepage.webp', 3),
+(10, '2lct_page_detail_presta.webp', 3),
+(11, '2lct_portfolio.webp',3),
+(12, '2lct_contact.webp',3);
 
 
 INSERT INTO "technology" ("id", "icon", "name") VALUES
