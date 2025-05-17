@@ -1,15 +1,24 @@
 import { NextResponse } from 'next/server'
-import { Project } from "../../../../models/index.js";
+import { Project, ProjectImage, Technology } from "../../../../models/index.js";
 
 export async function GET(req, {params}) {
 	try {
 		const projectSlug = params.slug;
-		const project = await Project.findOne({
-			where: { slug: projectSlug },
-			include: [{ association: "project_images", separate: true, order: [['id', 'ASC']] },
-				{ association: "technologies" }
-			],
-		});
+		 const project = await Project.findOne({
+      where: { slug: projectSlug },
+      include: [
+        {
+          model: ProjectImage,
+          as: 'project_images',
+          separate: true,
+          order: [['id', 'ASC']],
+        },
+        {
+          model: Technology,
+          as: 'technologies',
+        },
+      ],
+    });
 	
 		return NextResponse.json(project);
 	} catch(error){
