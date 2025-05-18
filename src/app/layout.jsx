@@ -44,6 +44,11 @@ const poppins = Poppins({
 })
 
 export default function RootLayout({ children }) {
+
+  if (typeof window !== 'undefined') {
+  document.body.removeAttribute('cz-shortcut-listen');
+}
+
   return (
     <html lang="fr" className={poppins.variable}>
       <head>
