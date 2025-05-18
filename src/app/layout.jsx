@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
   />
   {/* End Google Tag Manager */}
 </head>
-      <body>
+      <body suppressHydrationWarning={true}>
         {/*  Google Tag Manager (noscript)  */}
  <noscript
           dangerouslySetInnerHTML={{
