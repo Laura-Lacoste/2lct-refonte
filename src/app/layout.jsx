@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import Burger from '../components/burger';
 import Header from '../components/header'
 import Footer from '../components/footer';
-import CzFixer from '../components/CzFixer';
+import CzFixer from '../components/czFixer';
 
 export const metadata = {
   title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
