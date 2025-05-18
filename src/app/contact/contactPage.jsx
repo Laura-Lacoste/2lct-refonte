@@ -1,7 +1,6 @@
 'use client'
 import { use, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import useRecaptcha from '@/src/components/Recaptcha';
 import Script from 'next/script'
 
 
@@ -30,7 +29,6 @@ export default function Contact () {
     const [service, setService] = useState("");
     const [rgpd, setRgpd] = useState(false);
 
-    const { handleReCaptcha } = useRecaptcha();
 
     const handleContactSubmit = async (event) => {
         event.preventDefault();
@@ -85,17 +83,6 @@ export default function Contact () {
        return;
      }
 
-     const newToken = await handleReCaptcha();
-
-        if (!newToken) {
-            console.error("Erreur ReCAPTCHA : Le token est vide ou invalide !");
-            toast.error("Validation reCAPTCHA échouée. Merci de réessayer.", {
-                position: "bottom-right",
-                autoClose: 5000,
-                theme: "colored",
-            });
-            return;
-        }
 
     try {
     const res = await fetch("/api/contact", {
@@ -110,7 +97,6 @@ export default function Contact () {
         service,
         message,
         rgpd,
-        recaptchaToken : newToken,
       }),
     });
 
@@ -147,11 +133,6 @@ export default function Contact () {
 
 
     return (
-      <>
-      <Script
-      src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-      strategy="afterInteractive"
-    />
       <main className="text-base overflow-hidden">
             <HeadPageComponent title={title}/>
             <section className="px-5 py-10 lg:px-36 lg:py-36 flex flex-col md:flex-row gap-10 lg:gap-28 justify-center">
@@ -236,7 +217,6 @@ export default function Contact () {
             </section>
             <ToastContainer/>
         </main>
-      </>
         
     )
 }

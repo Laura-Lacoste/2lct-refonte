@@ -11,8 +11,6 @@ const contactSchema = Joi.object({
   service: Joi.string().allow(''),
   message: Joi.string().min(5).required(),
   rgpd: Joi.boolean().valid(true).required(),
-  recaptchaToken: Joi.string().required().messages({"string.empty": "Le reCAPTCHA est obligatoire."
-                        })
 });
 
 export async function POST (req){
@@ -56,7 +54,7 @@ export async function POST (req){
         { status: 400 }
       );
     }
-         const { name, email, phone, service, message,rgpd, recaptchaToken } = body;
+         const { name, email, phone, service, message,rgpd } = body;
 
          
 
@@ -67,26 +65,6 @@ export async function POST (req){
       );
     }
 
-     if (!recaptchaToken) {
-             return NextResponse.json({ error: "reCAPTCHA manquant." }, { status: 400 });
-        }
-
-         const googleResponse = await axios.post(
-          `https://www.google.com/recaptcha/api/siteverify`,
-          null,
-          {
-              params: {
-                  secret:  process.env.RECAPTCHA_SECRET_KEY,
-                  response: recaptchaToken,
-              },
-          }
-      );
-
-       const { success, score } = googleResponse.data;
-    
-      if (!success || score < 0.5) {
-        return NextResponse.json({ error: "Échec de la vérification reCAPTCHA. Score trop bas." }, { status: 400 });
-    }
 
          const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
