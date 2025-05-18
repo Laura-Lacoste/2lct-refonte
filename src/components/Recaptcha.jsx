@@ -1,33 +1,25 @@
-import { useState } from "react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useCallback } from 'react'
 
 const useRecaptcha = () => {
-    const { executeRecaptcha } = useGoogleReCaptcha();
-    const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const handleReCaptcha = useCallback(async () => {
+    if (!window.grecaptcha) {
+      console.error("grecaptcha non chargé")
+      return null
+    }
 
-    const handleReCaptcha = async () => {
-        if (!executeRecaptcha) {
-            console.error("ReCAPTCHA non monté !");
-            return null;
-        }
+    try {
+      const token = await window.grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: 'submit' }
+      )
+      return token
+    } catch (error) {
+      console.error("Erreur reCAPTCHA", error)
+      return null
+    }
+  }, [])
 
-        try {
-            const token = await executeRecaptcha("submit");
-            if (!token) {
-                console.error("Erreur ReCAPTCHA : Aucun token généré !");
-                return null;
-            }
+  return { handleReCaptcha } // ✅ Pas de recaptchaToken ici
+}
 
-            console.log("ReCAPTCHA Token reçu :", token);
-            setRecaptchaToken(token);
-            return token;
-        } catch (error) {
-            console.error("Erreur lors de l'exécution de reCAPTCHA :", error);
-            return null;
-        }
-    };
-
-    return { recaptchaToken, handleReCaptcha };
-};
-
-export default useRecaptcha;
+export default useRecaptcha

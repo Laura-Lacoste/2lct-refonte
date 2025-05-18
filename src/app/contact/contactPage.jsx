@@ -2,6 +2,7 @@
 import { use, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import useRecaptcha from '@/src/components/Recaptcha';
+import Script from 'next/script'
 
 
 
@@ -29,7 +30,7 @@ export default function Contact () {
     const [service, setService] = useState("");
     const [rgpd, setRgpd] = useState(false);
 
-    const { recaptchaToken, handleReCaptcha } = useRecaptcha();
+    const { handleReCaptcha } = useRecaptcha();
 
     const handleContactSubmit = async (event) => {
         event.preventDefault();
@@ -146,7 +147,12 @@ export default function Contact () {
 
 
     return (
-        <main className="text-base overflow-hidden">
+      <>
+      <Script
+      src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+      strategy="afterInteractive"
+    />
+      <main className="text-base overflow-hidden">
             <HeadPageComponent title={title}/>
             <section className="px-5 py-10 lg:px-36 lg:py-36 flex flex-col md:flex-row gap-10 lg:gap-28 justify-center">
                 <div className="w-full border-l-8 border-[#E58BD3] justify-center items-center lg:w-[20%] flex flex-col gap-6 bg-[#FCFAFC] p-6 shadow-sm text-sm">
@@ -230,5 +236,7 @@ export default function Contact () {
             </section>
             <ToastContainer/>
         </main>
+      </>
+        
     )
 }
