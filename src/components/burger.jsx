@@ -13,7 +13,8 @@ export default function Burger() {
   }
 
   useEffect(() => {
-    document.body.classList.toggle('no-scroll', burgerOpen)
+    document.body.removeAttribute('cz-shortcut-listen');
+    document.body.classList.toggle('no-scroll', burgerOpen);
   }, [burgerOpen])
 
   return (

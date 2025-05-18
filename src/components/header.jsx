@@ -3,8 +3,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import logo from '@/public/logo-2lct-blanc-fond-noir.webp'
+import { useEffect } from 'react';
 
 export default function Header() {
+    useEffect(() => {
+      document.body.removeAttribute('cz-shortcut-listen');
+    }, []);
   return (
     <header className="hidden md:flex fixed top-0 left-0 w-full h-28 bg-[#050305] z-[999] shadow-md px-12 text-sm">
       <div className="flex w-full justify-around items-center">
