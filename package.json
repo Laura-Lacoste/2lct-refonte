@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "db:create": "psql -U laura -d 2LCT -f ./data/create_db.sql",
     "db:populate": "psql -U laura -d 2LCT -f ./data/populate_db.sql",
