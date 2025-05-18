@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import Burger from '../components/burger';
 import Header from '../components/header'
 import Footer from '../components/footer';
+import RecaptchaLayout from '@/components/RecaptchaLayout'
 
 export const metadata = {
   title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
@@ -78,7 +79,9 @@ export default function RootLayout({ children }) {
         />
         <Burger />
         <Header />
+        <RecaptchaLayout>
         {children}
+        </RecaptchaLayout>
         <Footer />
       </body>
     </html>
