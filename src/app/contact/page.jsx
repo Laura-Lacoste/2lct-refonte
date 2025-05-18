@@ -9,7 +9,7 @@ export const metadata = {
   },
 };
 
-import Contact from './ContactPage';
+import Contact from './PageContact';
 
 export default function contactPage() {
   return <Contact />;
