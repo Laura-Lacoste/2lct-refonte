@@ -16,7 +16,7 @@ TRUNCATE TABLE
 
 
 INSERT INTO "service" ("id", "icon", "name", "slug", "card_description", "image", "short_description", "long_description") VALUES
-(1, 'fa-solid fa-laptop-code', 'Création de Site Web', 'creation-site',
+(1, 'fa-solid fa-laptop-code', 'Création de site beb', 'creation-site',
 'Des sites modernes, sur-mesure, bien pensés. WordPress ou dev spécifique, selon vos besoins.',
 '2lct-description-creation-site.svg',
 'Je conçois des sites vitrines professionnels, efficaces et modernes.
@@ -34,7 +34,7 @@ Votre site devient un vrai outil de communication, pensé pour durer.
 Un accompagnement complet, du début à la mise en ligne.'
 ),
 
-(2, 'fa-solid fa-hammer', 'Refonte & Optimisation', 'refonte-optimisation',
+(2, 'fa-solid fa-hammer', 'Refonte & optimisation', 'refonte-optimisation',
 'Modernisez votre site actuel. Nouveau design, meilleures performances, plus de visibilité.',
 '2lct-description-refonte-site.svg',
 'Votre site est en ligne, mais il ne vous ressemble plus ou ne performe pas ?
@@ -61,7 +61,7 @@ Je vous accompagne pour améliorer votre référencement naturel.
 Je travaille les mots-clés, les contenus, les balises et la structure.
 L’objectif : plus de visiteurs, mieux ciblés, sans pub payante.
 Un SEO clair, propre, durable.',
-'e vous aide à améliorer votre positionnement sur Google grâce au référencement naturel.
+'Je vous aide à améliorer votre positionnement sur Google grâce au référencement naturel.
 J’analyse votre site, vos contenus, vos mots-clés et votre structure technique.
 Je retravaille les titres, balises, textes, images et vitesse de chargement.
 Je mets en place un maillage interne efficace et une hiérarchie claire.
@@ -71,7 +71,7 @@ Votre site devient plus visible, plus crédible, plus performant.
 Un vrai levier de trafic, durable et rentable.'
 ),
 
-(4, 'fa-solid fa-headset', 'Maintenance & Support', 'maintenance-support',
+(4, 'fa-solid fa-headset', 'Maintenance & support', 'maintenance-support',
 'Un site qui tourne sans souci.
 Mises à jour, sécurité, évolutions.',
 '2lct-description-maintenance.svg',

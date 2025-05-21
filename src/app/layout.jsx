@@ -63,14 +63,16 @@ export default function RootLayout({ children }) {
 </head>
       <body suppressHydrationWarning={true}>
         {/*  Google Tag Manager (noscript)  */}
- <noscript
-          dangerouslySetInnerHTML={{
-            __html: `
-              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVW9PNP7"
-              height="0" width="0" style="display:none;visibility:hidden"></iframe>
-            `,
-          }}
-        />
+ <div
+      dangerouslySetInnerHTML={{
+        __html: `
+          <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVW9PNP7"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+          </noscript>
+        `,
+      }}
+    />
  {/* End Google Tag Manager (noscript) */}
         <link
           rel="stylesheet"
