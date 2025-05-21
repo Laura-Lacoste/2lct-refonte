@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import Burger from '../components/burger';
 import Header from '../components/header'
 import Footer from '../components/footer';
-
+import GTMNoScriptFix from './gtm-noscript';
 
 export const metadata = {
   title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
@@ -62,18 +62,7 @@ export default function RootLayout({ children }) {
   {/* End Google Tag Manager */}
 </head>
       <body suppressHydrationWarning={true}>
-        {/*  Google Tag Manager (noscript)  */}
- <div
-      dangerouslySetInnerHTML={{
-        __html: `
-          <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVW9PNP7"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-          </noscript>
-        `,
-      }}
-    />
- {/* End Google Tag Manager (noscript) */}
+        <GTMNoScriptFix />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
