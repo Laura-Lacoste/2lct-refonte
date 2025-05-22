@@ -55,7 +55,7 @@ const SLIDES = SLIDE_ARRAY.map(item => item.image)
                       href={`/portfolio/${element.slug}`}
                       className="bg-white px-2 py-2 rounded-md shadow-sm hover:text-[#E58BD3] hover:cursor-pointer hover:shadow-md transition-all"
                     >
-                      {element.name} ⭢
+                      {element.name} ➔
                     </Link>
                 )) ) : (
                     <p>Chargement des projets</p>

@@ -50,7 +50,7 @@ export default function Home() {
     <div className='flex flex-col gap-8 py-10 lg:w-[60%]'>
     <p className='hidden text-[#843E76] md:flex items-center justify-start gap-5 font-bold'>Une Collaboration Personnalisée <span className="bg-[#843E76] w-28 h-1"></span></p>
     
-    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Votre Partenaire pour Développer Votre Présence en Ligne</h2>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Votre partenaire pour développer votre présence en ligne</h2>
     
     <div className='flex flex-col gap-6 text-xs md:text-sm lg:text-base leading-relaxed'>
     <p>
@@ -81,7 +81,7 @@ export default function Home() {
     
     <section className='bg-[#FCFAFC] px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center' >
     <p className='text-[#843E76] flex items-center gap-6 uppercase font-bold'><span className="bg-[#843E76] w-24 h-1"></span>Services<span className="bg-[#843E76] w-24 h-1"></span></p>
-    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Des Solutions Digitales à Votre Image</h2>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Des solutions digitales à votre image</h2>
     
     <div className='flex flex-wrap gap-8 justify-center w-full mb-16'>
     {home.services && home.services.length > 0 ? (
@@ -153,7 +153,7 @@ export default function Home() {
     
     <section className='px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center'>
     <p className='text-[#843E76] flex items-center uppercase gap-6 font-bold'><span className="bg-[#843E76] w-24 h-1"></span>Portfolio<span className="bg-[#843E76] w-24 h-1"></span></p>
-    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Découvrez Quelques Réalisations</h2>
+    <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Découvrez quelques réalisations</h2>
     
     <div className='flex flex-col md:flex-row md:flex-wrap gap-8 justify-center items-stretch w-full'>
     {home.projects && home.projects.length > 0 ? (

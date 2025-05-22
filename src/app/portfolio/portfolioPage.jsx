@@ -17,7 +17,7 @@ export default function PortfolioPage() {
     fetchServices()
   }, [])
 
-  const title ="Mes Projets : Des Solutions Digitales sur mesure"
+  const title ="Mes projets : des solutions digitales sur mesure"
 
   return (
     <main  className='text-base overflow-hidden'>
