@@ -8,6 +8,9 @@ import GTMNoScriptFix from './gtm-noscript';
 
 export const metadata = {
   title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
+  icons: {
+    icon: '/favicon.ico',
+  },
   description:
     "2LCT accompagne les professionnels de Toulouse et de la Haute-Garonne dans la création et la refonte de sites web sur mesure, élégants et efficaces.",
   keywords: [
