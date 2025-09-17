@@ -16,7 +16,7 @@ TRUNCATE TABLE
 
 
 INSERT INTO "service" ("id", "icon", "name", "slug", "card_description", "image", "short_description", "long_description") VALUES
-(1, 'fa-solid fa-laptop-code', 'Création de site beb', 'creation-site',
+(1, 'fa-solid fa-laptop-code', 'Création de site web', 'creation-site',
 'Des sites modernes, sur-mesure, bien pensés. WordPress ou dev spécifique, selon vos besoins.',
 '2lct-description-creation-site.svg',
 'Je conçois des sites vitrines professionnels, efficaces et modernes.
