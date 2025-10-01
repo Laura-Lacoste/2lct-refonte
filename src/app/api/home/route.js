@@ -19,13 +19,14 @@ export async function GET() {
               model: DetailVariationService,
               as: 'details',
               order: [['detail_id', 'ASC']]
-            }
+            },
           ]
         }
       ]
         });
         const projects = await Project.findAll({
-            order: [["id", "DESC"]]
+            order: [["id", "DESC"]],
+            limit: 3,
         })
 
         return NextResponse.json({technologies, services, projects});
