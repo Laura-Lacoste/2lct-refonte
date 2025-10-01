@@ -412,6 +412,24 @@ Le site a été développé avec <b>Next.js</b>, <b>Tailwind CSS</b> et est enti
 J’ai pris en charge <b>l’hébergement</b> et la <b>mise en ligne</b>, avec pour objectif une <b>expérience utilisateur fluide</b> et une <b>image professionnelle forte</b>.<br><br>
 
 Aujourd’hui, ce site représente ma <b>vitrine</b>, mon <b>terrain d’expérimentation</b> et un <b>support de démonstration client</b>. Il reflète ma <b>vision du web</b> : <b>clair, moderne, humain et performant</b>.
+'),
+(4, 'dashboard_stats_mensuelles.webp', 'Dashboard Statistique', 'creation-dashboard-stats',
+'Création d’un tableau de bord de statistiques automatisé en React et Node.js',
+'Outil interne de visualisation et d’automatisation des statistiques métier, développé sur-mesure en Node.js et React.',
+'
+Développement d’un <b>Dashboard Statistique</b> pour automatiser la production et la lecture des indicateurs clés d’une entreprise. 
+Jusqu’alors, l’équipe effectuait ces calculs <b>manuellement</b>, ce qui représentait une perte de temps et un risque d’erreurs. 
+L’objectif : <b>centraliser, fiabiliser et visualiser</b> toutes les données importantes en un seul outil.<br><br>
+
+Le système récupère automatiquement les <b>données d’un CRM via FTP</b>, les stocke en local puis les <b>supprime et met à jour</b> chaque jour au lancement du logiciel. 
+Un back-end en <b>Node.js/Express</b> traite ces fichiers (conversion, encodage, nettoyage) et expose une <b>API</b> consommée par un front-end en <b>React</b>. 
+Les utilisateurs disposent ainsi d’un tableau de bord clair et visuel avec des <b>statistiques journalières, mensuelles et annuelles</b> : 
+<b>chiffre d’affaires, panier moyen, nombre de commandes, frais d’approvisionnement, évolution des ventes</b>…<br><br>
+
+Le Dashboard propose également des <b>répartitions par catégorie, marque ou fournisseur</b>, ainsi que des graphiques d’évolution pour analyser les tendances. 
+Le design a été pensé pour être <b>coloré, lisible et responsive</b>, facilitant la prise en main par l’équipe.<br><br>
+
+Résultat : une <b>automatisation complète</b> du processus, un gain de temps significatif pour les collaborateurs, et une <b>visualisation claire et interactive</b> des données clés de l’entreprise.
 ');
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
@@ -428,7 +446,12 @@ INSERT INTO "project_image" ("id", "image", "project_id") VALUES
 (9, '2lct_homepage.webp', 3),
 (10, '2lct_page_detail_presta.webp', 3),
 (11, '2lct_portfolio.webp',3),
-(12, '2lct_contact.webp',3);
+(12, '2lct_contact.webp',3),
+
+(13, 'dashboard_stats_mensuelles.webp', 4),
+(14, 'dashboard_stats_compta.webp', 4),
+(15, 'dashboard_stats_fournisseurs.webp', 4),
+(16, 'dashboard_stats_journalieres.webp', 4);
 
 
 INSERT INTO "technology" ("id", "icon", "name") VALUES
@@ -494,7 +517,13 @@ INSERT INTO "technology_project" ("project_id", "technology_id") VALUES
 (3,28),
 (3,27),
 (3,10),
-(3,12);      
+(3,12),
+(4, 4), 
+(4, 5), 
+(4, 9), 
+(4, 23), 
+(4, 25), 
+(4, 16); 
 
 COMMIT;
 
