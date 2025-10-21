@@ -40,11 +40,11 @@ export default function Home() {
     <section className='flex flex-col-reverse justify-center lg:justify-between items-center px-5 py-10 lg:flex-row lg:px-36 lg:py-14 lg:gap-20' >
     <div className='flex flex-col lg:flex-row gap-8 items-center justify-center lg:justify-between lg:w-[36%]'>
     <div className='hidden lg:flex flex-col gap-8 w-full lg:w-[45%]'>
-    <Image src={image1Home} alt='' />
-    <Image src={image2Home} alt=''/>
+  <Image src={image1Home} alt="Illustration d'accueil 1 - site web sur mesure Toulouse" />
+  <Image src={image2Home} alt="Illustration d'accueil 2 - accompagnement digital Haute-Garonne" />
     </div>
     <div className='w-full md:w-[70%] lg:w-[45%] h-auto object-cover'>
-    <Image src={image3Home} alt=''/>
+  <Image src={image3Home} alt="Illustration d'accueil 3 - expertise technique 2LCT" />
     </div>
     </div>
     <div className='flex flex-col gap-8 py-10 lg:w-[60%]'>
@@ -160,11 +160,11 @@ export default function Home() {
       home.projects.map(project => (
         <div key={project.id} className='flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm transition-transform hover:scale-105 hover:shadow-xl'>
         <Image 
-        src={`/${project.image}`} 
-        alt={project.name} 
-        width={600} 
-        height={400}
-        className="object-cover"
+  src={`/${project.image}`} 
+  alt={`Projet ${project.name} - réalisation web 2LCT`} 
+  width={600} 
+  height={400}
+  className="object-cover"
         />
         <div className='p-6 flex flex-col gap-3 items-center'>
         <h3 className='text-xl font-semibold text-[#843E76]'>{project.name}</h3>

@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /api/         # Bloque les API non destinées aux utilisateurs
 Allow: /
 
-Sitemap: http://www.localhost:3000/sitemap.xml
+Sitemap: https://www.az-transfert.fr/sitemap.xml

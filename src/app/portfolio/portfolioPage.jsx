@@ -30,11 +30,11 @@ export default function PortfolioPage() {
       projects.map(project => (
         <div key={project.id} className='flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm transition-transform hover:scale-105 hover:shadow-xl'>
         <Image 
-        src={`/${project.image}`} 
-        alt={project.name} 
-        width={600} 
-        height={400}
-        className="object-cover"
+  src={`/${project.image}`} 
+  alt={`Projet ${project.name} - création site web Toulouse`} 
+  width={600} 
+  height={400}
+  className="object-cover"
         />
         <div className='p-6 flex flex-col gap-3 items-center'>
         <h3 className='text-xl font-semibold text-[#843E76]'>{project.name}</h3>
@@ -81,7 +81,7 @@ export default function PortfolioPage() {
     </section>
 
 <section className=' flex flex-col px-5 py-10 lg:px-32 lg:py-36 gap-20'>
-    <h2 className='text-3xl font-bold self-center text-center lg:text-left'>Comment Travailler Ensemble ?</h2>
+  <h2 className='text-3xl font-bold self-center text-center lg:text-left'>Ma méthode pour vos projets web sur-mesure</h2>
     <div className="flex justify-center flex-wrap gap-20">
         <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
             <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">01</div>

@@ -1,5 +1,13 @@
 import HeadPageComponent from '@/src/components/headPageComponent/headPageComponent'
 
+export const metadata = {
+  title: 'Mentions légales | 2LCT - Freelance web Toulouse',
+  description: "Informations légales du site 2LCT : éditeur, hébergeur, propriété intellectuelle et protection des données.",
+  alternates: {
+    canonical: '/mentions-legales',
+  },
+};
+
 export default function Mentions() {
     const title ="Mentions Légales"
     return(

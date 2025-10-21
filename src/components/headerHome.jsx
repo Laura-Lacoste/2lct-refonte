@@ -20,11 +20,11 @@ export default function HeaderHome() {
 
         <h1 className="text-xl md:text-2xl font-bold leading-snug">
           Création de <span className="text-[#E58BD3]">sites web</span> à Toulouse pour 
-          <span className="text-[#E58BD3]"> indépendants et petites entreprises</span>
+          <span className="text-[#E58BD3]"> artisans, indépendants et PME</span>
         </h1>
 
         <h2 className="text-base md:text-lg font-medium text-white/80">
-          Des sites clairs, efficaces et personnalisés pour booster votre visibilité
+          Sites clairs et personnalisés pour votre visibilité
         </h2>
 
         <p className="text-xs md:text-sm font-extralight text-white/70 leading-relaxed">

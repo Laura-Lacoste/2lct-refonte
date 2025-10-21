@@ -17,11 +17,11 @@ export default function Apropos() {
 <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center justify-center">
   <div className="flex-shrink-0">
     <Image
-      src={imagePortrait}
-      alt="Portrait de Laura"
-      width={220}
-      height={220}
-      className="rounded-full shadow-md"
+  src={imagePortrait}
+  alt="Portrait de Laura Lacoste, développeuse web freelance à Toulouse"
+  width={220}
+  height={220}
+  className="rounded-full shadow-md"
     />
   </div>
 

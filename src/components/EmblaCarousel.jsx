@@ -44,7 +44,7 @@ const EmblaCarousel = (props) => {
                  src={`/${imageName}`}
                  width={2547}
                  height={1297}
-                 alt={`Slide ${index + 1}`}
+                 alt={`Diapositive ${index + 1} - projet web 2LCT`} 
                  className= "object-fit w-full h-full rounded-lg border-2"
                  />
             </div>

@@ -17,7 +17,7 @@ export const Thumb = (props) => {
       >
         <Image
           src={`/${image}`}
-          alt={`Miniature ${index + 1}`}
+          alt={`Miniature ${index + 1} - aperçu projet 2LCT`} 
           width={80}
           height={56}
           className="w-full h-auto object-cover rounded-lg border-2 shadow-lg"

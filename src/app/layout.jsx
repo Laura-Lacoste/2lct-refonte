@@ -7,6 +7,7 @@ import Footer from '../components/footer';
 import GTMNoScriptFix from './gtm-noscript';
 
 export const metadata = {
+  metadataBase: new URL('https://www.2lct.fr'),
   title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
   icons: {
     icon: '/favicon.ico',
@@ -24,6 +25,9 @@ export const metadata = {
     'Laura 2LCT',
   ],
   robots: 'index, follow',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
     description:

@@ -2,6 +2,9 @@ export const metadata = {
   title: 'Portfolio | 2LCT - Réalisations web à Toulouse',
   description:
     "Découvrez mes réalisations web pour des entrepreneurs et artisans de Toulouse et la Haute-Garonne : design, développement, accompagnement.",
+  alternates: {
+    canonical: '/portfolio',
+  },
   openGraph: {
     title: 'Portfolio | 2LCT',
     description:

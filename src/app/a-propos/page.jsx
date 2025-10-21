@@ -2,6 +2,9 @@ export const metadata = {
   title: 'À propos | 2LCT - Freelance web à Toulouse',
   description:
     "Je suis Laura, développeuse web freelance à Toulouse. Découvrez mon parcours, mes valeurs et ma manière de travailler sur vos projets digitaux.",
+  alternates: {
+    canonical: '/a-propos',
+  },
   openGraph: {
     title: 'À propos | 2LCT',
     description:
