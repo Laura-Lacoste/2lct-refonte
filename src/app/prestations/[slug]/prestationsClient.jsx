@@ -14,7 +14,7 @@ export default function PrestationsClient({params}) {
      useEffect(() => {
         const fetchServices = async () => {
             try {
-                const res = await fetch (`/api/service/${params.slug}`)
+                const res = await fetch (`/api/service/${params}`)
                 const data = await res.json()
                 setPrestation(data)
                 const resAll = await fetch ('/api/services')

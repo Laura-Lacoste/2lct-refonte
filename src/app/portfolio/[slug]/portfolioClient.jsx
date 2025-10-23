@@ -14,9 +14,10 @@ export default function PortfolioClient({params}) {
     useEffect(() => {
         const fetchServices = async () => {
         try{
-            const res = await fetch (`/api/project/${params.slug}`)
+            const res = await fetch (`/api/project/${params}`)
             const data = await res.json()
             setProject(data)
+            console.log(data)
             const resAll = await fetch('/api/projects')
             const dataAll = await resAll.json()
             setAllProjects(dataAll)

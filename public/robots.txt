@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /api/         # Bloque les API non destinées aux utilisateurs
 Allow: /
 
-Sitemap: https://www.az-transfert.fr/sitemap.xml
+Sitemap: https://www.2lct.fr/sitemap.xml
