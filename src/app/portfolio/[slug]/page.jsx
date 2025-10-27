@@ -38,17 +38,6 @@ export async function generateMetadata({ params }) {
   }
 }
 
-// export default async function PorfolioDetailPage({params}) {
-//   const { slug } = await params
-//   return (
-//     <Suspense fallback={<div>Chargement...</div>}>
-//       <PortfolioClient params={slug} />
-//     </Suspense>
-//   )
-// }
-
-
-
 
 export default async function PortfolioClient({params}) {
   const { slug } = await params
