@@ -46,9 +46,18 @@ const nextConfig = {
             value: 'max-age=31536000; includeSubDomains; preload',
           },
           {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://static.axept.io; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: blob:; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://client.axept.io https://static.axept.io; frame-src 'self' https://www.googletagmanager.com;",
-          },
+  key: 'Content-Security-Policy',
+  value: `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://static.axept.io;
+    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    img-src 'self' data: blob:;
+    font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+    connect-src 'self' https://client.axept.io https://static.axept.io https://api.axept.io;
+    frame-src 'self' https://www.googletagmanager.com;
+  `.replace(/\s{2,}/g, ' ').trim(),
+},
+
         ],
       },
     ];
