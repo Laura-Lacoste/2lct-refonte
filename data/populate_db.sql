@@ -430,7 +430,31 @@ Le Dashboard propose également des <b>répartitions par catégorie, marque ou f
 Le design a été pensé pour être <b>coloré, lisible et responsive</b>, facilitant la prise en main par l’équipe.<br><br>
 
 Résultat : une <b>automatisation complète</b> du processus, un gain de temps significatif pour les collaborateurs, et une <b>visualisation claire et interactive</b> des données clés de l’entreprise.
+'),
+(5, 'chouettecarpette_homepage.webp', 'Chouette Carpette', 'creation-chouettecarpette',
+'Création du site vitrine One Page de Chouette Carpette avec Next.js',
+'Site vitrine doux et professionnel pour une entreprise de nettoyage, développé sur-mesure avec Next.js et hébergé chez o2switch.',
+'
+Le site <b>Chouette Carpette</b> a été conçu pour une <b>entreprise tarnaise</b> spécialisée dans le <b>nettoyage de mobilier en tissu et cuir</b>. 
+L’objectif était de créer une <b>présence en ligne claire, rassurante et professionnelle</b>, reflétant l’univers doux et soigné de la marque.<br><br>
+
+Avant le projet, l’entreprise n’avait <b>aucun site web</b> et dépendait uniquement du bouche-à-oreille et des réseaux sociaux. 
+Le besoin était donc double : <b>gagner en crédibilité</b> et <b>attirer une nouvelle clientèle</b>, aussi bien de <b>particuliers</b> que de <b>professionnels</b> (hôtels, commerces, agences, artisans).<br><br>
+
+J’ai imaginé un <b>site vitrine One Page</b> à la navigation fluide, pensé pour inspirer la confiance et valoriser le savoir-faire. 
+La structure met en avant les <b>services clés</b> (nettoyage de mobilier et après chantier), une <b>présentation humaine</b> de la fondatrice, un <b>bandeau de réassurance</b> avec pictogrammes, une <b>galerie avant/après</b> et un <b>formulaire de contact rapide</b>.<br><br>
+
+Côté technique, le site a été développé en <b>Next.js</b> avec <b>Modules CSS</b> pour un rendu léger et performant. 
+Le <b>formulaire de contact</b> utilise une <b>route API sécurisée</b> via <b>Nodemailer</b> pour l’envoi automatique des messages. 
+Le site est <b>100 % responsive</b>, <b>SEO-friendly</b> (balises, structure Hn, sitemap, alt, métadonnées) et hébergé sur <b>o2switch</b> avec une application Node.js dédiée.<br><br>
+
+Le <b>design</b> traduit l’univers cocooning et propre de la marque : une palette de <b>bleu doux, beige clair et rose poudré</b>, des <b>typographies modernes</b> (Poppins et Roboto), et une <b>iconographie minimaliste</b> évoquant le soin et la sérénité. 
+Chaque section a été pensée pour guider le visiteur naturellement vers la prise de contact.<br><br>
+
+Résultat : un <b>site fluide, rassurant et professionnel</b> qui incarne parfaitement l’image de <b>Chouette Carpette</b>. 
+Il a permis à l’entreprise de <b>renforcer sa visibilité locale</b> et de <b>gagner du temps dans la gestion de ses demandes clients</b>, tout en affirmant une identité visuelle forte et cohérente.
 ');
+
 
 INSERT INTO "project_image" ("id", "image", "project_id") VALUES
 (1, 'cabilat_homepage.webp', 1),
@@ -451,7 +475,12 @@ INSERT INTO "project_image" ("id", "image", "project_id") VALUES
 (13, 'dashboard_stats_mensuelles.webp', 4),
 (14, 'dashboard_stats_compta.webp', 4),
 (15, 'dashboard_stats_fournisseurs.webp', 4),
-(16, 'dashboard_stats_journalieres.webp', 4);
+(16, 'dashboard_stats_journalieres.webp', 4),
+
+(17, 'chouettecarpette_homepage.webp', 5),
+(18, 'chouettecarpette_services.webp', 5),
+(19, 'chouettecarpette_galerie.webp', 5),
+(20, 'chouettecarpette_contact.webp', 5);
 
 
 INSERT INTO "technology" ("id", "icon", "name") VALUES
@@ -523,7 +552,14 @@ INSERT INTO "technology_project" ("project_id", "technology_id") VALUES
 (4, 9), 
 (4, 23), 
 (4, 25), 
-(4, 16); 
+(4, 16),
+(5, 32), 
+(5, 1),   
+(5, 2),   
+(5, 3),   
+(5, 16),  
+(5, 12), 
+(5, 27);
 
 COMMIT;
 

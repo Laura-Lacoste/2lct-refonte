@@ -29,7 +29,6 @@ export default async function PortfolioPage() {
   const projects = await res.json()
 
 
-
   const title ="Mes projets : des solutions digitales sur mesure"
 
   return (

@@ -59,7 +59,6 @@ async function generateSitemap() {
     const stream = new SitemapStream({ hostname: BASE_URL })
     const sitemap = await streamToPromise(Readable.from(links).pipe(stream))
     fs.writeFileSync('./public/sitemap.xml', sitemap.toString())
-    console.log('✅ Sitemap généré avec succès !')
   } catch (error) {
     console.error('❌ Erreur lors de la génération du sitemap :', error)
   }
