@@ -1,15 +1,26 @@
 export const metadata = {
-  title: 'À propos | 2LCT - Freelance web à Toulouse',
+  title: 'À propos | 2LCT - Développeuse web freelance à Toulouse',
   description:
-    "Je suis Laura, développeuse web freelance à Toulouse. Découvrez mon parcours, mes valeurs et ma manière de travailler sur vos projets digitaux.",
+    "Je suis Laura, développeuse web freelance à Toulouse. Découvrez mon parcours, mes valeurs et ma manière de travailler : des créations web sur mesure, humaines et efficaces.",
   alternates: {
-    canonical: '/a-propos',
+    canonical: 'https://www.2lct.fr/a-propos',
   },
   openGraph: {
-    title: 'À propos | 2LCT',
+    title: 'À propos | 2LCT - Développeuse web freelance à Toulouse',
     description:
-      "Apprenez à mieux connaître Laura, freelance web à Toulouse. Une approche humaine, rigoureuse et transparente.",
+      "Apprenez à mieux connaître Laura, freelance web à Toulouse. Une approche humaine, rigoureuse et transparente pour vos projets digitaux.",
     url: 'https://www.2lct.fr/a-propos',
+    siteName: '2LCT',
+    images: [
+      {
+        url: 'https://www.2lct.fr/2lct_homepage.webp', // ajoute ton image de partage
+        width: 1200,
+        height: 630,
+        alt: 'Laura Lacoste, développeuse web freelance à Toulouse - 2LCT',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
   },
 };
 

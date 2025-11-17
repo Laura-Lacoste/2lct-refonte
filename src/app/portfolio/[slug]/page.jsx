@@ -17,22 +17,55 @@ export async function generateMetadata({ params }) {
     const project = await res.json()
 
     return {
-      title: `${project.name} | Portfolio 2LCT`,
-      description: project.short_description || `Découvrez le projet ${project.name} réalisé par 2LCT`,
+      title: `${project.name} | | Portfolio 2LCT - Développeuse web freelance à Toulouse`,
+      description: project.short_description || `Découvrez le projet ${project.name} réalisé par 2LCT, développeuse web freelance à Toulouse.`,
       alternates: {
-        canonical: `/portfolio/${slug}`,
+        canonical: `https://www.2lct.fr/portfolio/${slug}`,
       },
       openGraph: {
-        title: `${project.name} | Portfolio 2LCT`,
-        description: project.short_description,
+        title: `${project.name} | Portfolio 2LCT - Réalisations web à Toulouse`,
+         description:
+          project.short_description ||
+          `Projet ${project.name} réalisé par 2LCT : création de site web sur mesure à Toulouse.`,
         url: `https://www.2lct.fr/portfolio/${slug}`,
+        siteName: '2LCT',
+        images: [
+          {
+            url:
+              project.project_images?.[0]?.image
+                ? `https://www.2lct.fr/${project.project_images[0].image}`
+                : 'https://www.2lct.fr/2lct_homepage.webp',
+            width: 1200,
+            height: 630,
+            alt: `${project.name} - Réalisation web 2LCT`,
+          },
+        ],
+        locale: 'fr_FR',
+        type: 'website',
       },
     }
   } catch (error) {
     return {
       title: 'Projet | Portfolio 2LCT',
+      description: 'Découvrez les projets réalisés par 2LCT, développeuse web freelance à Toulouse.',
       alternates: {
-        canonical: `/portfolio/${slug}`,
+        canonical: `https://www.2lct.fr/portfolio/${params.slug}`,
+      },
+      openGraph: {
+        title: 'Projet | Portfolio 2LCT',
+        description: 'Découvrez les projets web créés par 2LCT à Toulouse et en Haute-Garonne.',
+        url: `https://www.2lct.fr/portfolio/${params.slug}`,
+        siteName: '2LCT',
+        images: [
+          {
+            url: 'https://www.2lct.fr/2lct_homepage.webp',
+            width: 1200,
+            height: 630,
+            alt: '2LCT - Développeuse web freelance à Toulouse',
+          },
+        ],
+        locale: 'fr_FR',
+        type: 'website',
       },
     }
   }

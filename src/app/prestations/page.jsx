@@ -1,17 +1,29 @@
 export const metadata = {
-  title: 'Prestations | 2LCT - Création site web à Toulouse',
+  title: 'Prestations | 2LCT - Développeuse web freelance à Toulouse',
   description:
-    "Services de création de sites web, refonte, SEO et accompagnement technique en Haute-Garonne. Adapté à vos besoins locaux.",
+    "Création et refonte de sites web, SEO et accompagnement technique à Toulouse et en Haute-Garonne. Des solutions claires, utiles et sur mesure.",
   alternates: {
-    canonical: '/prestations',
+    canonical: 'https://www.2lct.fr/prestations',
   },
   openGraph: {
-    title: 'Prestations | 2LCT',
+    title: 'Prestations | 2LCT - Création de sites web à Toulouse',
     description:
-      "Une offre claire et humaine pour votre présence en ligne en Haute-Garonne : vitrine, refonte, e-commerce, SEO, accompagnement.",
+      "Vitrine, refonte, e-commerce, SEO et accompagnement : découvrez des prestations claires et humaines pour votre présence en ligne à Toulouse.",
     url: 'https://www.2lct.fr/prestations',
+    siteName: '2LCT',
+    images: [
+      {
+        url: 'https://www.2lct.fr/2lct_homepage.webp',
+        width: 1200,
+        height: 630,
+        alt: '2LCT - Développeuse web freelance à Toulouse',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
   },
 };
+
 
 
 import HeadPageComponent from '@/src/components/headPageComponent/headPageComponent'

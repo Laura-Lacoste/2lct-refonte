@@ -5,6 +5,7 @@ import Burger from '../components/burger';
 import Header from '../components/header'
 import Footer from '../components/footer';
 import GTMNoScriptFix from './gtm-noscript';
+import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL('https://www.2lct.fr'),
@@ -26,7 +27,7 @@ export const metadata = {
   ],
   robots: 'index, follow',
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.2lct.fr',
   },
   openGraph: {
     title: '2LCT - Création de sites web à Toulouse et en Haute-Garonne',
@@ -67,6 +68,160 @@ export default function RootLayout({ children }) {
     }}
   />
   {/* End Google Tag Manager */}
+  <Script
+  id="schema-localbusiness-combined"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.2lct.fr/#localbusiness",
+        "name": "2LCT Développement Web & Digital",
+        "image": "https://www.2lct.fr/logo-2lct-blanc-fond-noir.webp",
+        "url": "https://www.2lct.fr",
+        "telephone": "+33 7 86 20 15 20",
+        "email": "laura@2lct.fr",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "5 Rue du Maréchal Lyautey",
+          "addressLocality": "Montastruc-la-Conseillère",
+          "postalCode": "31380",
+          "addressCountry": "FR"
+        },
+        "priceRange": "€€",
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.716,
+          "longitude": 1.592
+        },
+        "areaServed": [
+          "Toulouse",
+          "Montastruc-la-Conseillère",
+          "Lavaur",
+          "Saint-Sulpice-la-Pointe",
+          "Albi",
+          "Castres",
+          "Mazamet",
+          "Haute-Garonne",
+          "Tarn"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création de site web",
+              "description":
+                "Des sites modernes, sur-mesure, bien pensés. WordPress ou développement spécifique, selon vos besoins.",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Packs de création de site web",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "Pack page unique" },
+                  { "@type": "Offer", "name": "Pack site simple" },
+                  { "@type": "Offer", "name": "Pack site avancé" }
+                ]
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Refonte & optimisation",
+              "description":
+                "Modernisez votre site actuel avec un nouveau design, de meilleures performances et plus de visibilité.",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Packs de refonte et d’optimisation",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "Pack mini optimisation" },
+                  { "@type": "Offer", "name": "Pack refonte graphique" },
+                  { "@type": "Offer", "name": "Pack refonte graphique et technique" }
+                ]
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Référencement naturel (SEO)",
+              "description":
+                "Améliorez votre position sur Google grâce à un SEO complet : contenu, technique et performance.",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Packs SEO",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "Pack SEO de base" },
+                  { "@type": "Offer", "name": "Pack SEO complet" },
+                  { "@type": "Offer", "name": "Pack SEO et Rédaction 3 pages" }
+                ]
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maintenance & support",
+              "description":
+                "Un site qui tourne sans souci : mises à jour, sécurité, assistance et évolutions.",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Packs de maintenance",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "Maintenance de base" },
+                  { "@type": "Offer", "name": "Maintenance avancée" },
+                  { "@type": "Offer", "name": "Maintenance premium" }
+                ]
+              }
+            }
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/2lct.digital/",
+          "https://www.facebook.com/profile.php?id=61581452159349"
+        ],
+        "description":
+          "2LCT est une agence digitale basée à Montastruc-la-Conseillère, spécialisée en création, refonte, référencement et maintenance de sites web sur mesure pour artisans, commerçants et PME autour de Toulouse, dans le Tarn et la Haute-Garonne."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.2lct.fr/#organization",
+        "name": "2LCT",
+        "url": "https://www.2lct.fr",
+        "logo": "https://www.2lct.fr/logo-2lct-blanc-fond-noir.webp",
+        "email": "laura@2lct.fr",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33 7 86 20 15 20",
+          "contactType": "Service client",
+          "areaServed": ["FR", "Occitanie"],
+          "availableLanguage": ["French"]
+        },
+        "sameAs": [
+          "https://www.instagram.com/2lct.digital/",
+          "https://www.facebook.com/profile.php?id=61581452159349"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.2lct.fr/#website",
+        "url": "https://www.2lct.fr",
+        "name": "2LCT Développement Web & Digital",
+        "publisher": {
+          "@id": "https://www.2lct.fr/#organization"
+        }
+      }
+    ]),
+  }}
+/>
+
 </head>
       <body suppressHydrationWarning={true}>
         <GTMNoScriptFix />

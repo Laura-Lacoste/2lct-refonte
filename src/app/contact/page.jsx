@@ -1,13 +1,29 @@
 export const metadata = {
-  title: 'Contact | 2LCT',
+  title: 'Contact | 2LCT - Développeuse web freelance à Toulouse',
   description:
-    "Un projet web en tête ? Contactez-moi pour discuter de vos besoins, de votre public cible et des solutions adaptées.",
+    "Un projet web en tête ? Contactez Laura, développeuse web freelance à Toulouse, pour échanger sur vos besoins et créer ensemble un site sur mesure.",
+  alternates: {
+    canonical: 'https://www.2lct.fr/contact',
+  },
   openGraph: {
-    title: 'Contact | 2LCT',
-    description: "Discutons ensemble de votre futur site web !",
+    title: 'Contact | 2LCT - Freelance web à Toulouse',
+    description:
+      "Discutons ensemble de votre futur site web ! Contactez Laura, développeuse web freelance à Toulouse.",
     url: 'https://www.2lct.fr/contact',
+    siteName: '2LCT',
+    images: [
+      {
+        url: 'https://www.2lct.fr/2lct_homepage.webp', // image de partage commune à tout le site
+        width: 1200,
+        height: 630,
+        alt: '2LCT - Développeuse web freelance à Toulouse',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
   },
 };
+
 
 
 import { ToastContainer, toast } from 'react-toastify';

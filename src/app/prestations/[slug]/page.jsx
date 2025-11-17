@@ -14,22 +14,59 @@ export async function generateMetadata({ params }) {
     const prestation = await res.json()
     
     return {
-      title: `${prestation.name} | Prestations 2LCT`,
-      description: prestation.short_description || `Découvrez la prestation ${prestation.name} proposée par 2LCT`,
+      title: `${prestation.name} | Prestations 2LCT - Développeuse web freelance à Toulouse`,
+      description:
+        prestation.short_description ||
+        `Découvrez la prestation ${prestation.name} proposée par 2LCT : création de sites web et accompagnement digital à Toulouse.`,
       alternates: {
-        canonical: `/prestations/${slug}`,
+        canonical: `https://www.2lct.fr/prestations/${slug}`,
       },
       openGraph: {
-        title: `${prestation.name} | Prestations 2LCT`,
-        description: prestation.short_description,
+        title: `${prestation.name} | Prestations 2LCT - Création de site web à Toulouse`,
+        description:
+          prestation.short_description ||
+          `Prestation ${prestation.name} proposée par 2LCT, développeuse web freelance à Toulouse.`,
         url: `https://www.2lct.fr/prestations/${slug}`,
+        siteName: '2LCT',
+        images: [
+          {
+            url:
+              prestation.image
+                ? `https://www.2lct.fr/${prestation.image}`
+                : 'https://www.2lct.fr/2lct_homepage.webp',
+            width: 1200,
+            height: 630,
+            alt: `${prestation.name} - Service web 2LCT à Toulouse`,
+          },
+        ],
+        locale: 'fr_FR',
+        type: 'website',
       },
-    }
+    };
   } catch (error) {
     return {
-      title: 'Prestation | 2LCT',
+       title: 'Prestation | 2LCT - Développeuse web freelance à Toulouse',
+      description:
+        "Découvrez les prestations proposées par 2LCT : création, refonte et optimisation de sites web à Toulouse et en Haute-Garonne.",
       alternates: {
-        canonical: `/prestations/${slug}`,
+        canonical: `https://www.2lct.fr/prestations/${slug}`,
+      },
+      openGraph: {
+        title: 'Prestation | 2LCT - Création de site web à Toulouse',
+        description:
+          "Découvrez les prestations proposées par 2LCT : création, refonte et accompagnement digital à Toulouse et alentours.",
+        url: `https://www.2lct.fr/prestations/${slug}`,
+        siteName: '2LCT',
+        images: [
+          {
+            url: 'https://www.2lct.fr/2lct_homepage.webp',
+            width: 1200,
+            height: 630,
+            alt: '2LCT - Développeuse web freelance à Toulouse',
+          },
+        ],
+        locale: 'fr_FR',
+        type: 'website',
       },
     }
   }

@@ -1,12 +1,31 @@
 import HeadPageComponent from '@/src/components/headPageComponent/headPageComponent'
 
 export const metadata = {
-  title: 'Mentions légales | 2LCT - Freelance web Toulouse',
-  description: "Informations légales du site 2LCT : éditeur, hébergeur, propriété intellectuelle et protection des données.",
+  title: 'Mentions légales | 2LCT - Développeuse web freelance à Toulouse',
+  description:
+    "Mentions légales du site 2LCT : informations sur l’éditeur, l’hébergeur, la propriété intellectuelle et la protection des données personnelles.",
   alternates: {
-    canonical: '/mentions-legales',
+    canonical: 'https://www.2lct.fr/mentions-legales',
+  },
+  openGraph: {
+    title: 'Mentions légales | 2LCT - Freelance web à Toulouse',
+    description:
+      "Mentions légales du site 2LCT : éditeur, hébergeur, droits d’auteur et protection des données personnelles.",
+    url: 'https://www.2lct.fr/mentions-legales',
+    siteName: '2LCT',
+    images: [
+      {
+        url: 'https://www.2lct.fr/2lct_homepage.webp',
+        width: 1200,
+        height: 630,
+        alt: '2LCT - Développeuse web freelance à Toulouse',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
   },
 };
+
 
 export default function Mentions() {
     const title ="Mentions Légales"

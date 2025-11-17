@@ -1,17 +1,29 @@
 export const metadata = {
-  title: 'Portfolio | 2LCT - Réalisations web à Toulouse',
+  title: 'Portfolio | 2LCT - Créations web sur mesure à Toulouse',
   description:
-    "Découvrez mes réalisations web pour des entrepreneurs et artisans de Toulouse et la Haute-Garonne : design, développement, accompagnement.",
+    "Découvrez les réalisations de 2LCT : des sites web modernes et personnalisés conçus pour des entrepreneurs et artisans de Toulouse et de la Haute-Garonne.",
   alternates: {
-    canonical: '/portfolio',
+    canonical: 'https://www.2lct.fr/portfolio',
   },
   openGraph: {
-    title: 'Portfolio | 2LCT',
+    title: 'Portfolio | 2LCT - Réalisations web à Toulouse',
     description:
-      "Sites créés à Toulouse et en Haute-Garonne : vitrine, e-commerce, refonte... chaque projet est unique.",
+      "Découvrez les projets réalisés par 2LCT : sites vitrines, refontes et accompagnements digitaux pour des professionnels à Toulouse et en Haute-Garonne.",
     url: 'https://www.2lct.fr/portfolio',
+    siteName: '2LCT',
+    images: [
+      {
+        url: 'https://www.2lct.fr/2lct_homepage.webp',
+        width: 1200,
+        height: 630,
+        alt: '2LCT - Développeuse web freelance à Toulouse',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
   },
 };
+
 
 
 import HeadPageComponent from '@/src/components/headPageComponent/headPageComponent'

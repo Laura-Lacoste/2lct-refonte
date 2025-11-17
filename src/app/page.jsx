@@ -1,15 +1,27 @@
 
 export const metadata = {
-  title: 'Accueil | 2LCT - Sites web sur mesure à Toulouse',
+ title: '2LCT | Création de sites web sur mesure à Toulouse',
   description:
-    "Bienvenue chez 2LCT. Je vous aide à créer un site web utile, élégant et parfaitement adapté à vos objectifs pros.",
+    "Je suis Laura, développeuse web freelance à Toulouse. J’accompagne les pros et les artisans dans la création, la refonte et l’optimisation de leur site web pour une présence en ligne claire et efficace.",
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.2lct.fr',
   },
   openGraph: {
-    title: '2LCT - Développement de sites personnalisés',
-    description: "Un accompagnement humain et technique pour votre visibilité en ligne.",
-    url: 'https://www.2lct.fr/',
+    title: '2LCT - Développement de sites web personnalisés à Toulouse',
+    description:
+      "Des sites modernes, performants et pensés pour vos besoins. Accompagnement humain et technique par une freelance web basée à Toulouse.",
+    url: 'https://www.2lct.fr',
+    siteName: '2LCT',
+    images: [
+      {
+        url: 'https://www.2lct.fr/2lct_homepage.webp', // si tu as une image de partage
+        width: 1200,
+        height: 630,
+        alt: '2LCT - Création de sites web sur mesure à Toulouse',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
   },
 };
 
