@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import HeadPageComponent from "@/src/components/headPageComponent/headPageComponent"
 import '../../../styles/embla.css'
 import CarouselWrapper from "@/src/components/CarouselWrapper"

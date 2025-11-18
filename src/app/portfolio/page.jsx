@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: 'Portfolio | 2LCT - Créations web sur mesure à Toulouse',
   description:

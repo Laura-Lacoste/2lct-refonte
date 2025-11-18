@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 
 import Image from "next/image";
 import HeadPageComponent from "@/src/components/headPageComponent/headPageComponent";

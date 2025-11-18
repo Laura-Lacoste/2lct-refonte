@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 
 export const metadata = {
  title: '2LCT | Création de sites web sur mesure à Toulouse',
@@ -62,7 +63,10 @@ export default async function Home() {
   const projects = await Project.findAll({ order: [['id','DESC']], limit: 3 });
 
   const home = { technologies, services, projects };
- 
+
+  console.log("=== ENV ACTIVE ===", process.env.ENV_NAME);
+
+
   return (
     <div className='max-w-full'>
     <HeaderHome/>
