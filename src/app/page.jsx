@@ -32,6 +32,7 @@ import Image from 'next/image';
 
 import HeaderHome from '../components/headerHome';
 import Pack from '../components/Pack';
+import { Technology, Service, Project, VariationService, DetailVariationService } from '@/src/models';
 
 import image1Home from '@/public/2lct-page-accueil-maquette-site-web.svg';
 import image2Home from '@/public/2lct-page-accueil-bureau-double-ecran.svg';
@@ -39,14 +40,28 @@ import image3Home from '@/public/2lct-page-accueil-collaboration-site-web.svg';
 
 export default async function Home() {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/home`);
+  // Récupération directe depuis la base via Sequelize (remplace fetch /api/home)
+  const technologies = await Technology.findAll({ order: [['id','ASC']] });
+  const services = await Service.findAll({
+    order: [['id','ASC']],
+    include: [
+      {
+        model: VariationService,
+        as: 'variation_services',
+        order: [['id', 'ASC']],
+        include: [
+          {
+            model: DetailVariationService,
+            as: 'details',
+            order: [['detail_id', 'ASC']]
+          },
+        ]
+      }
+    ]
+  });
+  const projects = await Project.findAll({ order: [['id','DESC']], limit: 3 });
 
-  if (!res.ok) {
-   console.error('Erreur API:', res.status, await res.text())
-    throw new Error('Erreur lors du chargement des données de la page d’accueil')
-  }
-
-  const home = await res.json()
+  const home = { technologies, services, projects };
  
   return (
     <div className='max-w-full'>

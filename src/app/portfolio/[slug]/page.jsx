@@ -2,19 +2,24 @@ import HeadPageComponent from "@/src/components/headPageComponent/headPageCompon
 import '../../../styles/embla.css'
 import CarouselWrapper from "@/src/components/CarouselWrapper"
 import Link from "next/link"
+import { Project, ProjectImage, Technology } from '@/src/models';
 
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/project/${slug}`, {
-      cache: 'no-store'
+    // Récupération minimale via Sequelize (name, short_description, project_images)
+    const project = await Project.findOne({
+      where: { slug },
+      include: [
+        {
+          model: ProjectImage,
+          as: 'project_images',
+          separate: true,
+          order: [['id', 'ASC']],
+        },
+      ],
     })
-    if (!res.ok) {
-      throw new Error('Erreur lors du chargement des données du projet')
-    }
-
-    const project = await res.json()
 
     return {
       title: `${project.name} | | Portfolio 2LCT - Développeuse web freelance à Toulouse`,
@@ -75,20 +80,24 @@ export async function generateMetadata({ params }) {
 export default async function PortfolioClient({params}) {
   const { slug } = await params
 
-  const [resProject, resAll] = await Promise.all([
-  fetch(`${process.env.NEXT_PUBLIC_API_URL}/project/${slug}`),
-  fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`)
-]);
+  // Récupération directe via Sequelize (remplace les fetch vers l'API)
+  const project = await Project.findOne({
+    where: { slug },
+    include: [
+      {
+        model: ProjectImage,
+        as: 'project_images',
+        separate: true,
+        order: [['id', 'ASC']],
+      },
+      {
+        model: Technology,
+        as: 'technologies',
+      },
+    ],
+  });
 
-
-
-  if (!resProject.ok) {
-  console.error("Erreur API projet :", resProject.status);
-  throw new Error("Erreur lors du chargement du projet");
-}
-
-  const project = await resProject.json();
-  const allProjects = resAll.ok ? await resAll.json() : [];
+  const allProjects = await Project.findAll({ order: [['id', 'DESC']] });
 
      const OPTIONS = {};
  const SLIDE_ARRAY = project.project_images || [];
