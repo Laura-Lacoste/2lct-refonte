@@ -42,30 +42,33 @@ import image3Home from '@/public/2lct-page-accueil-collaboration-site-web.svg';
 export default async function Home() {
 
   // Récupération directe depuis la base via Sequelize (remplace fetch /api/home)
-  const technologies = await Technology.findAll({ order: [['id','ASC']] });
-  const services = await Service.findAll({
+const technologies = JSON.parse(JSON.stringify(
+  await Technology.findAll({ order: [['id','ASC']] })
+));
+
+const services = JSON.parse(JSON.stringify(
+  await Service.findAll({
     order: [['id','ASC']],
     include: [
       {
         model: VariationService,
         as: 'variation_services',
-        order: [['id', 'ASC']],
         include: [
           {
             model: DetailVariationService,
-            as: 'details',
-            order: [['detail_id', 'ASC']]
+            as: 'details'
           },
         ]
       }
     ]
-  });
-  const projects = await Project.findAll({ order: [['id','DESC']], limit: 3 });
+  })
+));
 
-  const home = { technologies, services, projects };
+const projects = JSON.parse(JSON.stringify(
+  await Project.findAll({ order: [['id','DESC']], limit: 3 })
+));
 
-  console.log("=== ENV ACTIVE ===", process.env.ENV_NAME);
-
+const home = { technologies, services, projects };
 
   return (
     <div className='max-w-full'>
@@ -140,7 +143,7 @@ export default async function Home() {
       <p>Chargement des prestations...</p>
     )}
     </div>
-    <Pack />
+    <Pack services={home.services} />
      </section>
     
     <section className='px-5 md:px-10 py-16 flex flex-col gap-12 items-center text-center'>

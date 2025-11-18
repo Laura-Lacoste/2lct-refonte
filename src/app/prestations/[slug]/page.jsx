@@ -121,6 +121,8 @@ export default async function PrestationsClient({params}) {
       ],
     });
 
+    const prestationSafe = JSON.parse(JSON.stringify(prestation));
+
     return(
         <main className="text-base overflow-hidden">
             <HeadPageComponent title={prestation.name} />
@@ -215,7 +217,7 @@ export default async function PrestationsClient({params}) {
   <p>Chargement des avantages...</p>
 )}
 
-                <Faq prestation={prestation} />
+                <Faq prestation={prestationSafe} />
                 
             </section>
         </main>
