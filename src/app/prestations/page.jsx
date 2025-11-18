@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: 'Prestations | 2LCT - Développeuse web freelance à Toulouse',
   description:
@@ -27,18 +29,23 @@ export const metadata = {
 
 
 import HeadPageComponent from '@/src/components/headPageComponent/headPageComponent'
+import { Service, VariationService, DetailVariationService } from '@/src/models';
 
 export default async function PrestationsPage() {
 
-    const res =  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services`);
-
-
-    if (!res.ok) {
-      console.error('Erreur API:', res.status, await res.text())
-      throw new Error('Erreur lors du chargement des données des prestations')
-    }
-
-    const services = await res.json()
+    // Récupération directe via Sequelize (remplace fetch /api/services)
+    const services = await Service.findAll({
+      order: [['id', 'ASC']],
+      include: [
+        {
+          model: VariationService,
+          as: 'variation_services',
+          separate: true,
+          order: [['id', 'ASC']],
+          limit: 3,
+        },
+      ],
+    })
 
 
   const title = "Création de sites web et solutions digitales"

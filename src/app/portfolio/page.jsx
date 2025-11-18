@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: 'Portfolio | 2LCT - Créations web sur mesure à Toulouse',
   description:
@@ -28,17 +30,12 @@ export const metadata = {
 
 import HeadPageComponent from '@/src/components/headPageComponent/headPageComponent'
 import Image from 'next/image'
+import { Project } from '@/src/models';
 
 export default async function PortfolioPage() {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`);
-
-  if (!res.ok) {
-    console.error('Erreur API:', res.status, await res.text())
-    throw new Error('Erreur lors du chargement des données des projets')
-  }
-
-  const projects = await res.json()
+  // Récupération directe via Sequelize (remplace fetch /api/projects)
+  const projects = await Project.findAll({ order: [['id', 'DESC']] })
 
 
   const title ="Mes projets : des solutions digitales sur mesure"

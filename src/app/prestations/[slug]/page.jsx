@@ -1,17 +1,20 @@
+export const dynamic = "force-dynamic";
 
 import Image from "next/image";
 import HeadPageComponent from "@/src/components/headPageComponent/headPageComponent";
 import Faq from "@/src/components/Faq";
 import Link from "next/link";
+import { Service, VariationService, DetailVariationService, Advantage, Question } from '@/src/models';
 
 export async function generateMetadata({ params }) {
     const { slug } = await params
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/service/${slug}`, {
-      cache: 'no-store'
+    // Récupération minimale côté serveur via Sequelize (nom, short_description, image)
+    const prestation = await Service.findOne({
+      where: { slug },
+      attributes: ['name', 'short_description', 'image'],
     })
-    const prestation = await res.json()
     
     return {
       title: `${prestation.name} | Prestations 2LCT - Développeuse web freelance à Toulouse`,
@@ -76,18 +79,47 @@ export async function generateMetadata({ params }) {
 export default async function PrestationsClient({params}) {
     const {slug} = await params
 
-    const [resPrestation, resAllPrestations] = await Promise.all([
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/service/${slug}`),
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/services`)
-    ]);
+    // Récupération directe via Sequelize (remplace les fetch vers les routes API)
+    const prestation = await Service.findOne({
+      where: { slug },
+      include: [
+        {
+          model: VariationService,
+          as: 'variation_services',
+          separate: true,
+          order: [['id', 'ASC']],
+          include: [
+            {
+              model: DetailVariationService,
+              as: 'details',
+              order: [['detail_id', 'ASC']],
+            },
+          ],
+        },
+        {
+          model: Advantage,
+          as: 'servicesToAdvantage',
+          order: [['id', 'ASC']],
+        },
+        {
+          model: Question,
+          as: 'servicesToQuestion',
+        },
+      ],
+    });
 
-    if (!resPrestation.ok || !resAllPrestations.ok) {
-        console.error("Erreur API :", resPrestation.status, resAllPrestations.status);
-        throw new Error("Erreur lors du chargement des données des prestations");
-    }
-
-    const prestation = await resPrestation.json();
-    const allPrestations = await resAllPrestations.json();
+    const allPrestations = await Service.findAll({
+      order: [['id', 'ASC']],
+      include: [
+        {
+          model: VariationService,
+          as: 'variation_services',
+          separate: true,
+          order: [['id', 'ASC']],
+          limit: 3,
+        },
+      ],
+    });
 
     return(
         <main className="text-base overflow-hidden">
