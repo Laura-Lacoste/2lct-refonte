@@ -1,23 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-export default function Pack() {
-    const [home, setHome] = useState({});
+export default function Pack({ services }) {
     const [openService, setOpenService] = useState(1);
-
-     useEffect(() => {
-     const fetchServices = async () => {
-       try {        
-         const res = await fetch('/api/home')
-         const data = await res.json()
-         setHome(data)
-       } catch (error) {
-         console.error("Erreur lors du fetch :", error)
-       }
-     }
-     fetchServices()
-   }, [])
 
     function selectedService(id) {
      setOpenService(id)
@@ -33,8 +19,8 @@ return (
     </div>
 
     <div className='flex flex-col lg:flex-row flex-wrap gap-4 justify-center items-center'>
-      {home.services && home.services.length > 0 ? (
-    home.services.map(service => (
+      {services && services.length > 0 ? (
+    services.map(service => (
       <div key={service.id}
       onClick={() => selectedService(service.id)}
       className={`text-base text-left w-fit cursor-pointer hover:underline transition-colors duration-200 ${
@@ -50,8 +36,8 @@ return (
     )}
     </div>
         <div className='flex gap-6 flex-wrap justify-center'>
-          {home.services && openService && (
-            home.services.find(service => service.id === openService)?.variation_services?.map(variation =>(
+          {services && openService && (
+        services.find(service => service.id === openService)?.variation_services?.map(variation =>(
               <div key={variation.id} className='w-full sm:w-[80%] md:w-[48%] lg:w-[22%]'>
               <div className="flex justify-between align-center flex-col gap-4 border-l-4 border-[#E58BD3] bg-white py-6 px-10 w-full shadow-lg transition-all">
                 <h3 className='text-base font-bold'>{variation.name}</h3>
