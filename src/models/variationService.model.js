@@ -1,4 +1,4 @@
-import { sequelize } from "../libs/db";
+import { sequelize } from "../libs/db.js";
 import { DataTypes, Model } from "sequelize";
 
 export class VariationService extends Model {}
