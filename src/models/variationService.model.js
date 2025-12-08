@@ -6,15 +6,15 @@ export class VariationService extends Model {}
 VariationService.init(
 	{
 		name: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		wordpress_price:{
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: true,
 		},
 		development_price:{
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: true,
 		},
 	},

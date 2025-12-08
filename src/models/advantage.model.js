@@ -6,7 +6,7 @@ export class Advantage extends Model {}
 Advantage.init(
 	{
 		name: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		description: {

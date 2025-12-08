@@ -6,7 +6,7 @@ export class DetailVariationService extends Model {}
 DetailVariationService.init(
     {
         name: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
     },
