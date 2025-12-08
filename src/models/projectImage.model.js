@@ -6,7 +6,7 @@ export class ProjectImage extends Model {}
 ProjectImage.init(
 	{
 		image: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 	},

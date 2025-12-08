@@ -6,15 +6,15 @@ export class Service extends Model {}
 Service.init(
 	{
 		icon: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		name: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		slug: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		card_description: {
@@ -22,7 +22,7 @@ Service.init(
 			allowNull: false,
 		},
 		image: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		short_description: {

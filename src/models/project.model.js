@@ -6,15 +6,15 @@ export class Project extends Model {}
 Project.init(
 	{
 		image: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		name: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		slug: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		card_description: {
