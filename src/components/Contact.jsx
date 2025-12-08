@@ -1,6 +1,7 @@
 'use client'
 
 import { use, useState } from 'react';
+import { toast } from 'react-toastify';
 
 export default function ContactForm() {
 

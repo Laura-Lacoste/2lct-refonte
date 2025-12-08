@@ -1,13 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 
 body {
-    font-family: var(--font-poppins), sans-serif;
-    font-size: large;
-  }
+  font-family: var(--font-poppins), sans-serif;
+}
 
 .no-scroll {
-  overflow:hidden
+  overflow: hidden;
 }
