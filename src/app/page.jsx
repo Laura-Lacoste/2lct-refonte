@@ -109,7 +109,7 @@ const home = { technologies, services, projects };
     <p className='font-semibold leading-relaxed'>
     Mon approche : écoute, rigueur, transparence.    </p>
     </div>
-    <Link href="/prestations" className='z-10 mt-10 bg-[#E58BD3] text-base px-6 py-3 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>
+    <Link href="/prestations" className='z-10 mt-10 bg-[#E58BD3] text-base px-6 py-3 rounded-sm hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>
     En savoir plus
     </Link>
     </div>
@@ -123,9 +123,9 @@ const home = { technologies, services, projects };
     <div className='flex flex-wrap gap-8 justify-center w-full mb-16'>
     {home.services && home.services.length > 0 ? (
       home.services.map(service => (
-        <div key={service.id} className="  w-full sm:w-[48%] lg:w-[22%] bg-[url('/background-items-services.webp')] relative flex flex-col gap-6 p-6 justify-between bg-cover  items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl shadow-md  rounded-xl  hover:bg-white hover:bg-opacity-90">
-        <div className="absolute inset-0 bg-[white]/90 z-1"></div>
-        <div className="absolute inset-0 bg-[#050305]/3 z-2"></div>
+        <div key={service.id} className="  w-full sm:w-[48%] lg:w-[22%] bg-[url('/background-items-services.webp')] relative flex flex-col gap-6 p-10 justify-between bg-cover  items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl shadow-md  rounded-xl  hover:bg-white hover:bg-opacity-90">
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="absolute inset-0 bg-[#050305]/3"></div>
         <div className="relative z-10 flex flex-col gap-4 ">
         <i className={`${service.icon} fa-2xl relative z-10  m-4`} />
         <h3 className='text-lg font-semibold'>{service.name}</h3>
@@ -133,7 +133,7 @@ const home = { technologies, services, projects };
         </div>
         <a 
         href={`/prestations/${service.slug}`} 
-        className='relative z-10 mt-6 bg-[#E58BD3] text-base py-2 px-4 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'
+        className='relative z-10 mt-6 bg-[#E58BD3] text-base py-2 px-4 rounded-sm hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'
         >
         En savoir plus
         </a>          
@@ -178,7 +178,7 @@ const home = { technologies, services, projects };
     )}
 
     </div>
-<Link href="/portfolio" className='z-10 mt-10 bg-[#E58BD3] text-base px-6 py-3 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>
+<Link href="/portfolio" className='z-10 mt-10 bg-[#E58BD3] text-base px-6 py-3 rounded-sm hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>
     Voir tous les projets
     </Link>
     
@@ -202,19 +202,19 @@ const home = { technologies, services, projects };
 
     <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-10 text-center">
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#843E76] font-semibold text-l">Un site à votre image</h3>
+        <h3 className="text-[#843E76] font-semibold text-lg">Un site à votre image</h3>
         <p className="text-sm">Design, ton, contenu : tout est pensé pour refléter votre personnalité ou celle de votre marque.</p>
       </div>
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#843E76] font-semibold text-l">Des conseils personnalisés</h3>
+        <h3 className="text-[#843E76] font-semibold text-lg">Des conseils personnalisés</h3>
         <p className="text-sm">Pas de jargon inutile. On parle simple, on avance ensemble, et je vous guide à chaque étape.</p>
       </div>
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#843E76] font-semibold text-l">Une solution clé en main</h3>
+        <h3 className="text-[#843E76] font-semibold text-lg">Une solution clé en main</h3>
         <p className="text-sm">Je m’occupe de tout : création, optimisation, sécurité, SEO, maintenance. Zéro prise de tête pour vous.</p>
       </div>
       <div className="flex flex-col gap-2 w-full md:w-[45%] lg:w-[22%]">
-        <h3 className="text-[#843E76] font-semibold text-l">Un vrai suivi humain</h3>
+        <h3 className="text-[#843E76] font-semibold text-lg">Un vrai suivi humain</h3>
         <p className="text-sm">On ne coupe pas les ponts à la livraison. Je reste dispo pour vous accompagner et faire évoluer votre site.</p>
       </div>
     </div>
@@ -222,7 +222,7 @@ const home = { technologies, services, projects };
 
   <a 
     href="/contact"
-    className="z-10 mt-10 bg-[#E58BD3] text-base px-6 py-3 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit"
+    className="z-10 mt-10 bg-[#E58BD3] text-base px-6 py-3 rounded-sm hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit"
   >
     Discutons de votre projet
   </a>

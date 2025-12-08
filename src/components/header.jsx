@@ -10,7 +10,7 @@ export default function Header() {
       document.body.removeAttribute('cz-shortcut-listen');
     }, []);
   return (
-    <header className="hidden md:flex fixed top-0 left-0 w-full h-28 bg-[#050305] z-[999] shadow-md px-12 text-sm">
+    <header className="hidden md:flex fixed top-0 left-0 w-full h-28 bg-[#050305] z-50 shadow-md px-12 text-sm">
       <div className="flex w-full justify-around items-center">
         {/* Logo */}
         <Link href="/" className="shrink-0">
@@ -25,7 +25,7 @@ export default function Header() {
           <Link href="/a-propos" className="hover:text-[#E58BD3] transition-colors duration-200">À propos</Link>
           <Link
             href="/contact"
-            className="bg-[#E58BD3] px-4 py-2 rounded text-[#050305] hover:bg-white hover:text-[#843E76] border border-transparent hover:border-[#843E76] transition-all duration-300"
+            className="bg-[#E58BD3] px-4 py-2 rounded-sm text-[#050305] hover:bg-white hover:text-[#843E76] border border-transparent hover:border-[#843E76] transition-all duration-300"
           >
             Contact
           </Link>
