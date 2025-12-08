@@ -10,9 +10,12 @@
     "build:prod": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=production node server.js",
     "lint": "next lint",
-    "db:create": "psql -U lali0283_laura -d lali0283_2lct -f ./data/create_db.sql",
-    "db:populate": "psql -U lali0283_laura -d lali0283_2lct -f ./data/populate_db.sql",
-    "db:reset": "npm run db:create && npm run db:populate",
+    "db:create:dev": "mysql -u laura -p 2lct < ./data/schema_2lct_mysql.sql",
+    "db:populate:dev": "mysql -u laura -p 2lct < ./data/populate_db_mysql.sql",
+    "db:reset:dev": "npm run db:create:dev && npm run db:populate:dev",
+    "db:create:prod": "mysql -u lali0283_laura -p lali0283_2lct < ./data/schema_2lct_mysql.sql",
+    "db:populate:prod": "mysql -u lali0283_laura -p lali0283_2lct < ./data/populate_db_mysql.sql",
+    "db:reset:prod": "npm run db:create:prod && npm run db:populate:prod",
     "sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
