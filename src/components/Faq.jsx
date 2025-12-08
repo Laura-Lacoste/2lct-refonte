@@ -15,7 +15,7 @@ export default function Faq({ prestation }) {
                         <span className="text-2xl text-[#E58BD3] ml-4">  {activeQuestionId === element.id ? "−" : "+"}</span>
                         </button>
                             {activeQuestionId === element.id && (
-        <p className="mt-2 text-sm">{element.answer}</p>
+        <p className="mt-2 text-sm pt-3">{element.answer}</p>
       )}                        
                     </div>
                 )) ) : (

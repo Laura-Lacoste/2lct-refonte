@@ -123,7 +123,7 @@ export default function ContactForm() {
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
-        className="border p-2 rounded"
+        className="border p-2 rounded-sm"
       />
       <input
         type="email"
@@ -132,7 +132,7 @@ export default function ContactForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="border p-2 rounded"
+        className="border p-2 rounded-sm"
       />
       <input
         type="tel"
@@ -140,7 +140,7 @@ export default function ContactForm() {
         placeholder="Votre téléphone (optionnel)"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        className="border p-2 rounded"
+        className="border p-2 rounded-sm"
     />
     <input
         type="text"
@@ -148,7 +148,7 @@ export default function ContactForm() {
         placeholder="Prestation souhaitée (optionnel)"
         value={service}
         onChange={(e) => setService(e.target.value)}
-        className="border p-2 rounded"
+        className="border p-2 rounded-sm"
     />
       <textarea
         name="message"
@@ -157,7 +157,7 @@ export default function ContactForm() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         required
-        className="border p-2 rounded"
+        className="border p-2 rounded-sm"
       />
       <label className="flex items-center gap-2 text-sm">
               <input
@@ -169,7 +169,7 @@ export default function ContactForm() {
             </label>
       <button
         type="submit"
-        className="bg-[#E58BD3] text-base px-4 py-2 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition"
+        className="bg-[#E58BD3] text-base px-4 py-2 rounded-sm hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition"
       >
         Envoyer
       </button>

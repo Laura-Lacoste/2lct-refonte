@@ -41,7 +41,7 @@ return (
               <div key={variation.id} className='w-full sm:w-[80%] md:w-[48%] lg:w-[22%]'>
               <div className="flex justify-between align-center flex-col gap-4 border-l-4 border-[#E58BD3] bg-white py-6 px-10 w-full shadow-lg transition-all">
                 <h3 className='text-base font-bold'>{variation.name}</h3>
-                {variation.wordpress_price && (<p className='bg-[#E58BD3] text-[#050305] px-2 w-fit text-center self-center rounded '>A partir de {variation.wordpress_price}</p>)}
+                {variation.wordpress_price && (<p className='bg-[#E58BD3] text-[#050305] px-2 w-fit text-center self-center rounded-sm '>A partir de {variation.wordpress_price}</p>)}
               </div>
               <div className='border-l-4 border-[#E58BD3] bg-white leading-loose text-base py-6 px-10 shadow-lg'> 
                 {variation.details?.sort((a,b) => a.id - b.id).map(detail => (

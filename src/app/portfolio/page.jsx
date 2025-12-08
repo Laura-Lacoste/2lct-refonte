@@ -104,17 +104,17 @@ export default async function PortfolioPage() {
 <section className=' flex flex-col px-5 py-10 lg:px-32 lg:py-36 gap-20'>
   <h2 className='text-3xl font-bold self-center text-center lg:text-left'>Ma méthode pour vos projets web sur-mesure</h2>
     <div className="flex justify-center flex-wrap gap-20">
-        <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
+        <div className="relative bg-white rounded-lg shadow-md p-10 w-full sm:w-[48%] lg:w-[22%] text-center">
             <div  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">01</div>
             <h3 className='mt-8 font-semibold'>Collaboration Étape par Étape</h3>
             <p className="text-sm mt-2">Je propose une approche étape par étape pour chaque projet, assurant une communication claire et une planification rigoureuse. De la prise de brief à la livraison finale, chaque phase est soigneusement gérée pour répondre à vos attentes.</p>
         </div>
-        <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
+        <div className="relative bg-white rounded-lg shadow-md p-10 w-full sm:w-[48%] lg:w-[22%] text-center">
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">02</div>
             <h3 className='mt-8 font-semibold'>Suivi Personnalisé</h3>
             <p className="text-sm mt-2">En tant que freelance, je vous offre un suivi personnalisé tout au long du projet. Vous bénéficiez d’une attention individuelle et d’un accompagnement adapté à vos besoins spécifiques, avec des mises à jour régulières pour vous tenir informé de l’avancement.</p>
         </div>
-        <div className="relative bg-white rounded-lg shadow-md p-6 w-full sm:w-[48%] lg:w-[22%] text-center">
+        <div className="relative bg-white rounded-lg shadow-md p-10 w-full sm:w-[48%] lg:w-[22%] text-center">
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#E58BD3] w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm z-10 border-4 border-white">03</div>
             <h3 className='mt-8 font-semibold'>Flexibilité et Réactivité</h3>
             <p className="text-sm mt-2">Je m’engage à être flexible et réactive pour répondre rapidement à vos demandes et ajuster les éléments du projet en fonction de vos retours. Mon objectif est de vous offrir un service qui évolue avec vos besoins et assure la réussite de votre projet.</p>

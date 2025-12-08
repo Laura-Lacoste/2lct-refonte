@@ -192,9 +192,9 @@ export default async function PrestationsClient({params}) {
                 <div className="relative flex flex-col mt-10 lg:mt-0 gap-10 p-10 bg-[url('/2lct-besoin-daide-contact.svg')] bg-cover bg-center w-full lg:w-1/5 justify-center items-center rounded-xl shadow-sm">
                 <div className="absolute inset-0 bg-[#FCFAFC]/70 z-0 rounded-xl"></div>
                 <div className="absolute inset-0 bg-[#E58BD3]/30 z-0 rounded-xl"></div>
-                <h2 className="relative z-10 uppercase  text-shadow-sm font-bold">Contacter</h2>
-                <p className="relative z-10 uppercase text-2xl bold font-bold">Besoin d'aide ?</p>
-                <a href="/contact" className='relative z-10 bg-[#E58BD3] text-base py-2 px-4 rounded hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>Poser une question</a>
+                <h2 className="relative z-10 uppercase drop-shadow-sm font-bold">Contacter</h2>
+                <p className="relative z-10 uppercase text-2xl font-bold">Besoin d'aide ?</p>
+                <a href="/contact" className='relative z-10 bg-[#E58BD3] text-base py-2 px-4 rounded-sm hover:bg-white hover:text-[#843E76] border border-[#E58BD3] hover:border-[#843E76] transition-all duration-300 w-fit'>Poser une question</a>
                 </div>
 
                 </div>

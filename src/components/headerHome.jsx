@@ -5,7 +5,7 @@ import ParticlesBackground from "./ParticlesBackground"
 
 export default function HeaderHome() {
   return (
-    <section className="relative w-full flex flex-col overflow-x-hidden bg-[url('/2lct-page-accueil-code-site-web.webp')] bg-cover bg-center z-[998] min-h-screen pt-32 justify-center items-center">
+    <section className="relative w-full flex flex-col overflow-x-hidden bg-[url('/2lct-page-accueil-code-site-web.webp')] bg-cover bg-center z-0 min-h-screen pt-32 justify-center items-center">
       <div className="absolute inset-0 bg-black/80 z-0"></div>
       <ParticlesBackground />
 
@@ -33,7 +33,7 @@ export default function HeaderHome() {
 
         <a
           href="/contact"
-          className="bg-[#E58BD3] text-[#050305] px-6 py-3 mt-4 rounded shadow hover:bg-white hover:text-[#843E76] font-semibold transition-all duration-300 w-fit self-center text-base"
+          className="bg-[#E58BD3] text-[#050305] px-6 py-3 mt-4 rounded-sm shadow-sm hover:bg-white hover:text-[#843E76] font-semibold transition-all duration-300 w-fit self-center text-base"
         >
           Demander votre devis gratuit
         </a>
