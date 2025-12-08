@@ -7,14 +7,14 @@ export default function Methode() {
 
     return (
         <>
-<div className="flex flex-col gap-4">
+<div className="flex flex-col gap-4 w-full items-center">
 <div className="flex flex-col  max-w-6xl w-full mx-auto border-l-4 border-[#E58BD3] p-4 justify-center bg-[#FCFAFC] shadow-sm">
 <button onClick={() => setActiveMethode(activeMethode === 1 ? null : 1)} className="flex justify-between items-center md:w-full font-bold">
 Étape 1 : Brief & analyse
 <span className="text-2xl text-[#E58BD3] ml-4">  {activeMethode === 1 ? "−" : "+"}</span>
 </button>
 {activeMethode === 1 && (
-    <div className="mt-2 text-sm flex flex-col gap-2">
+    <div className="mt-2 text-sm flex flex-col gap-2 pt-2">
         <p>Tout commence par l’écoute. Je prends le temps de <b>comprendre votre activité, vos enjeux, vos valeurs</b>. Ensemble, on pose les bases :</p>
         <ul className="ml-10">
             <li>- Quel est votre public cible ?</li>
@@ -32,7 +32,7 @@ export default function Methode() {
 <span className="text-2xl text-[#E58BD3] ml-4">  {activeMethode === 2 ? "−" : "+"}</span>
 </button>
 {activeMethode === 2 && (
-    <div className="mt-2 text-sm flex flex-col gap-2">
+    <div className="mt-2 text-sm flex flex-col gap-2 pt-2">
         <p>Avant d’écrire une ligne de code, on travaille la <b>structure du site</b> :</p>
         <ul className="ml-10">
             <li>- Je crée une <b>arborescence optimisée</b> pour faciliter la navigation.</li>
@@ -51,7 +51,7 @@ export default function Methode() {
 <span className="text-2xl text-[#E58BD3] ml-4">  {activeMethode === 3 ? "−" : "+"}</span>
 </button>
 {activeMethode === 3 && (
-    <div className="mt-2 text-sm flex flex-col gap-2">
+    <div className="mt-2 text-sm flex flex-col gap-2 pt-2">
         <p>Je passe ensuite à la phase de création technique :</p>
         <ul className="ml-10">
             <li>- Pour les sites <b>WordPress</b>, j’intègre les contenus avec soin, en personnalisant le thème pour qu’il colle à votre image</li>
@@ -68,7 +68,7 @@ export default function Methode() {
 <span className="text-2xl text-[#E58BD3] ml-4">  {activeMethode === 4 ? "−" : "+"}</span>
 </button>
 {activeMethode === 4 && (
-    <div className="mt-2 text-sm flex flex-col gap-2">
+    <div className="mt-2 text-sm flex flex-col gap-2 pt-2">
         <p>Un beau site, c’est bien. Un site qui <b>performe</b>, c’est encore mieux. J’intègre donc plusieurs optimisations :</p>
         <ul className="ml-10">
             <li>- <b>SEO technique et sémantique</b> : structure Hn, balises meta, attributs alt, contenu lisible.</li>
@@ -87,7 +87,7 @@ export default function Methode() {
 <span className="text-2xl text-[#E58BD3] ml-4">  {activeMethode === 5 ? "−" : "+"}</span>
 </button>
 {activeMethode === 5 && (
-    <div className="mt-2 text-sm flex flex-col gap-2">
+    <div className="mt-2 text-sm flex flex-col gap-2 pt-2">
         <p>Je m’occupe de tout ce qui est technique et parfois un peu obscur :</p>
         <ul className="ml-10">
             <li>- Rédaction et paramétrage du <b>nom de domaine</b></li>
@@ -107,7 +107,7 @@ export default function Methode() {
 <span className="text-2xl text-[#E58BD3] ml-4">  {activeMethode === 6 ? "−" : "+"}</span>
 </button>
 {activeMethode === 6 && (
-    <div  className="mt-2 text-sm flex flex-col gap-2">
+    <div  className="mt-2 text-sm flex flex-col gap-2 pt-2">
         <p>Une fois le site en ligne, <b>je ne vous laisse pas seul.</b></p>
         <ul className="ml-10">
             <li>Je propose une <b>formation rapide</b> pour vous apprendre à mettre à jour votre site (WordPress ou back-office sur mesure).</li>

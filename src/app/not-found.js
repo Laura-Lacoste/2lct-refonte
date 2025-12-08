@@ -21,7 +21,7 @@ export default function NotFound() {
         />
          <Link
           href="/"
-          className="inline-block mt-6 bg-[#E58BD3] text-[#050305] px-6 py-3 rounded hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 font-semibold"
+          className="inline-block mt-6 bg-[#E58BD3] text-[#050305] px-6 py-3 rounded-sm hover:bg-white hover:text-[#E58BD3] border border-[#E58BD3] transition-all duration-300 font-semibold"
         >
           Revenir à l'accueil
         </Link>

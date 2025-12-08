@@ -39,9 +39,9 @@ export default function Apropos() {
     return(
         <main className="text-base overflow-hidden">
             <HeadPageComponent title={title}/>
-<section className="px-5 py-10 lg:px-36 lg:py-36 flex flex-col gap-14">
+<section className="px-5 py-10 lg:px-36 lg:py-36 flex flex-col gap-14 justify-center items-center">
 <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center justify-center">
-  <div className="flex-shrink-0">
+  <div className="shrink-0">
     <Image
   src={imagePortrait}
   alt="Portrait de Laura Lacoste, développeuse web freelance à Toulouse"
@@ -75,7 +75,7 @@ export default function Apropos() {
   </div>
 </div>
 
-<div className="bg-[#FCFAFC] border-l-4 border-[#E58BD3] px-6 py-10 mx-auto shadow-sm max-w-6xl text-center">
+<div className="bg-[#FCFAFC] border-l-4 border-[#E58BD3] px-6 py-10 mx-auto shadow-sm max-w-6xl text-center flex flex-col">
   <p className="mb-4">
     Pour moi, un bon site web est avant tout un <b>outil au service de votre activité</b> : il doit être clair, utile et pensé pour vos visiteurs.
   </p>
